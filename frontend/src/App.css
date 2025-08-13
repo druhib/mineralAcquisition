@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.leaflet-interactive {
+    fill-opacity: 0.7 !important;
+}

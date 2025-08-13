@@ -1,0 +1,237 @@
+﻿Country,ISO3,ASM_Workers 
+Afghanistan,AFG,
+Åland Islands,ALA,
+Albania,ALB,
+Algeria,DZA,7000
+American Samoa,ASM,
+Andorra,AND,
+Angola,AGO,120000
+Anguilla,AIA,
+Antigua and Barbuda,ATG,
+Argentina,ARG,5800
+Armenia,ARM,
+Aruba,ABW,
+Australia,AUS,
+Austria,AUT,
+Azerbaijan,AZE,
+Bahamas,BHS,
+Bahrain,BHR,
+Bangladesh,BGD,
+Barbados,BRB,
+Belarus,BLR,
+Belgium,BEL,
+Belize,BLZ,
+Benin,BEN,15000
+Bermuda,BMU,
+Bhutan,BTN,
+Bolivia,BOL,175000
+Bosnia and Herzegovina,BIH,
+Botswana,BWA,15000
+Brazil,BRA,861000
+British Virgin Islands,VGB,
+Brunei Darussalam,BRN,
+Bulgaria,BGR,
+Burkina Faso,BFA,1000000
+Burundi,BDI,34000
+Cambodia,KHM,
+Cameroon,CMR,44000
+Canada,CAN,
+Cape Verde,CPV,
+Cayman Islands,CYM,
+Central African Republic,CAF,143900
+Chad,TCD,313100
+Chile,CHL,17000
+China,CHN,9000000
+Hong Kong Special Administrative Region of China,HKG,
+Macao Special Administrative Region of China,MAC,
+Colombia,COL,300000
+Comoros,COM,
+Congo,COG,
+Cook Islands,COK,
+Costa Rica,CRI,
+Côte d'Ivoire,CIV,503100
+Croatia,HRV,
+Cuba,CUB,7000
+Cyprus,CYP,
+Czech Republic,CZE,
+Democratic People's Republic of Korea,PRK,
+Democratic Republic of the Congo,COD,2000000
+Denmark,DNK,
+Djibouti,DJI,
+Dominica,DMA,
+Dominican Republic,DOM,3000
+Ecuador,ECU,29097
+Egypt,EGY,
+El Salvador,SLV,
+Equatorial Guinea,GNQ,15000
+Eritrea,ERI,400000
+Estonia,EST,
+Ethiopia,ETH,1260000
+Faeroe Islands,FRO,
+Falkland Islands (Malvinas),FLK,
+Fiji,FJI,
+Finland,FIN,
+France,FRA,
+French Guiana,GUF,7000
+French Polynesia,PYF,
+Gabon,GAB,10000
+Gambia,GMB,
+Georgia,GEO,
+Germany,DEU,
+Ghana,GHA,1100000
+Gibraltar,GIB,
+Greece,GRC,
+Greenland,GRL,
+Grenada,GRD,
+Guadeloupe,GLP,
+Guam,GUM,
+Guatemala,GTM,
+Guernsey,GGY,
+Guinea,GIN,300000
+Guinea-Bissau,GNB,7000
+Guyana,GUY,30000
+Haiti,HTI,4500
+Holy See,VAT,
+Honduras,HND,1000
+Hungary,HUN,
+Iceland,ISL,
+India,IND,15000000
+Indonesia,IDN,3600000
+"Iran, Islamic Republic of",IRN,
+Iraq,IRQ,
+Ireland,IRL,
+Isle of Man,IMN,
+Israel,ISR,
+Italy,ITA,
+Jamaica,JAM,1200
+Japan,JPN,
+Jersey,JEY,
+Jordan,JOR,
+Kazakhstan,KAZ,
+Kenya,KEN,140000
+Kiribati,KIR,
+Kuwait,KWT,
+Kyrgyzstan,KGZ,10000
+Lao People's Democratic Republic,LAO,10000
+Latvia,LVA,
+Lebanon,LBN,
+Lesotho,LSO,
+Liberia,LBR,500000
+Libyan Arab Jamahiriya,LBY,7000
+Liechtenstein,LIE,
+Lithuania,LTU,
+Luxembourg,LUX,
+Madagascar,MDG,500000
+Malawi,MWI,40000
+Malaysia,MYS,4600
+Maldives,MDV,
+Mali,MLI,400000
+Malta,MLT,
+Marshall Islands,MHL,
+Martinique,MTQ,
+Mauritania,MRT,10000
+Mauritius,MUS,
+Mayotte,MYT,
+Mexico,MEX,56000
+"Micronesia, Federated States of",FSM,
+Moldova,MDA,
+Monaco,MCO,
+Mongolia,MNG,70000
+Montenegro,MNE,
+Montserrat,MSR,
+Morocco,MAR,7500
+Mozambique,MOZ,100000
+Myanmar,MMR,182500
+Namibia,NAM,10000
+Nauru,NRU,
+Nepal,NPL,120000
+Netherlands,NLD,
+Netherlands Antilles,ANT,
+New Caledonia,NCL,
+New Zealand,NZL,
+Nicaragua,NIC,25000
+Niger,NER,450000
+Nigeria,NGA,400000
+Niue,NIU,
+Norfolk Island,NFK,
+Northern Mariana Islands,MNP,
+Norway,NOR,
+Occupied Palestinian Territory,PSE,
+Oman,OMN,
+Pakistan,PAK,515000
+Palau,PLW,
+Panama,PAN,5000
+Papua New Guinea,PNG,108000
+Paraguay,PRY,
+Peru,PER,150000
+Philippines,PHL,500000
+Pitcairn,PCN,
+Poland,POL,
+Portugal,PRT,
+Puerto Rico,PRI,
+Qatar,QAT,
+Republic of Korea,KOR,
+R_union,REU,
+Romania,ROU,
+Russian Federation,RUS,
+Rwanda,RWA,30000
+Saint-Barthélemy,BLM,
+Saint Helena,SHN,
+Saint Kitts and Nevis,KNA,
+Saint Lucia,LCA,
+Saint-Martin (French part),MAF,
+Saint Pierre and Miquelon,SPM,
+Saint Vincent and the Grenadines,VCT,
+Samoa,WSM,
+San Marino,SMR,
+Sao Tome and Principe,STP,
+Saudi Arabia,SAU,
+Senegal,SEN,15000
+Serbia,SRB,
+Seychelles,SYC,
+Sierra Leone,SLE,300000
+Singapore,SGP,
+Slovakia,SVK,
+Slovenia,SVN,
+Solomon Islands,SLB,
+Somalia,SOM,15000
+South Africa,ZAF,20000
+Spain,ESP,
+Sri Lanka,LKA,165000
+Sudan,SDN,1000000
+Suriname,SUR,20000
+Svalbard and Jan Mayen Islands,SJM,
+Swaziland,SWZ,
+Sweden,SWE,
+Switzerland,CHE,
+Syrian Arab Republic,SYR,
+Tajikistan,TJK,
+Thailand,THA,21500
+The former Yugoslav Republic of Macedonia,MKD,
+Timor-Leste,TLS,
+Togo,TGO,
+Tokelau,TKL,
+Tonga,TON,
+Trinidad and Tobago,TTO,
+Tunisia,TUN,
+Turkey,TUR,
+Turkmenistan,TKM,
+Turks and Caicos Islands,TCA,
+Tuvalu,TUV,
+Uganda,UGA,305700
+Ukraine,UKR,
+United Arab Emirates,ARE,
+United Kingdom of Great Britain and Northern Ireland,GBR,
+United Republic of Tanzania,TZA,1000000
+United States of America,USA,
+United States Virgin Islands,VIR,
+Uruguay,URY,
+Uzbekistan,UZB,
+Vanuatu,VUT,
+Venezuela (Bolivarian Republic of),VEN,15771
+Viet Nam,VNM,63000
+Wallis and Futuna Islands,WLF,
+Western Sahara,ESH,
+Yemen,YEM,
+Zambia,ZMB,35000
+Zimbabwe,ZWE,1000000
