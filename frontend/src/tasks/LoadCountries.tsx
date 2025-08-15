@@ -1,10 +1,11 @@
-import { features } from "../data/countries.json";
+import countries from "../data/countries.json";
 
 class LoadCountriesTask{
     //const [ASMdata, setData] = useState([]);
+    
     load = (setState) => {
-        setState(features); 
-        //console.log(features);
+        setState(countries); 
+        console.log(countries);
     }
     
 }; 
