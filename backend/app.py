@@ -16,7 +16,7 @@ CORS(app)
 
 @app.route('/data_from_csv_pandas', methods=['GET'])
 def get_csv_data_pandas():
-    file = './data/ASM_Workers.csv'  # Specify your CSV file path
+    file = './data/Bauxite_tonne_1913_2019_British_Geological_Survey.csv'  # Specify your CSV file path
     
     df = pd.read_csv(file)
     df = df.fillna(0)

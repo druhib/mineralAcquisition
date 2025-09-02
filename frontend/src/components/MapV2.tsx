@@ -73,8 +73,8 @@ const onEachCountry = (country, layer) => {
       
         <MapContainer
           style={mapStyle}
-          center ={[40, 10]}
-          zoom={2} scrollWheelZoom={true} >
+          center ={[30, 0]}
+          zoom={1.7} scrollWheelZoom={true} >
           <GeoJSON data={countries}
             style={(feature) => style(feature, dataLookup)}
             onEachFeature={onEachCountry} />
