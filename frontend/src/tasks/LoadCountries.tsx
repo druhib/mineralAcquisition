@@ -1,4 +1,4 @@
-import countries from "../data/countries.json";
+import countries from "../../public/data/countries.json";
 
 class LoadCountriesTask{
     

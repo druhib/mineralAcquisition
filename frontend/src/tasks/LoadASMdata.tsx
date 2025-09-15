@@ -1,11 +1,11 @@
-import ASMdata from "../data/ASMdata.json";
+import BAUXITEdata from "../../public/data/Bauxite_tonne_1913_2019_British_Geological_Survey.json";
 
 class LoadASMdataTask{
     
     load = (setState) => {
-        setState(ASMdata); 
+        setState(BAUXITEdata); 
         // console.log("Loaded ASM data");
-        // console.log(ASMdata);
+        //console.log(BAUXITEdata);
     }
     
 }; 
