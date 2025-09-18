@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 
 import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -16,15 +16,6 @@ function getYears(map_data: Record<string, any>) {
   
 }
 
-function createDataLookup(map_data: Record<string, any>) {
-  const lookup: Record<string, any> = {};
-  Object.values(map_data).forEach((item: any) => {
-      
-      lookup[item.ISO3] = Number(item); 
-    });
-    console.log("Data lookup:", lookup);
-  return lookup;
-}
 
 const mapStyle = {
         height: '37rem',
@@ -45,11 +36,12 @@ function getColor(d) {
                       '#32a74fff';
 }
 
-function style(feature, dataLookup) {
+function style(feature, data) {
     const iso3 = feature.properties.ISO_A3; 
-    const mineralValue = Number(dataLookup[iso3]);
+    const mineralValue = Number(data[iso3]);
+    //console.log("Styling feature:", feature.properties.ADMIN, "ISO3:", iso3, "Value:", mineralValue);
+  
 
-    
 
     return {
     fillColor: getColor(mineralValue),
@@ -89,14 +81,14 @@ const Map = ({countries, map_data}) => {
   const [currentYear, setCurrentYear] = useState(YearDataMin_Max[0] || 0 ) // set initial year to ? 
 
 
-  const [data, setData] = useState({});
+  const [Mineraldata, setMineralData] = useState({});
 
   // // Update data lookup when year changes
   useEffect(() => {
     if (map_data && currentYear) {
       console.log("Updating data lookup for year:", currentYear);
       const updatedMineralData = MineralData(map_data, currentYear);
-      setData(updatedMineralData);
+      setMineralData(updatedMineralData);
      
       console.log("Updated mineral data:", updatedMineralData);
       
@@ -104,24 +96,44 @@ const Map = ({countries, map_data}) => {
     }
   }, [currentYear, map_data]);
 
-  console.log("Data for current year:", data);
+  // console.log("Data for current year:", );
 
 
-const dataLookup = createDataLookup(data);
+// const onEachCountry = useCallback((country, layer ) => {
+//         const name = country.properties.ADMIN;
+//         const iso3 = country.properties.ISO_A3;
+//         const yearData = data
+//         console.log("Mineral data for year", data);
+//     // mineralData[iso3] = yearData;
 
-const onEachCountry = (country, layer) => {
+        
+      
 
-    const name = country.properties.ADMIN;
-    const iso3 = country.properties.ISO_A3;
+//         layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> yearData: ${yearData[iso3]}`);
+//     }, [data]); 
 
-    // display data first --> console log and then check what to display
-    // const data = dataLookup[iso3];
+function onEachCountry(data) {
+    return (country, layer) => {
+        const name = country.properties.ADMIN;
+        const iso3 = country.properties.ISO_A3;
+        console.log("set" , data)
+        const dataPoint = Number(data[iso3]) ? data : "No data";
+        
+        // let mineralValue;
+        // if (dataPoint === undefined || dataPoint === null || dataPoint === "") {
+        //     mineralValue = "No data";
+        // } else {
+        //     const numValue = Number(dataPoint);
+        //     mineralValue = isNaN(numValue) ? "No data" : numValue;
+        // }
+        
 
-  
-    // ASM look up here is not working 
-    layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> Value: ${data}`);
+        // data point displayed is one behind what is need UGH 
 
-  };
+        //console.log(`Country: ${name}, ISO3: ${iso3}, Value: ${mineralValue}`);
+        layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br>  `);
+    };
+}
 
   const handleSliderChange = (sliderValue) => {
     
@@ -138,9 +150,11 @@ const onEachCountry = (country, layer) => {
           style={mapStyle}
           center ={[30, 0]}
           zoom={1.7} scrollWheelZoom={true} >
-          <GeoJSON data={countries}
-            style={(feature) => style(feature, data)}
-            onEachFeature={onEachCountry} />
+          <GeoJSON 
+            key ={currentYear}
+            data={countries}
+            style={(feature) => style(feature, Mineraldata)}
+            onEachFeature={onEachCountry(Mineraldata)} />
           
         </MapContainer>
         <Slider step = {1} included={false} defaultValue={0} min = {Number(YearDataMin_Max[0])} max ={Number(YearDataMin_Max[1])} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue) }  />
