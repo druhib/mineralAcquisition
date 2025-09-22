@@ -1,14 +1,36 @@
 import pandas as pd 
 
 file1 = "./data/Copper_tonne_1801_1900_from_us_department_of_commerce_bureau_of_mines.csv"
-
 file2 = "./data/Copper_tonne_1913_2019_British_Geological_Survey.csv"
 
+file3 = "./data/Gold_tonne_1913_2019_British_Geological_Survey.csv"
+file4 = "./data/Manganese_tonne_1913_2019_british_geological_survey.csv"
+
+file5 = "./data/Monazite_tonne_1913_2019_british_geological_survey.csv"
+file6 = "./data/Nickel_tonne_1913_2019_british_geological_survey.csv"
+
+file7 = "./data/Phosphate_tonne_1913_2019_british_geological_survey.csv"
+
+
+
 #large file with many entries 
-df1 = pd.read_csv(file2)
+df1 = pd.read_csv(file6)
+
+# print("org frame: ")
+
+# df1.to_csv("output.csv")
+
+
 #sum them
-group_by_frame = df1.groupby('ISO3').sum()
-group_by_frame.replace(0.0, "NaN")
+group_by_frame = df1.groupby('ISO3').sum(min_count=1)
+print(group_by_frame)
+
+group_by_frame.to_csv('Phosphate_tonne_1913_2019_complete_british_geological_survey.csv')
+
+
+
+'''
+# group_by_frame.replace(0.0, "NaN")
 
 #reset index 
 group_by_frame = group_by_frame.reset_index().set_index('ISO3')
@@ -53,7 +75,7 @@ print(column_to_move)
 final_df.insert(0, "IS03", column_to_move)
 
 final_df.to_csv('Copper_tonne_complete_British_Geological_Survey.csv')
-
+'''
 
 
 
