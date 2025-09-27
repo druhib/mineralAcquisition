@@ -1,27 +1,50 @@
 import pandas as pd 
 
-file1 = "./data/Copper_tonne_1801_1900_from_us_department_of_commerce_bureau_of_mines.csv"
-file2 = "./data/Copper_tonne_1913_2019_British_Geological_Survey.csv"
+file1 = "amblygonite_(tonne)_lithium_ore.csv"
+file2 = "eucryptite_lithium_ore.csv"
+file3 = "lepidolite_lithium_ore.csv"
+file4 = "lithium_minerals_lithium_ore.csv"
+file5 = "petalite_lithium_ore.csv"
+file6 = "phyllite_lithium_ore.csv"
+file7 = "spudomene_lithium_ore.csv"
+file8 = "lithium_ore_aggregated_file.csv"
+file9 = "single_line_lithium_ore_aggregated_file.csv"
 
-file3 = "./data/Gold_tonne_1913_2019_British_Geological_Survey.csv"
-file4 = "./data/Manganese_tonne_1913_2019_british_geological_survey.csv"
+df1 =  pd.read_csv(file1)
+df2 = pd.read_csv(file2)
+df3 = pd.read_csv(file3)
+df4 =  pd.read_csv(file4)
+df5 =  pd.read_csv(file5)
+df6 = pd.read_csv(file6)
+df7 = pd.read_csv(file7)
 
-file5 = "./data/Monazite_tonne_1913_2019_british_geological_survey.csv"
-file6 = "./data/Nickel_tonne_1913_2019_british_geological_survey.csv"
+df8 = pd.read_csv(file8)
+df9 = pd.read_csv(file9)
+group_by_frame = df8.groupby('ISO3').sum(min_count=1)
 
-file7 = "./data/Phosphate_tonne_1913_2019_british_geological_survey.csv"
 
+df9.to_json('lithium_ore_aggregated_file.json', orient='records', indent=4)
+
+
+
+
+
+
+# df5.to_json('petalite_lithium_ore.json', orient='records', indent=4)
+
+# df6.to_json('phyllite_lithium_ore.json', orient='records', indent=4)
+# df7.to_json('spudomene_lithium_ore.json', orient='records', indent=4)
 
 
 #large file with many entries 
-df1 = pd.read_csv(file2)
+#df1 = pd.read_csv(file2)
 
 
 # print("org frame: ")
 
 # df1.to_csv("output.csv")
 
-
+'''
 #sum them
 group_by_frame = df1.groupby('ISO3').sum(min_count=1)
 print(group_by_frame)
@@ -86,7 +109,7 @@ final_df.to_csv('Copper_tonne_complete1_British_Geological_Survey.csv', index=Fa
 
 
 
-
+'''
 
 
 

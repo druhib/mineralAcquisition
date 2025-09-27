@@ -114,7 +114,6 @@
     {
         "Country":"australia",
         "ISO3":"AUS",
-        
        "Years":{
         "1913":0.0,
         "1914":0.0,
@@ -1459,7 +1458,7 @@
     {
         "Country":"french indo-china",
         "ISO3":"KHM",
-       "Years":{
+        "Years":{
         "1913":0.0,
         "1914":0.0,
         "1915":0.0,
