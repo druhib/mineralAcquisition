@@ -2,7 +2,7 @@ import BAUXITEdata from "../../public/data/Bauxite_tonne_1913_2019_British_Geolo
 
 class LoadASMdataTask{
     
-    load = (setState) => {
+    load = (setState: any) => {
         setState(BAUXITEdata); 
         // console.log("Loaded ASM data");
         //console.log(BAUXITEdata);

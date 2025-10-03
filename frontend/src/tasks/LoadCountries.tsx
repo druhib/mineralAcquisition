@@ -1,11 +1,12 @@
 import countries from "../../public/data/countries.json";
 
+
 class LoadCountriesTask{
     
-    load = (setState) => {
+    load = (setState: any) => {
         setState(countries); 
-        // console.log("Loaded countries");
-        // console.log(countries);
+        console.log("Loaded countries");
+        console.log(countries);
     }
     
 }; 

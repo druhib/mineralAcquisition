@@ -1,7 +1,6 @@
-import React, { useState, useEffect, use } from "react";
+import { useState, useEffect, use } from "react";
 import { Radio } from "antd"
 import LoadCountriesTask from "../tasks/LoadCountries";
-import LoadASMdataTask from "../tasks/LoadASMdata";
 import Map from "./MapV2";
 import { dataConfig } from './dataConfig';
 
@@ -15,8 +14,9 @@ const MapLoading = () => {
     
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [colordata, setColors] = useState<string[]>([]); 
 
-    const handleRadioChange = (e) => {
+    const handleRadioChange = (e: any) => {
      setSelectedDataset(e.target.value);
   };
 
@@ -35,8 +35,10 @@ const MapLoading = () => {
             try {
               const config = dataConfig[selectedDataset];
               if (config && config.data) {
+                console.log(config.data)
                 // If you have static imports in config, use them directly
                 setData(config.data);
+                setColors(config.colors)
               } else {
                 console.error('No data configuration found for:', selectedDataset);
                 setData(null);
@@ -75,7 +77,8 @@ const MapLoading = () => {
         
           <Map 
             countries={countries} 
-            map_data={data} 
+            map_data={data}
+            colors={colordata}
           />
 
           <div id="legend" style ={{ position: 'relative', top: '11rem', left:'0.5rem' }}>
@@ -86,7 +89,7 @@ const MapLoading = () => {
               <li><span className="legend-item color-red"></span> 100000-50000 </li>
               <li><span className="legend-item color-orange"></span> 50000-10000</li>
               <li><span className="legend-item color-orange-yellow"></span>10000-5000 </li>
-              <li><span className="legend-item color-dark-yellow"></span> 5000-1000</li>
+              <li><span className="legend-item color-dark-yellow"></span>5000-1000</li>
               <li><span className="legend-item color-yellow"></span> 1000-0</li>
               <li><span className="legend-item color-green"></span> default </li> 
             </ul>
