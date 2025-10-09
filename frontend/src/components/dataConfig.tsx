@@ -1,7 +1,7 @@
 import { data } from "react-router";
 import ASMdata from "../../public/data/ASM_Workers.json";
-import BAUXITEdata from "../../public/data/Bauxite_tonne_1913_2019_British_Geological_Survey.json";
-import COBALTdata from "../../public/data/Cobalt_tonne_1913_2019_British_Geological_Survey.json";
+import BAUXITEdata from "../../public/data/Bauxite_tonne_1913_2019_British_Geological_Survey_complete.json";
+import COBALTdata from "../../public/data/Cobalt_tonne_1913_2019_British_Geological_Survey_complete.json";
 import COPPERdata from "../../public/data/Copper_tonne_newcomplete_British_Geological_Survey.json"
 
 import MANGANESEdata from "../../public/data/Manganese_tonne_1913_2019_Complete_british_geological_survey.json"
