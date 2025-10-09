@@ -20,13 +20,15 @@ file11 = "./data/Iron_tonne_1913_2019_british_geological_survey.csv"
 file12 = "./data/Silver_tonne_1493_1900_us_bureau_of_commerce_of_mines.csv"
 file13 = "Silver_tonne_1493_1900_reduced_us_bureau_of_commerce_of_mines.csv"
 file14 = "./data/Silver_tonnes_1913_2019_British_Geological_Survey.csv"
+file15 = "data/Bauxite_tonne_1913_2019_British_Geological_Survey.csv"
 
+file16 = "./data/Cobalt_tonne_1913_2019_British_Geological_Survey.csv"
 
 
 
 
 #large file with many entries 
-df1 = pd.read_csv(file14)
+df1 = pd.read_csv(file16)
 
 
 # print("org frame: ")
@@ -47,6 +49,7 @@ print(group_by_frame)
 
 #reset index 
 group_by_frame = group_by_frame.reset_index().set_index('ISO3')
+group_by_frame.to_csv("Cobalt_tonne_1913_2019_British_Geological_Survey_complete.csv")
 
 #new column 
 # group_by_frame["1493-1600"] = ''
@@ -58,7 +61,7 @@ group_by_frame = group_by_frame.reset_index().set_index('ISO3')
 
 # print(group_by_frame.head())
 
-
+'''
 
 #smaller file w/ years : 1493-1600,1601-1700,1701-1800,1801-1900
 df2 = pd.read_csv(file13)
@@ -141,7 +144,7 @@ final_df.to_csv('Silver_complete.csv', index=False)
 
 
 
-
+'''
 
 
 

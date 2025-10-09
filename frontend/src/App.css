@@ -1,22 +1,11 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
 
 @keyframes logo-spin {
   from {
@@ -45,19 +34,19 @@
 .leaflet-interactive {
     fill-opacity: 0.7 !important;
 }
-
+/* 
 .legend {
   text-align: left;
-  line-height: 16rem;
+  line-height: 20rem;
   color: #555;
-}
+} */
 
 
 
 #legend {
-  width: 40rem; /* Set a fixed width for the legend */
-  height: 16rem; 
-  padding-left: 0.4rem;
+  width: 14rem ;
+  height: 22rem; 
+  padding-left: 1rem;
   background-color: #f0f0f0;
   overflow-y: auto; /* Enable scrolling if legend content is long */
 }
@@ -66,6 +55,8 @@
   margin-top: 0.7rem;
   margin-bottom: 0.2rem; 
   font-size: 1rem;
+  padding-left: 0.5rem;
+  text-align: left;
 }
 
 #legend ul {
@@ -77,49 +68,6 @@
   /* margin-bottom: 0.2rem; */
   display: flex; /* Use flexbox for legend item layout */
   align-items: center; /* Vertically align items */
+ 
 }
 
-.legend-item {
-  width: 10px;
-  height: 10px;
-  margin-right: 8px;
-  /* border: 1px solid #333; */
-}
-
-.color-dark-pink {
-  background-color: #800026;
-}
-
-.color-dark-red {
-  background-color: #BD0026;
-}
-
-.color-red {
-  background-color: #E31A1C;
-  
-}
-
-.color-orange {
-  background-color: #FC4E2A;
-  
-}
-
-.color-orange-yellow{
-  background-color: #FD8D3C;
-  
-}
-
-.color-dark-yellow {
-  background-color: #FEB24C;
-  
-}
-
-.color-yellow {
-  background-color: #FED976;
-  
-}
-
-.color-green {
-  background-color: #32a74fff;
-  
-}

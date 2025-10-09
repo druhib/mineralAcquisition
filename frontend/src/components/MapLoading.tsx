@@ -5,11 +5,34 @@ import Map from "./MapV2";
 import { dataConfig } from './dataConfig';
 
 
+const generateLegendData = (colordata: string[]) => {
 
+const mineralRanges = [
+      "+500mil", 
+      "500mil - 80mil",  // always black 
+      "20mil - 1mil",
+      "1mil - 500k",
+      "500k - 100k",
+      "100k - 50k",
+      "50k - 10k",
+      "10k - 5k",
+      "5k - 100", 
+      "100 - 0",
+      '0', // always green 
+     
+    ];
+
+
+    return colordata.slice(0, mineralRanges.length).map((color, index) => ({
+      color: color,
+      range: mineralRanges[index]
+    }));
+  };
+    
 const MapLoading = () => {
 
     const [countries, setCountries] = useState([]); 
-    const [selectedDataset, setSelectedDataset] = useState("false");
+    const [selectedDataset, setSelectedDataset] = useState("Mineral");
    
     
     const [data, setData] = useState(null);
@@ -39,6 +62,7 @@ const MapLoading = () => {
                 // If you have static imports in config, use them directly
                 setData(config.data);
                 setColors(config.colors)
+                console.log("Colors set to: ", config.colors)
               } else {
                 console.error('No data configuration found for:', selectedDataset);
                 setData(null);
@@ -54,7 +78,8 @@ const MapLoading = () => {
         }, [selectedDataset]);
 
 
-        
+ 
+
 
     
 
@@ -81,17 +106,31 @@ const MapLoading = () => {
             colors={colordata}
           />
 
-          <div id="legend" style ={{ position: 'relative', top: '11rem', left:'0.5rem' }}>
-            <h3>Map Legend</h3>
-            <ul>
-              <li><span className="legend-item color-dark-pink"></span> +500000</li>
-              <li><span className="legend-item color-dark-red"></span> 500000-100000</li>
-              <li><span className="legend-item color-red"></span> 100000-50000 </li>
-              <li><span className="legend-item color-orange"></span> 50000-10000</li>
-              <li><span className="legend-item color-orange-yellow"></span>10000-5000 </li>
-              <li><span className="legend-item color-dark-yellow"></span>5000-1000</li>
-              <li><span className="legend-item color-yellow"></span> 1000-0</li>
-              <li><span className="legend-item color-green"></span> default </li> 
+          <div id="legend" style ={{ 
+            position: 'relative', 
+            top: '7.5rem', 
+            left:'0.5rem', 
+            }}>
+            <h3>Map Legend - {selectedDataset} tonnes</h3>
+            <ul style={{ listStyleType: 'none', paddingLeft: 10 }}>
+              {generateLegendData(colordata).map((item, index) => (
+
+                <li key={index}>
+                    <span 
+                      style={{
+                        display: 'inline-block',
+                        width: '10px',
+                        height: '10px',
+                        backgroundColor: item.color,
+                        marginRight: '1rem',
+                        verticalAlign: 'middle'
+                      }}
+                    ></span>
+                    {item.range}
+                  </li>
+
+              ))}
+
             </ul>
         </div>
       </div>        

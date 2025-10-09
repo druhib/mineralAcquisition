@@ -24,7 +24,6 @@ function getYears(map_data: Record<string, any>) {
   
 }
 
-
 const mapStyle = {
         height: '37rem',
         width: '65rem',
@@ -35,21 +34,19 @@ const mapStyle = {
 function getColor(d: any, colors: string[]) {
   // if (d === null || d === undefined) return '#6a6f6bff';
   const value = Number(d);
-  return value > 500000000 ? '#010903ff' :
-         value > 80000000  ? colors[0] :
-         value > 20000000   ? colors[1] :
-         value > 1000000  ? colors[2] :
-         value > 500000   ? colors[3] :
-        //  value > 30000   ? colors[5] :
-        //  value > 100000   ? colors[6] :
-         value > 100000   ? colors[4] :
-         value > 50000  ? colors[5] :
-         value > 10000   ? colors[6] :
-         value > 5000   ? colors[7] :
-         value > 100   ?  colors[8]:
-         value > 0      ? colors[9] :
-         value === 0    ? '#32a74fff' :
-                      '#6a6f6bff';
+  return value > 500000000 ? colors[0] :
+         value > 80000000  ? colors[1] :
+         value > 20000000   ? colors[2] :
+         value > 1000000  ? colors[3] :
+         value > 500000   ? colors[4] :
+         value > 100000   ? colors[5] :
+         value > 50000  ? colors[6] :
+         value > 10000   ? colors[7] :
+         value > 5000   ? colors[8] :
+         value > 100   ?  colors[9]:
+         value > 0      ? colors[10] :
+         value === 0    ? colors[11] :
+                      '#ffffffff';
 }
 
 function style(feature: any, data: Record<string, any>, colors: string[]) {
@@ -59,14 +56,14 @@ function style(feature: any, data: Record<string, any>, colors: string[]) {
     const mineralValue = Number(data[iso3]);
     //console.log("Styling feature:", feature.properties.ADMIN, "ISO3:", iso3, "Value:", mineralValue);
   
-    console.log("styled data: ", data)
+    // console.log("styled data: ", data)
 
     return {
     fillColor: getColor(mineralValue, colors),
-    weight: 2,
+    weight: .6,
     opacity: 0.7,
-    color: 'white',
-    fillOpacity: 0.7
+    color: 'black',
+    fillOpacity: 1
   };
 
     
@@ -114,16 +111,17 @@ const marks: SliderSingleProps['marks'] = { // help with scale
 //const Map: React.FC<MapProps> = ({ countries, map_data, colors }) => { 
 const Map : React.FC<MapProps> = ({ countries, map_data , colors}) => { 
 
-  console.log("data", map_data); 
-  console.log("set colors", colors)
+  // console.log("data", map_data); 
+  // console.log("set colors", colors)
 
   
-  const YearDataMin_Max = map_data ? getYears(map_data) : {};
+  const YearDataMin_Max = map_data ? getYears(map_data) : [1493,2023];
   const [currentYear, setCurrentYear] = useState( 1493 ) // set initial year to ? 
 
 
   const [Mineraldata, setMineralData] = useState({});
   // console.log("set colors", colors); 
+  console.log("YearDataMin_Max: ", YearDataMin_Max);
 
   // // Update data lookup when year changes
   useEffect(() => {
@@ -132,8 +130,8 @@ const Map : React.FC<MapProps> = ({ countries, map_data , colors}) => {
       const updatedMineralData = MineralData(map_data, currentYear);
       setMineralData(updatedMineralData);
      
-      console.log("Updated mineral data:", updatedMineralData);
-      console.log(YearDataMin_Max)
+      // console.log("Updated mineral data:", updatedMineralData);
+      // console.log(YearDataMin_Max)
       
 
     }
@@ -146,15 +144,16 @@ function onEachCountry(data: Record<string, any>) {
         const name = country.properties.ADMIN;
         const iso3 = country.properties.ISO_A3;
         // data point displayed is one behind what is need UGH 
-        const dataPoint = Number(data[iso3]) ? data : "No data";
-        console.log(layer)
+        //console.log("loaded" ,data)
+        //const dataPoint = Number(data[iso3]) ? data : "No data";
+        // console.log(layer)
         //console.log(`Country: ${name}, ISO3: ${iso3}, Value: ${mineralValue}`);
-        layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br>  `);
+        layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> `);
     };
 }
 
   const handleSliderChange = (sliderValue: number) => {
-    console.log(sliderValue)
+    // console.log(sliderValue)
     if (sliderValue  >= 1913){
       setCurrentYear(sliderValue)
 
@@ -197,7 +196,7 @@ function onEachCountry(data: Record<string, any>) {
           
         </MapContainer>
        {/* change slider to black out what is before it  */}
-        <Slider min ={1493} max= {2023} step={1} defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue) }  />
+        <Slider min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
 
        
       </div>

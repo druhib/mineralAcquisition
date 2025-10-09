@@ -6,7 +6,11 @@ interface MapProps {
 
 
 
-
+export interface MineralConfig {
+    label: string 
+    data :any 
+    colors: string[]
+}
 
 // export type DatasetKey = 'BAUXITE' | 'COBALT' | 'COPPER' | 'MANGANESE' | 'MONAZITE' | 'NICKEL' | 'PHOSPHATE';
 
