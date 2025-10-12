@@ -1,34 +1,18 @@
 import pandas as pd 
 
-file1 = "./data/Copper_tonne_1801_1900_from_us_department_of_commerce_bureau_of_mines.csv"
-file2 = "./data/Copper_tonne_1913_2019_British_Geological_Survey.csv"
 
-file3 = "./data/Gold_tonne_1913_2019_British_Geological_Survey.csv"
-file4 = "./data/Manganese_tonne_1913_2019_british_geological_survey.csv"
+file4= "./data/Silver_tonnes_1913_2019_British_Geological_Survey.csv"
+file5 = "Silver_1493-1900_10_11_25.csv"
 
-file5 = "./data/Monazite_tonne_1913_2019_british_geological_survey.csv"
-file6 = "./data/Nickel_tonne_1913_2019_british_geological_survey.csv"
-
-file7 = "./data/Phosphate_tonne_1913_2019_british_geological_survey.csv"
-
-file8 = "./data/csv_copper_1801_1900.csv"
-file9 = "./data/csv_gold_1493_1900.csv"
-
-file10 = "Gold_complete.csv"
-
-file11 = "./data/Iron_tonne_1913_2019_british_geological_survey.csv"
-file12 = "./data/Silver_tonne_1493_1900_us_bureau_of_commerce_of_mines.csv"
-file13 = "Silver_tonne_1493_1900_reduced_us_bureau_of_commerce_of_mines.csv"
-file14 = "./data/Silver_tonnes_1913_2019_British_Geological_Survey.csv"
-file15 = "data/Bauxite_tonne_1913_2019_British_Geological_Survey.csv"
-
-file16 = "./data/Cobalt_tonne_1913_2019_British_Geological_Survey.csv"
+file6 = "./data/Bauxite_tonne_1913_2019_British_Geological_Survey.csv"
+file7 = "Gold_1493_1900_condesned_10_11_25.csv"
+file8 = "./data/Gold_tonne_1913_2019_British_Geological_Survey.csv"
 
 
 
 
 #large file with many entries 
-df1 = pd.read_csv(file16)
+df1 = pd.read_csv(file4)
 
 
 # print("org frame: ")
@@ -49,7 +33,7 @@ print(group_by_frame)
 
 #reset index 
 group_by_frame = group_by_frame.reset_index().set_index('ISO3')
-group_by_frame.to_csv("Cobalt_tonne_1913_2019_British_Geological_Survey_complete.csv")
+# group_by_frame.to_csv("Bauxite_10_11_25.csv")
 
 #new column 
 # group_by_frame["1493-1600"] = ''
@@ -61,27 +45,30 @@ group_by_frame.to_csv("Cobalt_tonne_1913_2019_British_Geological_Survey_complete
 
 # print(group_by_frame.head())
 
-'''
+
 
 #smaller file w/ years : 1493-1600,1601-1700,1701-1800,1801-1900
-df2 = pd.read_csv(file13)
+df2 = pd.read_csv(file5)
 print( "smaller file")
 print(df2.head())
 
-# df3 = df2.groupby('ISO3').sum(min_count=1)
-# print(df3.head())
+# df2 = df2.groupby('ISO3').sum(min_count=1)
+# # print(df3.head())
 # df2 = df2.reset_index().set_index('ISO3')
 
 
-#check same type 
-# df3['ISO3'] = df3['ISO3'].astype(str)
-group_by_frame.index = group_by_frame.index.astype(str)
+# #check same type 
+# # df3['ISO3'] = df3['ISO3'].astype(str)
+# group_by_frame.index = group_by_frame.index.astype(str)
 
 
 
 # merge 
+
 merged_df = pd.merge(group_by_frame, df2[['ISO3', '1493-1600','1601-1700','1701-1800','1801-1900' ]], 
                      left_index=True, right_on='ISO3', how='left')
+
+# copper merge b/c only has 1801-1900 data
 # merged_df = pd.merge(group_by_frame, df2[['ISO3', '1801-1900']], 
 #                      left_index=True, right_on='ISO3', how='left')
 
@@ -133,18 +120,16 @@ print(column5_to_move)
 final_df.insert(2, "1493", column5_to_move)
 
 
+final_df.to_csv('Silver_complete_10_11_25.csv', index=False)
 
-
-final_df.to_csv('Silver_complete.csv', index=False)
-
-
-
+ 
 
 
 
 
 
-'''
+
+
 
 
 

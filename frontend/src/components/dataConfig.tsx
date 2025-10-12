@@ -1,17 +1,18 @@
 import { data } from "react-router";
 import ASMdata from "../../public/data/ASM_Workers.json";
-import BAUXITEdata from "../../public/data/Bauxite_tonne_1913_2019_British_Geological_Survey_complete.json";
-import COBALTdata from "../../public/data/Cobalt_tonne_1913_2019_British_Geological_Survey_complete.json";
-import COPPERdata from "../../public/data/Copper_tonne_newcomplete_British_Geological_Survey.json"
+import BAUXITEdata from "../../public/data/Bauxite_10_11_25.json";
+import COBALTdata from "../../public/data/Cobalt_tonne_10_11_25.json";
+import COPPERdata from "../../public/data/Copper_complete_10_11_25.json"
+import GOLDdata from "../../public/data/Gold_complete_10_11_25.json"
 
-import MANGANESEdata from "../../public/data/Manganese_tonne_1913_2019_Complete_british_geological_survey.json"
-import MONAZITEdata from "../../public/data/Monazite_tonne_1913_2019_complete_british_geological_survey.json"
-import NICKELdata from "../../public/data/Nickel_tonne_1913_2019_complete_british_geological_survey.json"
-import PHOSPHATEdata from "../../public/data/Phosphate_tonne_1913_2019_complete_british_geological_survey.json"
+import MANGANESEdata from "../../public/data/Manganese_10_11_25.json"
+import MONAZITEdata from "../../public/data/Monazite_checked_10_11_25.json"
+import NICKELdata from "../../public/data/Nickel_10_11_25.json"
+import PHOSPHATEdata from "../../public/data/Phosphate_10_11_25.json"
 import LITHIUMdata from "../../public/data/Lithium/lithium_ore_aggregated_file.json"
-import GOLDdata from "../../public/data/Gold_complete.json"
-import IRONdata from "../../public/data/Iron_tonne_complete_1913_2019_british_geological_survey.json"
-import SILVERdata from "../../public/data/Silver_Complete.json"
+
+import IRONdata from "../../public/data/Iron_checked_10_11_25.json"
+import SILVERdata from "../../public/data/Silver_complete_10_11_25.json"
 
 
 import { MineralConfig } from "./types";
