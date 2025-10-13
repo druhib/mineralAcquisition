@@ -11,7 +11,6 @@ import { Route, Routes } from "react-router";
 export default function App(){
   return(
     <div className = "App">
-      
       <Navbar />
       <Routes>
         <Route path = "/" element = {<div> Home Page </div>} />
@@ -20,8 +19,6 @@ export default function App(){
         <Route path = "/casestudies" element = {<div> Case Studies </div>}/>
         <Route path = "/contacts" element = {<div> Contacts Page </div>}/>
       </Routes>
-    
-      
     </div>
   )
 }

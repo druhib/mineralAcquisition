@@ -9,7 +9,6 @@ import type { SliderSingleProps } from 'antd';
 interface MapProps {
   countries: any; 
   map_data: any;  
-  colors: string[];
 }
 
 
@@ -31,35 +30,31 @@ const mapStyle = {
     }
 
 
-function getColor(d: any, colors: string[]) {
-  // if (d === null || d === undefined) return '#6a6f6bff';
+function getColor(d: any) {
   const value = Number(d);
-  return value > 500000000 ? colors[0] :
-         value > 80000000  ? colors[1] :
-         value > 20000000   ? colors[2] :
-         value > 1000000  ? colors[3] :
-         value > 500000   ? colors[4] :
-         value > 100000   ? colors[5] :
-         value > 50000  ? colors[6] :
-         value > 10000   ? colors[7] :
-         value > 5000   ? colors[8] :
-         value > 100   ?  colors[9]:
-         value > 0      ? colors[10] :
-         value === 0    ? colors[11] :
-                      '#ffffffff';
+  return value > 500000000 ? '#010903ff' :
+         value > 80000000  ?  '#4d061b':
+         value > 20000000  ? '#9a0b28' :
+         value > 1000000  ? '#d30202' :
+         value > 500000   ?'#ff4721' :
+         value > 100000   ? '#fd8d3c' :
+         value > 50000  ? '#fdd83c' :
+         value > 10000   ? '#e8bf44' :
+         value > 5000   ? '#fdd83c' :
+         value > 100   ? '#f7e285':
+         value >= 0    ? '#fefaa1':
+                         '#72b1de';
 }
 
-function style(feature: any, data: Record<string, any>, colors: string[]) {
+function style(feature: any, data: Record<string, any>) {
 
 
     const iso3 = feature.properties.ISO_A3; 
     const mineralValue = Number(data[iso3]);
-    //console.log("Styling feature:", feature.properties.ADMIN, "ISO3:", iso3, "Value:", mineralValue);
-  
-    // console.log("styled data: ", data)
+ 
 
     return {
-    fillColor: getColor(mineralValue, colors),
+    fillColor: getColor(mineralValue),
     weight: .6,
     opacity: 0.7,
     color: 'black',
@@ -101,18 +96,9 @@ const marks: SliderSingleProps['marks'] = { // help with scale
   2023: '2023'
 };
   
-// };
 
+const Map : React.FC<MapProps> = ({ countries, map_data}) => { 
 
-// container with countries 
-
-//export const dataConfig : Record< string,MineralConfig> = {
-// const Map: React.FC<MapProps> = ({ countries, map_data }) => { 
-//const Map: React.FC<MapProps> = ({ countries, map_data, colors }) => { 
-const Map : React.FC<MapProps> = ({ countries, map_data , colors}) => { 
-
-  // console.log("data", map_data); 
-  // console.log("set colors", colors)
 
   
   const YearDataMin_Max = map_data ? getYears(map_data) : [1493,2023];
@@ -144,11 +130,11 @@ function onEachCountry(data: Record<string, any>) {
         const name = country.properties.ADMIN;
         const iso3 = country.properties.ISO_A3;
         // data point displayed is one behind what is need UGH 
-        //console.log("loaded" ,data)
+        console.log("loaded" ,data)
         //const dataPoint = Number(data[iso3]) ? data : "No data";
         // console.log(layer)
         //console.log(`Country: ${name}, ISO3: ${iso3}, Value: ${mineralValue}`);
-        layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> `);
+        layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> Data: ${data[iso3] ? data[iso3] : "No data"}`);
     };
 }
 
@@ -191,7 +177,7 @@ function onEachCountry(data: Record<string, any>) {
           <GeoJSON 
             key ={currentYear}
             data={countries}
-            style={(feature) => style(feature, Mineraldata, colors)}
+            style={(feature) => style(feature, Mineraldata)}
             onEachFeature={onEachCountry(Mineraldata)} />
           
         </MapContainer>

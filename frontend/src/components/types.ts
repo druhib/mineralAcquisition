@@ -1,15 +1,15 @@
-interface MapProps {
-  countries: any; // Replace 'any' with the actual GeoJSON type if available
-  map_data: any;  // Replace 'any' with the actual data type if available
-  colors: string[];
-}
+// interface MapProps {
+//   countries: any; // Replace 'any' with the actual GeoJSON type if available
+//   map_data: any;  // Replace 'any' with the actual data type if available
+
+// }
 
 
 
 export interface MineralConfig {
     label: string 
     data :any 
-    colors: string[]
+
 }
 
 // export type DatasetKey = 'BAUXITE' | 'COBALT' | 'COPPER' | 'MANGANESE' | 'MONAZITE' | 'NICKEL' | 'PHOSPHATE';

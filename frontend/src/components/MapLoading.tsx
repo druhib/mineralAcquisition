@@ -8,8 +8,8 @@ import { dataConfig } from './dataConfig';
 const generateLegendData = (colordata: string[]) => {
 
 const mineralRanges = [
-      "+500mil", 
-      "500mil - 80mil",  // always black 
+      "+500mil",  // darkest red
+      "500mil - 80mil", 
       "20mil - 1mil",
       "1mil - 500k",
       "500k - 100k",
@@ -18,7 +18,7 @@ const mineralRanges = [
       "10k - 5k",
       "5k - 100", 
       "100 - 0",
-      '0', // always green 
+      'no data reported' //blue
      
     ];
 
@@ -37,7 +37,7 @@ const MapLoading = () => {
     
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [colordata, setColors] = useState<string[]>([]); 
+    const colordata = ['#010903ff','#4d061b',  '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
 
     const handleRadioChange = (e: any) => {
      setSelectedDataset(e.target.value);
@@ -58,11 +58,9 @@ const MapLoading = () => {
             try {
               const config = dataConfig[selectedDataset];
               if (config && config.data) {
-                console.log(config.data)
-                // If you have static imports in config, use them directly
+                // console.log(config.data)
                 setData(config.data);
-                setColors(config.colors)
-                console.log("Colors set to: ", config.colors)
+              
               } else {
                 console.error('No data configuration found for:', selectedDataset);
                 setData(null);
@@ -103,7 +101,6 @@ const MapLoading = () => {
           <Map 
             countries={countries} 
             map_data={data}
-            colors={colordata}
           />
 
           <div id="legend" style ={{ 
