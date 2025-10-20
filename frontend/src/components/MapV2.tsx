@@ -3,6 +3,7 @@ import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Slider } from 'antd';
 import type { SliderSingleProps } from 'antd';
+import { PlayCircleFilled } from '@ant-design/icons';
 
 
 
@@ -13,7 +14,7 @@ interface MapProps {
 
 
 
-function getYears(map_data: Record<string, any>) {
+function getYearsMinMax(map_data: Record<string, any>) {
   // extracts years from first data key which should be the same all all tables 
     const yearKeys = Object.keys(map_data[0].Years);
     const  min_max = [yearKeys[0], yearKeys[yearKeys.length - 1]]
@@ -22,6 +23,15 @@ function getYears(map_data: Record<string, any>) {
 
   
 }
+
+
+function getYears(map_data: Record<string, any>) {
+  // extracts years from first data key which should be the same all all tables 
+    const yearKeys = Object.keys(map_data[0].Years);
+    
+  return  yearKeys; 
+} 
+  
 
 const mapStyle = {
         height: '37rem',
@@ -96,41 +106,12 @@ const marks: SliderSingleProps['marks'] = { // help with scale
   2023: '2023'
 };
   
-
-const Map : React.FC<MapProps> = ({ countries, map_data}) => { 
-
-
-  
-  const YearDataMin_Max = map_data ? getYears(map_data) : [1493,2023];
-  const [currentYear, setCurrentYear] = useState( 1493 ) // set initial year to ? 
-
-
-  const [Mineraldata, setMineralData] = useState({});
-  // console.log("set colors", colors); 
-  console.log("YearDataMin_Max: ", YearDataMin_Max);
-
-  // // Update data lookup when year changes
-  useEffect(() => {
-    if (map_data && currentYear) {
-      console.log("Updating data lookup for year:", currentYear);
-      const updatedMineralData = MineralData(map_data, currentYear);
-      setMineralData(updatedMineralData);
-     
-      // console.log("Updated mineral data:", updatedMineralData);
-      // console.log(YearDataMin_Max)
-      
-
-    }
-  }, [currentYear, map_data]);
-
-  // console.log("Data for current year:", );
-
 function onEachCountry(data: Record<string, any>) {
     return (country: any , layer: any) => {
         const name = country.properties.ADMIN;
         const iso3 = country.properties.ISO_A3;
         // data point displayed is one behind what is need UGH 
-        console.log("loaded" ,data)
+        // console.log("loaded" ,data)
         //const dataPoint = Number(data[iso3]) ? data : "No data";
         // console.log(layer)
         //console.log(`Country: ${name}, ISO3: ${iso3}, Value: ${mineralValue}`);
@@ -138,8 +119,64 @@ function onEachCountry(data: Record<string, any>) {
     };
 }
 
+const Map : React.FC<MapProps> = ({ countries, map_data}) => { 
+
+  // console.log("Map data received:", map_data);  
+  
+  const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2023];
+  const [currentYear, setCurrentYear] = useState(1493) // set initial year to ? 
+
+  //timer function 
+  const listOfYears = map_data ? getYears(map_data) : [];
+  const [count, setCount] = useState(0);
+  const [startTimer,setStartTimer] = useState(false)
+  const [Mineraldata, setMineralData] = useState({});
+ 
+
+
+  // // Update data of mineral when lookup when year changes
+  useEffect(() => {
+    if (map_data && currentYear) {
+      console.log("Updating data lookup for year:", currentYear);
+      const updatedMineralData = MineralData(map_data, currentYear);
+      setMineralData(updatedMineralData);
+    }
+  }, [currentYear, map_data]);
+
+  useEffect(() => {
+      // console.log("Timer started", startTimer);
+     
+      if (startTimer) {
+          
+          const timerId = setInterval(() => {
+              setCount((prev) => {
+              // Check if we've reached the end of the years array
+              if (prev >= listOfYears.length - 1) {
+                  // Stop the timer and reset count to 0
+                  console.log('Timer ended');
+                  setStartTimer(false);
+                  return 0;
+              }
+              setCurrentYear(Number(listOfYears[prev + 1]));
+              // console.log("Timer tick", listOfYears[prev + 1]);
+              return prev + 1;
+              });
+          }, 1500)
+
+        // Cleanup when the component unmounts
+        return () => {
+            clearInterval(timerId);
+    };;
+        
+  }}, [startTimer, listOfYears.length]);
+
+  const handlePlayClick = () => {
+    setStartTimer(true);
+  };
+
+
   const handleSliderChange = (sliderValue: number) => {
-    // console.log(sliderValue)
+    console.log(sliderValue)
     if (sliderValue  >= 1913){
       setCurrentYear(sliderValue)
 
@@ -163,12 +200,12 @@ function onEachCountry(data: Record<string, any>) {
   };
   
 
-
     return ( 
       <div>
         <div style={{ textAlign: 'center', marginBottom: '1rem', fontSize: '1.5rem', fontWeight: 'bold' }}>
           {currentYear} Map 
       </div>
+      <div style={{ display: 'block', alignItems: 'right', gap: '1rem' }}> 
       
         <MapContainer
           style={mapStyle}
@@ -181,10 +218,28 @@ function onEachCountry(data: Record<string, any>) {
             onEachFeature={onEachCountry(Mineraldata)} />
           
         </MapContainer>
-       {/* change slider to black out what is before it  */}
-        <Slider min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
-
        
+        </div>
+        
+       <div style = {{display: 'inline'}}>
+          {/* this may have bugs please check  */}
+          {startTimer && (
+            <Slider
+              min={1493}
+              max={2023}
+              step={1}
+              defaultValue={1493}
+              marks={marks}
+              onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)}
+              value={typeof currentYear === 'number' ? currentYear : 1493} // i think this shoulf always be true so not sure why were are checking 
+            />
+          )}
+          {!startTimer && (
+          <Slider min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
+          )}
+          <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />
+
+        </div>
       </div>
       
       

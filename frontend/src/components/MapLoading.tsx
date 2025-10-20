@@ -38,7 +38,7 @@ const MapLoading = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const colordata = ['#010903ff','#4d061b',  '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
-
+    
     const handleRadioChange = (e: any) => {
      setSelectedDataset(e.target.value);
   };
@@ -60,6 +60,7 @@ const MapLoading = () => {
               if (config && config.data) {
                 // console.log(config.data)
                 setData(config.data);
+      
               
               } else {
                 console.error('No data configuration found for:', selectedDataset);
@@ -107,9 +108,10 @@ const MapLoading = () => {
             position: 'relative', 
             top: '7.5rem', 
             left:'0.5rem', 
+            font: 'Inter'
             }}>
-            <h3>Map Legend - {selectedDataset} tonnes</h3>
-            <ul style={{ listStyleType: 'none', paddingLeft: 10 }}>
+            <h3>Map Legend <br></br>{selectedDataset} tonnes</h3>
+            <ul style={{ listStyleType: 'none', paddingLeft: 10, font: 'Inter', fontSize: "15px"}}>
               {generateLegendData(colordata).map((item, index) => (
 
                 <li key={index}>
