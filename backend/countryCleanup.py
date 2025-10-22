@@ -1,8 +1,10 @@
 import pandas as pd
 import json
 
+
+#file is used to check if ISO3 are valid countries in the countries geojsonfile
 file = "./data/countries.json"
-mineralFile = "./data/Silver_tonnes_1913_2019_British_Geological_Survey.csv"
+mineralFile = "./data/lithium/lithium_ore_aggregated_file.csv"
 
 with open(file, 'r') as f:
     data = json.load(f)

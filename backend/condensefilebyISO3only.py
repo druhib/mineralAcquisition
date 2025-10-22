@@ -10,7 +10,7 @@ df1 = pd.read_csv(file)
 group_by_frame = df1.groupby('ISO3').sum(min_count=1)
 print(group_by_frame)
 
-group_by_frame.to_csv('Silver_1493-1900_10_11_25.csv')
+group_by_frame.to_csv('Silver_1493-1900_10_22_25.csv')
 
 
 

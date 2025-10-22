@@ -7,12 +7,12 @@ import GOLDdata from "../../public/data/Gold_complete_10_11_25.json"
 
 import MANGANESEdata from "../../public/data/Manganese_10_11_25.json"
 import MONAZITEdata from "../../public/data/Monazite_checked_10_11_25.json"
-import NICKELdata from "../../public/data/Nickel_10_11_25.json"
+import NICKELdata from "../../public/data/Nickel_tonne_10_22_25.json"
 import PHOSPHATEdata from "../../public/data/Phosphate_10_11_25.json"
-import LITHIUMdata from "../../public/data/Lithium/lithium_ore_aggregated_file.json"
+import LITHIUMdata from "../../public/data/lithium_ore_aggregated_10_22_25.json"
 
 import IRONdata from "../../public/data/Iron_checked_10_11_25.json"
-import SILVERdata from "../../public/data/Silver_complete_10_11_25.json"
+import SILVERdata from "../../public/data/Silver_complete_10_22_25.json"
 
 
 import { MineralConfig } from "./types";
