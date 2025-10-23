@@ -8,7 +8,8 @@
 
 export interface MineralConfig {
     label: string 
-    data :any 
+    //data :any 
+    file_name: string 
 
 }
 

@@ -5,6 +5,7 @@ import Map from "./MapV2";
 import { dataConfig } from './dataConfig';
 
 
+
 const generateLegendData = (colordata: string[]) => {
 
 const mineralRanges = [
@@ -32,7 +33,7 @@ const mineralRanges = [
 const MapLoading = () => {
 
     const [countries, setCountries] = useState([]); 
-    const [selectedDataset, setSelectedDataset] = useState("Mineral");
+    const [selectedDataset, setSelectedDataset] = useState("false");
    
     
     const [data, setData] = useState(null);
@@ -53,23 +54,30 @@ const MapLoading = () => {
 
         useEffect(() => {
           const loadData = async () => {
-            if (!selectedDataset || selectedDataset === "false") return;
+            if (!selectedDataset || selectedDataset === "false") return; // does this make sense? 
             setLoading(true);
             try {
               const config = dataConfig[selectedDataset];
-              if (config && config.data) {
-                // console.log(config.data)
-                setData(config.data);
-      
               
+              if (config && config.file_name) {
+             
+                fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/' + config.file_name, 
+                {       method: 'GET',  
+                        headers: {'Content-Type': 'application/json',}    })    
+                        .then(response => response.json())  
+                        .then(data => { setData(data);
+                        console.log("fetched data:", data);    
+
+                 })    
+                 .catch(error => {  
+                  setData(null);   
+                  console.error('Error fetching data:', error);    });
+      
               } else {
                 console.error('No data configuration found for:', selectedDataset);
                 setData(null);
               }
-            } catch (error) {
-              console.error("Error loading data:", error);
-              setData(null);
-            } finally {
+            }finally {
               setLoading(false);
             }
           };
