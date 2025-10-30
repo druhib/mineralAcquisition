@@ -1,8 +1,12 @@
-nav{
+/* nav{
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 80px; 
+   
 
 
 
@@ -43,4 +47,4 @@ nav{
     position: absolute;
     bottom: 4px;
     left: 1.5rem;  
-}
+} */

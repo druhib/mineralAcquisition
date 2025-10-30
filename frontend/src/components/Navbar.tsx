@@ -1,20 +1,21 @@
-import "./NavbarStyles.css"
+
 import { Link } from "react-router-dom";
 
 const  Navbar = () => {
     return (
        
-        <nav className = 'bg-slate-800 shadow -lg flex items-center justify-around py3 px-32 fixed top-0 left-0 w-full'> 
+        // <nav className = 'navbar' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 2rem'}}> 
+        <nav className = 'navbar'>
             <Link to = "/">
-                <span className = 'font-bold text-lg flex items-center gap-3 text-green-40'>
-                     <span className = " font-bold text-2xl text-black" style={{color: 'black'}}>
-                         Mineral Exploitation 
-                     </span>
-                     
+             
+                <span style={{color: 'black'}}>
+                    Mineral Exploitation 
                 </span>
-
+                
+    
             </Link> 
-            <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingLeft: '1.5rem'}}>
+            <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingLeft: '1rem'}}>
+             
                 <Link to = "/" style={{color: 'black',  padding: '1rem' }}> 
                    Home
                </Link>
@@ -37,6 +38,24 @@ const  Navbar = () => {
             </div> 
 
         </nav>
+
+        // <div className="inner">
+
+		// 					<nav className="navbar">
+		// 						<a href="/" className="navbar-brand">
+		// 							Mineral Exploitation
+		// 						</a>
+								
+		// 						<div className="navbar-links">
+		// 							<a href="/">Home</a>
+		// 							<a href="/about">About</a>
+		// 							<a href="/maps">Maps</a>
+		// 							<a href="/casestudies">Case Studies</a>
+		// 							<a href="/contacts">Contacts</a>
+		// 						</div>
+		// 					</nav>
+
+        //                 </div>
     )
 }
 export default Navbar;

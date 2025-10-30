@@ -161,7 +161,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data}) => {
               // console.log("Timer tick", listOfYears[prev + 1]);
               return prev + 1;
               });
-          }, 1500)
+          }, 1250)
 
         // Cleanup when the component unmounts
         return () => {
