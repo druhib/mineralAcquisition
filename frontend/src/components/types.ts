@@ -10,6 +10,7 @@ export interface MineralConfig {
     label: string 
     //data :any 
     file_name: string 
+    year_interval: string
 
 }
 

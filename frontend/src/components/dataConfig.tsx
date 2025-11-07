@@ -1,77 +1,63 @@
-// import { data } from "react-router";
-// import ASMdata from "../../public/data/ASM_Workers.json";
-// import BAUXITEdata from "../../public/data/Bauxite_10_11_25.json";
-// import COBALTdata from "../../public/data/Cobalt_tonne_10_11_25.json";
-// import COPPERdata from "../../public/data/Copper_complete_10_11_25.json"
-// import GOLDdata from "../../public/data/Gold_complete_10_11_25.json"
-
-// import MANGANESEdata from "../../public/data/Manganese_10_11_25.json"
-// import MONAZITEdata from "../../public/data/Monazite_checked_10_11_25.json"
-// import NICKELdata from "../../public/data/Nickel_tonne_10_22_25.json"
-// import PHOSPHATEdata from "../../public/data/Phosphate_10_11_25.json"
-// import LITHIUMdata from "../../public/data/lithium_ore_aggregated_10_22_25.json"
-
-// import IRONdata from "../../public/data/Iron_checked_10_11_25.json"
-// import SILVERdata from "../../public/data/Silver_complete_10_22_25.json"
-
-
 import { MineralConfig } from "./types";
 
 export const dataConfig : Record< string,MineralConfig> = {
 
  
-  BAUXITE:{
+  Bauxite:{
     label: "Bauxite",
     file_name: "Bauxite_10_11_25.json",
+    year_interval: "(1913-2019)"
     
   },
-  // color scale turns blue --> red --> brown 
-  COBALT:{
+  Cobalt:{
     label: "Cobalt",
     file_name: "Cobalt_tonne_10_11_25.json",
+    year_interval: "(1913-2019)"
     
   },
-  COPPER:{
+  Copper:{
     label: "Copper",
     file_name: "Copper_complete_10_11_25.json",
+    year_interval: "(1493-1900) (1913-2019)"
     
   },
-  MANGANESE:{
+  Manganese:{
     label: "Manganese",
-    file_name:"Manganese_10_11_25.json"
-
-    
+    file_name:"Manganese_10_11_25.json",
+    year_interval: "(1913-2019)"
   },
-  MONAZITE:{
-    label: "Monazite",
-    file_name: "Monazite_checked_10_11_25.json"
-    
-  },
-  NICKEL:{
+  Nickel:{
     label: "Nickel",
-    file_name: "Nickel_tonne_10_22_25.json"
+    file_name: "Nickel_tonne_10_22_25.json",
+    year_interval: "(1913-2019)"
   },
-  PHSOPHATE:{
+  Phosphate:{
     label: "Phosphate",
-    file_name: "Phosphate_10_11_25.json"
+    file_name: "Phosphate_11_6_25.json",
+    year_interval: "(1913-2019)"
   }, 
-  LITHIUM:{
+  Lithium:{
     label: "Lithium",
-    file_name: "lithium_ore_aggregated_10_22_25.json"
+    file_name: "lithium_ore_aggregated_10_22_25.json", 
+    year_interval: "(1938-2019)"
   }, 
-  GOLD:{
+  Gold:{
     label: "Gold",
-    file_name: "Gold_complete_10_11_25.json"
+    file_name: "Gold_complete_10_11_25.json",
+    year_interval: "(1493-1900) (1913-2019)"
+    
     }, 
-    IRON:{
-      label: "Iron",
-      file_name:"Iron_checked_10_11_25.json"
-    }, 
-   
-    SILVER: 
-    {
-      label: "Silver",
-      file_name: "Silver_complete_10_22_25.json"
-    }
+  Iron:{
+    label: "Iron",
+    file_name:"Iron_checked_10_11_25.json",
+    year_interval: "(1913-2019)"
+  }, 
+  
+  Silver: 
+  {
+    label: "Silver",
+    file_name: "Silver_complete_10_22_25.json",
+    year_interval: "(1493-1900) (1913-2019)"
+  }
 
 };

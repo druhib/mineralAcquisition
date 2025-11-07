@@ -5,11 +5,11 @@ import Map from "./MapV2";
 import { dataConfig } from './dataConfig';
 
 
-
+// legend numbers
 const generateLegendData = (colordata: string[]) => {
 
 const mineralRanges = [
-      "+500mil",  // darkest red
+      "+500mil",  // black
       "500mil - 80mil", 
       "20mil - 1mil",
       "1mil - 500k",
@@ -23,17 +23,18 @@ const mineralRanges = [
      
     ];
 
-
+    // mapping to data 
     return colordata.slice(0, mineralRanges.length).map((color, index) => ({
       color: color,
       range: mineralRanges[index]
     }));
   };
-    
+
+// loading map 
 const MapLoading = () => {
 
     const [countries, setCountries] = useState([]); 
-    const [selectedDataset, setSelectedDataset] = useState("false");
+    const [selectedDataset, setSelectedDataset] = useState("Mineral");
    
     
     const [data, setData] = useState(null);
@@ -41,84 +42,71 @@ const MapLoading = () => {
     const colordata = ['#010903ff','#4d061b',  '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
     
     const handleRadioChange = (e: any) => {
-     setSelectedDataset(e.target.value);
+     setSelectedDataset(e.target.value); 
   };
 
-     
+    //reading file locally once
     useEffect(() => { 
         const loadCountriesTask = new LoadCountriesTask();
         loadCountriesTask.load(setCountries);
 
         
-        }, []);
+    }, []);
+    // set data dynamically based on selected data key
+    useEffect(() => {
+      const loadData = async () => {
+        if (!selectedDataset || selectedDataset === "false") return; // does this make sense? 
+        setLoading(true);
+        try {
+          const config = dataConfig[selectedDataset];
+          
+          if (config && config.file_name) {
+          
+            fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/' + config.file_name, 
+            {       method: 'GET',  
+                    headers: {'Content-Type': 'application/json',}    })    
+                    .then(response => response.json())  
+                    .then(data => { setData(data);
+                    console.log("fetched data:", data);    
 
-        useEffect(() => {
-          const loadData = async () => {
-            if (!selectedDataset || selectedDataset === "false") return; // does this make sense? 
-            setLoading(true);
-            try {
-              const config = dataConfig[selectedDataset];
-              
-              if (config && config.file_name) {
-             
-                fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/' + config.file_name, 
-                {       method: 'GET',  
-                        headers: {'Content-Type': 'application/json',}    })    
-                        .then(response => response.json())  
-                        .then(data => { setData(data);
-                        console.log("fetched data:", data);    
-
-                 })    
-                 .catch(error => {  
-                  setData(null);   
-                  console.error('Error fetching data:', error);    });
-      
-              } else {
-                console.error('No data configuration found for:', selectedDataset);
-                setData(null);
-              }
-            }finally {
-              setLoading(false);
-            }
-          };
-          loadData();
-        }, [selectedDataset]);
-
-
- 
-
-
+            })    
+            .catch(error => {  
+            setData(null);   
+            console.error('Error fetching data:', error);    });
+  
+          } else {
+            console.error('No data configuration found for:', selectedDataset);
+            setData(null);
+          }
+        }finally {
+          setLoading(false);
+        }
+      };
+      loadData();
+      }, [selectedDataset]);
     
 
     return <div> {countries.length === 0 ? <div>Map</div> :
-        
-      <div>
-        <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
-            <Radio.Group
+     
+      <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-2.5rem"}}>
+       {/* buttons  for each mineral */}
+        <div style ={{display: "flex", flexDirection:"column", gap:"3rem", textAlign:"left", marginTop: "9rem"}}>
+          <Radio.Group
                 value={selectedDataset} 
                 onChange={handleRadioChange}
             >
-              {Object.keys(dataConfig).map((key) => (
-              <div  style = {{display: 'flex', alignItems: 'center', justifyContent: 'left' }}> 
-                <Radio key={key} value={key}>
-                  {dataConfig[key].label}
+            {Object.keys(dataConfig).map((key) => (
+              <div  style = {{display: 'flex', alignItems: 'center', justifyContent: 'left',  }}> 
+                <Radio key={key} value={key} style = {{fontSize: "14px"}}>  
+                  {dataConfig[key].label} <span style = {{fontSize: "9px"}}> {dataConfig[key].year_interval}  </span>  
                 </Radio>
               </div>
-              ))}
-            </Radio.Group>
+            ))}
+          </Radio.Group>
         
-          <Map 
-            countries={countries} 
-            map_data={data}
-          />
-
-          <div id="legend" style ={{ 
-            position: 'relative', 
-            top: '7.5rem', 
-            left:'0.5rem', 
-            font: 'Inter'
-            }}>
-            <h3>Map Legend <br></br>{selectedDataset} tonnes</h3>
+          {/* legend  */}
+          <div id="legend" style ={{ font: 'Inter',}}>
+            <h3><span style = {{ fontSize:"small"}}> Map Legend (tonnes)</span></h3>
             <ul style={{ listStyleType: 'none', paddingLeft: 10, font: 'Inter', fontSize: "15px"}}>
               {generateLegendData(colordata).map((item, index) => (
 
@@ -126,8 +114,8 @@ const MapLoading = () => {
                     <span 
                       style={{
                         display: 'inline-block',
-                        width: '10px',
-                        height: '10px',
+                        width: '15px',
+                        height: '15px',
                         backgroundColor: item.color,
                         marginRight: '1rem',
                         verticalAlign: 'middle'
@@ -135,13 +123,18 @@ const MapLoading = () => {
                     ></span>
                     {item.range}
                   </li>
-
               ))}
-
             </ul>
-        </div>
-      </div>        
-    </div>
+          </div>
+       </div>  
+       {/* map conatiner */}
+        <Map 
+            countries={countries} 
+            map_data={data}
+            mineral_name = {selectedDataset}
+        />
+      </div>     
+     
   }
 
         
