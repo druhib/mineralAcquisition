@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
   /* padding: changed may need to add back later; */
   padding: 0.5rem;
@@ -35,21 +35,15 @@
 .leaflet-interactive {
     fill-opacity: 0.7 !important;
 }
-/* 
-.legend {
-  text-align: left;
-  line-height: 20rem;
-  color: #555;
-} */
 
 
-
+/* still using this format for legend */
 #legend {
   width: 14rem ;
-  height: 22rem; 
+  height: 18rem; 
   padding-left: 1rem;
   background-color: #f0f0f0;
-  overflow-y: auto; /* Enable scrolling if legend content is long */
+  /* overflow-y: auto; Enable scrolling if legend content is long */
 }
 
 #legend h3 {
