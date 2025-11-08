@@ -80,7 +80,7 @@ function style(feature: any, data: Record<string, any>) {
 // returns values for each country 
 function onEachCountry(feature: any, data: Record<string, any>, layer: any) {
 
-  console.log("why is data here diff", data)
+  // console.log("why is data here diff", data)
 
     const name = feature.properties.ADMIN
     const iso3 = feature.properties.ISO_A3; 
@@ -122,7 +122,7 @@ const marks: SliderSingleProps['marks'] = { // help with scale
   1960: '1960',
   1980: '1980',
   2000: '2000',
-  2019: '2019'
+  2023: '2023'
 };
   
 //map function 
@@ -130,7 +130,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
 
   //console.log("mineral selected", mineral_name)
 
-  const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2019];
+  const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2023];
   const [currentYear, setCurrentYear] = useState(0) // set initial year to ? 
   const [titleYear, setTitleYear] = useState(0)
 
@@ -156,8 +156,10 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
               return 0;
           }
         setCurrentYear(Number(listOfYears[prev + 1]));
+        setTitleYear(Number(listOfYears[prev + 1]))
         // console.log("Timer tick", listOfYears[prev + 1]);
         return prev + 1;
+
         });
       }, 1250)
 
@@ -178,6 +180,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
 
   // handles slider values for data 
   const handleSliderChange = (sliderValue: number) => {
+    console.log(sliderValue)
     setTitleYear(sliderValue)
  
     if (sliderValue  >= 1913){
@@ -218,15 +221,16 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
           <div>  
               <Slider
               min={1493}
-              max={2019}
+              max={2023}
               step={1}
-              defaultValue={0}
+              defaultValue={1493}
+              value = {titleYear}
               marks={marks}
               onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)}
-              value={typeof currentYear === 'number' ? currentYear : 0} // i think this shoulf always be true so not sure why were are checking 
+              //value={typeof currentYear === 'number' ? currentYear : 0} // i think this shoulf always be true so not sure why were are checking 
               styles = {{ track: { backgroundColor: 'black'}}}
               />
-            <div style ={{position:"relative", left:"-5rem",marginTop: "-2.5rem" }}>  
+            <div style ={{position:"relative", left:"-5rem",marginTop: "-1.5rem" }}>  
                 <Popover content="Stop Timeline" trigger="hover"> 
                   <CloseCircleFilled style={{ alignContent: 'left',fontSize: '2rem', color: '#08c'}} onClick={handlePauseClick} />
               </Popover>
@@ -240,8 +244,8 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
             
             <div >
               
-              <Slider min ={1493} max= {2019} step={1}  defaultValue={0} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
-          <div style = {{position:"relative", left:"-5rem",marginTop: "-2.5rem"}}>
+              <Slider value = {titleYear} min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
+          <div style = {{position:"relative", left:"-5rem",marginTop: "-1.5rem"}}>
           <Popover content="Play to flip through the Years" trigger="hover"> 
             <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />
           </Popover>

@@ -88,7 +88,7 @@ const MapLoading = () => {
 
     return <div> {countries.length === 0 ? <div>Map</div> :
      
-      <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-2.5rem"}}>
+      <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-3rem"}}>
        {/* buttons  for each mineral */}
         <div style ={{display: "flex", flexDirection:"column", gap:"3rem", textAlign:"left", marginTop: "9rem"}}>
           <Radio.Group

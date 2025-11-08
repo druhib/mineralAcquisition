@@ -3158,6 +3158,7 @@ input, select, textarea {
 
 	#main {
 		padding: 0em 0 6em 0 ;
+		
 	}
 
 		@media screen and (max-width: 736px) {
@@ -3363,6 +3364,9 @@ input, select, textarea {
 #rectangular-header-line1 {
     background-color: #98792ca6;
 }
+#rectangular-header-line2 {
+    background-color:  #cf72a2ca;
+}
 
 .info-box {
     
@@ -3377,6 +3381,9 @@ input, select, textarea {
 #info-box1{
 	background-color: #98792ca6;
 }
+#info-box2{
+	background-color: #cf72a2ca;
+}
 
 .info-box h1 {
     margin: 0;  /* Remove default h1 margins */
@@ -3389,7 +3396,7 @@ input, select, textarea {
         }
 
 .column {
-	width: 50%;
+	width: auto;
 	/* Each column takes up 50% of the container width */
 }
 
@@ -3401,21 +3408,24 @@ details > summary {
   background-color: #000000d1;
   font: bold 24px Inter;
   align-items: center;
-  justify-content: left;
+  /* justify-content: left; */
   border-radius: 10px;
+  border-color: #000000;
   cursor: pointer;
   text-indent: 3rem; 
   margin:auto;
   padding-top: 2rem;
+  
    
  
   
 }
+details > 
 
 
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #dcdcdc;
+  /* background-color: #dcdcdc; */
 
 }
 
@@ -3445,4 +3455,22 @@ details > p {
 	padding: 0.75rem;
 	text-decoration: none;
 	
+}
+
+
+.zoom {
+  
+
+  transition: transform .2s; /* Animation */
+
+
+}
+
+.zoom:hover {
+
+  transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  /* align-items: center;
+  justify-content: center;
+  object-fit: cover; */
+  /* cursor: zoom-in; */
 }

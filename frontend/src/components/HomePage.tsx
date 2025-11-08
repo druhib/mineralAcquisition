@@ -47,7 +47,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Copper_vvoe_AdobeStock_102491386.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
-									<a href="generic.html">
+									<a href="copper.html">
 										<h2>Copper</h2>
 										<div className="content">
 											{/* <p>Native Copper from United Kingdom </p> */}
@@ -83,7 +83,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Lithium_Henri Koskinen_AdobeStock_257006124.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
-									<a href="generic.html">
+									<a href="lithium.html">
 										<h2>Lithium</h2>
 										<div className="content">
 											{/* <p>Spudumene from Madagascar</p> */}

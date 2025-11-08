@@ -29,7 +29,7 @@ export const dataConfig : Record< string,MineralConfig> = {
   Nickel:{
     label: "Nickel",
     file_name: "Nickel_tonne_10_22_25.json",
-    year_interval: "(1913-2019)"
+    year_interval: "(1913-2023)"
   },
   Phosphate:{
     label: "Phosphate",
