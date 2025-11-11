@@ -88,7 +88,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Lithium_Henri Koskinen_AdobeStock_257006124.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
-									<a href="lithium.html">
+									<a href="case_studies/lithium.html">
 										<h2>Lithium</h2>
 										<div className="content">
 											{/* <p>Spudumene from Madagascar</p> */}
