@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router";
+import MapLoading from "./MapLoading.tsx";
 
 const HomePage = () => {
     return (
@@ -15,6 +16,10 @@ const HomePage = () => {
             
                               
 							</header>
+
+							<div >
+								<p style ={{ fontSize:"x-large",marginBottom:"0rem"}}> click a rock to learn more! scroll down to interact with maps!</p>
+							</div>
 							
 							<div className="tiles" style = {{ alignItems: 'center'}}>
 								<article className="style1">
@@ -23,8 +28,8 @@ const HomePage = () => {
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
 									
-									<a href="elements.html">
-										<h2>Buaxite</h2>
+									<a href="bauxite.html">
+										<h2>Bauxite</h2>
 										<div className="content">
 											<p> (aluminum ore) </p>
 										</div>
@@ -35,7 +40,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Cobalt_Valerie Garner_AdobeStock_51615139.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
-									<a href="generic.html">
+									<a href="cobalt.html">
 										<h2>Cobalt</h2>
 										<div className="content">
 											{/* <p>Cobalite from Canada</p> */}
@@ -59,7 +64,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Gold_Elzbieta Sekowska_AdobeStock_25400183.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
-									<a href="generic.html">
+									<a href="gold.html">
 										<h2>Gold</h2>
 										<div className="content">
 											{/* <p>Carbon Leader Gold Ore from South Africa</p> */}
@@ -71,7 +76,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Iron(hematite)_michal812_AdobeStock_25214049.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
-									<a href="generic.html">
+									<a href="iron.html">
 										<h2>Iron</h2>
 										<div className="content">
 											{/* <p>Hermatite from Madagascar</p> */}
@@ -95,7 +100,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Manganese_Okan_AdobeStock_522571038.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
-									<a href="generic.html">
+									<a href="manganese.html">
 										<h2>Manganese</h2>
 										<div className="content">
 											{/* <p>Pyrolusite from Brazil</p> */}
@@ -107,7 +112,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Nickel_Agnieszka_AdobeStock_371622481.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
-									<a href="generic.html">
+									<a href="nickel.html">
 										<h2>Nickel</h2>
 										<div className="content">
 											{/* <p>Pentlandite from Canada</p> */}
@@ -119,7 +124,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/PhosphateRock_Apatite_Ekaterina_AdobeStock_760534276.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
-									<a href="generic.html">
+									<a href="phosphorous.html">
 										<h2>Phosphorous</h2>
 										<div className="content">
 											{/* <p>Apatite from Madagascar</p> */}
@@ -131,7 +136,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Silver_bambambu_AdobeStock_189623313.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
-									<a href="generic.html">
+									<a href="silver.html">
 										<h2>Silver</h2>
 										<div className="content">
 											{/* <p>Native Silver from Czech Republic</p> */}
@@ -140,6 +145,18 @@ const HomePage = () => {
 								</article>
 								
 							</div>
+
+	
+							{/* <div >
+								<p style ={{fontWeight:"bold", fontSize:"x-large",marginBottom:"0rem"}}> interact with the map: </p>
+							</div> */}
+
+							<div style = {{display:"flex", alignContent:"center", justifyContent:"center"}}>
+								
+								<MapLoading /> 
+							</div>
+
+							
 					
 						</div>
 					</div>

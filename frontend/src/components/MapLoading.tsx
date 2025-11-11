@@ -9,16 +9,18 @@ import { dataConfig } from './dataConfig';
 const generateLegendData = (colordata: string[]) => {
 
 const mineralRanges = [
+
       "+500mil",  // black
-      "500mil - 80mil", 
-      "20mil - 1mil",
-      "1mil - 500k",
-      "500k - 100k",
-      "100k - 50k",
-      "50k - 10k",
-      "10k - 5k",
-      "5k - 100", 
-      "100 - 0",
+      "80mil -500mil",
+      "20mil - 80mil", 
+      "1mil - 20mil ",
+      "500k - 1mil",
+      "100k - 500k",
+      "50k - 100k",
+      "10k - 50k",
+      "5k - 10k",
+      "100 -5k", 
+      "0 - 100",
       'no data reported' //blue
      
     ];
@@ -39,7 +41,7 @@ const MapLoading = () => {
     
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
-    const colordata = ['#010903ff','#4d061b',  '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
+    const colordata = ['#010903ff','#4d061b', '#892c2cff' , '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
     
     const handleRadioChange = (e: any) => {
      setSelectedDataset(e.target.value); 
@@ -47,9 +49,19 @@ const MapLoading = () => {
 
     //reading file locally once
     useEffect(() => { 
-        const loadCountriesTask = new LoadCountriesTask();
-        loadCountriesTask.load(setCountries);
 
+      fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/countries.json', 
+            {       method: 'GET',  
+                    headers: {'Content-Type': 'application/json',}    })    
+                    .then(response => response.json())  
+                    .then(countriesdata => {setCountries(countriesdata);
+                    console.log("fetched countries:", countriesdata);    
+
+            })    
+            .catch(error => {  
+            setCountries([]);   
+            console.error('Error fetching data:', error);    
+          });
         
     }, []);
     // set data dynamically based on selected data key
@@ -67,7 +79,7 @@ const MapLoading = () => {
                     headers: {'Content-Type': 'application/json',}    })    
                     .then(response => response.json())  
                     .then(data => { setData(data);
-                    console.log("fetched data:", data);    
+                    console.log("fetched data", data)
 
             })    
             .catch(error => {  
@@ -75,7 +87,7 @@ const MapLoading = () => {
             console.error('Error fetching data:', error);    });
   
           } else {
-            console.error('No data configuration found for:', selectedDataset);
+            console.log('No data configuration found for:', selectedDataset);
             setData(null);
           }
         }finally {
@@ -90,7 +102,7 @@ const MapLoading = () => {
      
       <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-3rem"}}>
        {/* buttons  for each mineral */}
-        <div style ={{display: "flex", flexDirection:"column", gap:"3rem", textAlign:"left", marginTop: "9rem"}}>
+        <div style ={{display: "flex", flexDirection:"column", gap:"2rem", textAlign:"left", marginTop: "9rem"}}>
           <Radio.Group
                 value={selectedDataset} 
                 onChange={handleRadioChange}
@@ -129,9 +141,11 @@ const MapLoading = () => {
        </div>  
        {/* map conatiner */}
         <Map 
+            key ={selectedDataset}
             countries={countries} 
             map_data={data}
             mineral_name = {selectedDataset}
+            
         />
       </div>     
      

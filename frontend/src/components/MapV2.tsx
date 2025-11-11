@@ -87,7 +87,7 @@ function onEachCountry(feature: any, data: Record<string, any>, layer: any) {
     const mineralValue = Number(data[iso3]);
 
  
-    layer.bindPopup(`Country: ${name}<br> ISO3: ${iso3} <br> Data: ${mineralValue != -1 ? mineralValue : "No data"}`);
+    layer.bindPopup(`Country: ${name} (${iso3}) <br> Tonnage: ${mineralValue != -1 ? mineralValue : "NaN"}`);
     
 
     
@@ -141,6 +141,15 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
   // const [Mineraldata, setMineralData] = useState<{ [key: string]: any }>({})
   const Mineraldata = map_data && currentYear ? MineralData(map_data, currentYear) : {};
 
+// Reset when mineral changes
+  useEffect(() => {
+    const minYear = 0;
+    setCurrentYear(Number(minYear));
+    setTitleYear(Number(minYear));
+    setCount(0);
+    setStartTimer(false);
+  }, [mineral_name, map_data]);
+
 
   // timer used for play button 
   useEffect(() => {
@@ -171,6 +180,15 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
   }}, [startTimer, listOfYears.length]);
 
   const handlePlayClick = () => {
+    const currentIndex = listOfYears.findIndex(year => Number(year) === titleYear);
+    // If found, set count to that index, otherwise start from 0
+    if (currentIndex !== -1) {
+      setCount(currentIndex);
+    } else {
+      setCount(0);
+    }
+
+
     setStartTimer(true);
   };
 
@@ -180,8 +198,18 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
 
   // handles slider values for data 
   const handleSliderChange = (sliderValue: number) => {
-    console.log(sliderValue)
+  console.log(sliderValue)
     setTitleYear(sliderValue)
+
+    // Find the index of this year for when play is clicked again
+    const yearIndex = listOfYears.findIndex(year => {
+      const yearNum = Number(year);
+      return yearNum >= sliderValue;
+    });
+    
+    if (yearIndex !== -1) {
+      setCount(yearIndex);
+    }
  
     if (sliderValue  >= 1913){
       setCurrentYear(sliderValue)
@@ -210,11 +238,12 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
   return ( 
       
     <div >
-      {/* title of map  */}
-      <div style={{ textAlign: 'center',  fontSize: '1.5rem', fontWeight: 'bold', marginTop: "2.5rem"}}>
-        Global Production of <span style ={{textDecoration: 'underline'}}>{mineral_name}</span> in metric tonnes for year <span style ={{textDecoration: 'underline'}}> {titleYear}</span>
+       {/* title of map  */}
+      <div style={{  alignItems:"center", textAlign: 'center',  fontSize: '1.5rem', fontWeight: 'bold', marginTop: "4.5rem"}}>
+        The Global Production of <span style ={{textDecoration: 'underline'}}>{mineral_name}</span> in metric tonnes for year <span style ={{textDecoration: 'underline'}}> {titleYear}</span>
       </div>
       
+     
       <div> 
           {/* timer running  */}
         {startTimer && (
@@ -243,8 +272,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
           {!startTimer && (
             
             <div >
-              
-              <Slider value = {titleYear} min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
+              <Slider value = {titleYear} min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChange={(sliderValue) => handleSliderChange(sliderValue)} />
           <div style = {{position:"relative", left:"-5rem",marginTop: "-1.5rem"}}>
           <Popover content="Play to flip through the Years" trigger="hover"> 
             <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />
