@@ -23,7 +23,7 @@ export default function App(){
               <Route path = "/maps" element = {<MapLoading />}/>
               <Route path = "/casestudies" element = {<div> <a href="generic.html"></a> </div>}/>
               <Route path = "/contacts" element = {<div> Contacts Page </div>}/>
-              <Route path = "/lithium" element = {<div> Contacts Page </div>}/>
+              {/* <Route path = "/lithium" element = {<div> Contacts Page </div>}/> */}
             </Routes>
 
            
