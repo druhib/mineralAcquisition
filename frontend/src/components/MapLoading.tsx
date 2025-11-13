@@ -100,7 +100,7 @@ const MapLoading = () => {
       }, [selectedDataset]);
     
 
-    return <div> {countries.length === 0 ? <div>Map</div> :
+    return <div> {countries.length === 0 ? <div>Map Loading, if it is taking long try to refresh</div> :
      
       <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-3rem"}}>
        {/* buttons  for each mineral */}
