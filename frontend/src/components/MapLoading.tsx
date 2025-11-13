@@ -49,19 +49,21 @@ const MapLoading = () => {
 
     //reading file locally once
     useEffect(() => { 
+      const loadCountriesTask = new LoadCountriesTask();
+      loadCountriesTask.load(setCountries);
 
-      fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/countries.json', 
-            {       method: 'GET',  
-                    headers: {'Content-Type': 'application/json',}    })    
-                    .then(response => response.json())  
-                    .then(countriesdata => {setCountries(countriesdata);
-                    console.log("fetched countries:", countriesdata);    
+      // fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/countries.json', 
+      //       {       method: 'GET',  
+      //               headers: {'Content-Type': 'application/json',}    })    
+      //               .then(response => response.json())  
+      //               .then(countriesdata => {setCountries(countriesdata);
+      //               console.log("fetched countries:", countriesdata);    
 
-            })    
-            .catch(error => {  
-            setCountries([]);   
-            console.error('Error fetching data:', error);    
-          });
+      //       })    
+      //       .catch(error => {  
+      //       setCountries([]);   
+      //       console.error('Error fetching data:', error);    
+      //     });
         
     }, []);
     // set data dynamically based on selected data key
