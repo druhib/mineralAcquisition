@@ -24,7 +24,7 @@ const HomePage = () => {
 							<div className="tiles" style = {{ alignItems: 'center'}}>
 								<article className="style1">
 									<span className="image">
-										<img src="images/rockphotos/Bauxite_siimsepp_AdobeStock_52934386.jpeg" alt="" />
+										<img src="images/rockphotos/BauxiteZoomIn.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
 									
@@ -37,7 +37,7 @@ const HomePage = () => {
 								</article>
 								<article className="style2">
 									<span className="image">
-										<img src="images/rockphotos/Cobalt_Valerie Garner_AdobeStock_51615139.jpeg" alt="" />
+										<img src="images/rockphotos/Cobalt.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
 									<a href="cobalt.html">
@@ -49,7 +49,7 @@ const HomePage = () => {
 								</article>
 								<article className="style3">
 									<span className="image">
-										<img src="images/rockphotos/Copper_vvoe_AdobeStock_102491386.jpeg" alt="" />
+										<img src="images/rockphotos/Copper.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
 									<a href="copper.html">
@@ -61,7 +61,7 @@ const HomePage = () => {
 								</article>
 								<article className="style4">
 									<span className="image">
-										<img src="images/rockphotos/Gold_Elzbieta Sekowska_AdobeStock_25400183.jpeg" alt="" />
+										<img src="images/rockphotos/GoldZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
 									<a href="gold.html">
@@ -73,7 +73,7 @@ const HomePage = () => {
 								</article>
 								<article className="style5">
 									<span className="image">
-										<img src="images/rockphotos/Iron(hematite)_michal812_AdobeStock_25214049.jpeg" alt="" />
+										<img src="images/rockphotos/IronZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
 									<a href="iron.html">
@@ -85,7 +85,7 @@ const HomePage = () => {
 								</article>
 								<article className="style6">
 									<span className="image">
-										<img src="images/rockphotos/Lithium_Henri Koskinen_AdobeStock_257006124.jpeg" alt="" />
+										<img src="images/rockphotos/LithiumZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
 									<a href="case_studies/lithium.html">
@@ -97,7 +97,7 @@ const HomePage = () => {
 								</article>
 								<article className="style2">
 									<span className="image">
-										<img src="images/rockphotos/Manganese_Okan_AdobeStock_522571038.jpeg" alt="" />
+										<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
 									<a href="manganese.html">
@@ -109,7 +109,7 @@ const HomePage = () => {
 								</article>
 								<article className="style1">
 									<span className="image">
-										<img src="images/rockphotos/Nickel_Agnieszka_AdobeStock_371622481.jpeg" alt="" />
+										<img src="images/rockphotos/NickelZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
 									<a href="nickel.html">
@@ -121,7 +121,7 @@ const HomePage = () => {
 								</article>
 								<article className="style5">
 									<span className="image">
-										<img src="images/rockphotos/PhosphateRock_Apatite_Ekaterina_AdobeStock_760534276.png" alt="" />
+										<img src="images/rockphotos/PhosphorusZoomIn.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
 									<a href="phosphorous.html">
@@ -133,7 +133,7 @@ const HomePage = () => {
 								</article>
 								<article className="style6">
 									<span className="image">
-										<img src="images/rockphotos/Silver_bambambu_AdobeStock_189623313.jpeg" alt="" />
+										<img src="images/rockphotos/Silver.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
 									<a href="silver.html">
