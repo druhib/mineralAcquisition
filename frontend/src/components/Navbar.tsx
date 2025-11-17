@@ -20,14 +20,14 @@ const  Navbar = () => {
                    Home
                </Link>
                <Link to = "/about" style={{color: 'black',  padding: '1rem' }}> 
-                   About
+                   Tool Overview
                </Link>
-                <Link to = "/maps" style={{color: 'black',  padding: '1rem' }}>
+                {/* <Link to = "/maps" style={{color: 'black',  padding: '1rem' }}>
                 Maps
-               </Link>
-                <Link to = "/casestudies" style={{color: 'black',  padding: '1rem' }}> 
+               </Link> */}
+                {/* <Link to = "/casestudies" style={{color: 'black',  padding: '1rem' }}> 
                    Case Studies
-               </Link>
+               </Link> */}
                 <Link to = "/contacts" style={{color: 'black',  padding: '1rem' }}> 
                    Contacts
                </Link>

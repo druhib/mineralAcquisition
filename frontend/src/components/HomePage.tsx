@@ -28,7 +28,7 @@ const HomePage = () => {
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
 									
-									<a href="bauxite.html">
+									<a href="case_studies/bauxite.html">
 										<h2>Bauxite</h2>
 										<div className="content">
 											<p> (aluminum ore) </p>
@@ -40,7 +40,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Cobalt.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
-									<a href="cobalt.html">
+									<a href="case_studies/cobalt.html">
 										<h2>Cobalt</h2>
 										<div className="content">
 											{/* <p>Cobalite from Canada</p> */}
@@ -52,7 +52,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Copper.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
-									<a href="copper.html">
+									<a href="case_studies/copper.html">
 										<h2>Copper</h2>
 										<div className="content">
 											{/* <p>Native Copper from United Kingdom </p> */}
@@ -64,7 +64,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/GoldZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
-									<a href="gold.html">
+									<a href="case_studies/gold.html">
 										<h2>Gold</h2>
 										<div className="content">
 											{/* <p>Carbon Leader Gold Ore from South Africa</p> */}
@@ -76,7 +76,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/IronZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
-									<a href="iron.html">
+									<a href="case_studies/iron.html">
 										<h2>Iron</h2>
 										<div className="content">
 											{/* <p>Hermatite from Madagascar</p> */}
@@ -100,7 +100,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
-									<a href="manganese.html">
+									<a href="case_studies/manganese.html">
 										<h2>Manganese</h2>
 										<div className="content">
 											{/* <p>Pyrolusite from Brazil</p> */}
@@ -112,7 +112,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/NickelZoomIn.jpeg" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
-									<a href="nickel.html">
+									<a href="case_studies/nickel.html">
 										<h2>Nickel</h2>
 										<div className="content">
 											{/* <p>Pentlandite from Canada</p> */}
@@ -124,7 +124,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/PhosphorusZoomIn.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
-									<a href="phosphorous.html">
+									<a href="case_studies/phosphorous.html">
 										<h2>Phosphorous</h2>
 										<div className="content">
 											{/* <p>Apatite from Madagascar</p> */}
@@ -136,7 +136,7 @@ const HomePage = () => {
 										<img src="images/rockphotos/Silver.png" alt="" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
-									<a href="silver.html">
+									<a href="case_studies/silver.html">
 										<h2>Silver</h2>
 										<div className="content">
 											{/* <p>Native Silver from Czech Republic</p> */}
