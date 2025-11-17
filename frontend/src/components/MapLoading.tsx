@@ -11,7 +11,7 @@ const generateLegendData = (colordata: string[]) => {
 const mineralRanges = [
 
       "+500mil",  // black
-      "80mil -500mil",
+      "80mil - 500mil",
       "20mil - 80mil", 
       "1mil - 20mil ",
       "500k - 1mil",
@@ -41,7 +41,8 @@ const MapLoading = () => {
     
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
-    const colordata = ['#010903ff','#4d061b', '#892c2cff' , '#9a0b28','#d30202', '#ff4721','#fd8d3c','#e8bf44','#fdd83c','#f7e285','#fefaa1','#72b1de' ]
+    const colordata = ['#170000','#260D00', '#7A0E03' , '#B2001F','#D41700', '#FF4700','#FF8133','#FFB629','#FFDF56','#FFFE73','#FFFFBF',
+      '#72B1DE' ]
     
     const handleRadioChange = (e: any) => {
      setSelectedDataset(e.target.value); 
@@ -104,7 +105,7 @@ const MapLoading = () => {
      
       <div style ={{display: "flex", flexDirection:"row", gap:"1rem", textAlign:"left", marginTop: "-3rem"}}>
        {/* buttons  for each mineral */}
-        <div style ={{display: "flex", flexDirection:"column", gap:"2rem", textAlign:"left", marginTop: "9rem"}}>
+        <div style ={{display: "flex", flexDirection:"column", gap:"2rem", textAlign:"left", marginTop: "11rem"}}>
           <Radio.Group
                 value={selectedDataset} 
                 onChange={handleRadioChange}
