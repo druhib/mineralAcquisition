@@ -80,9 +80,9 @@ input, select, textarea {
 		width: device-width;
 	}
 
-	body {
+	/* body {
 		-ms-overflow-style: scrollbar;
-	}
+	} */
 
 	@media screen and (max-width: 480px) {
 
@@ -3266,6 +3266,9 @@ input, select, textarea {
 #rectangular-header-line2 {
     background-color:  #cf72a2ca;
 }
+#rectangular-header-line3 {
+    background-color:  #e75b15ca;
+}
 
 .info-box {
     
@@ -3282,6 +3285,9 @@ input, select, textarea {
 }
 #info-box2{
 	background-color: #cf72a2ca;
+}
+#info-box3{
+	background-color:  #e75b15ca;
 }
 
 .info-box h1 {
@@ -3372,4 +3378,30 @@ details > p {
   justify-content: center;
   object-fit: cover; */
   /* cursor: zoom-in; */
+}
+
+.frame {
+    overflow-y: auto;
+    /* border: 1px solid black; */
+    height: 3em;
+    width: 10em;
+    line-height: 1em;
+}
+
+.frame::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.frame::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.frame::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.frame::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
 }

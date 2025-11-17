@@ -24,7 +24,7 @@ const HomePage = () => {
 							<div className="tiles" style = {{ alignItems: 'center'}}>
 								<article className="style1">
 									<span className="image">
-										<img src="images/rockphotos/BauxiteZoomIn.png" alt="" />
+										<img src="images/rockphotos/BauxiteZoomIn.png" alt="BauxiteZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
 									
@@ -37,7 +37,7 @@ const HomePage = () => {
 								</article>
 								<article className="style2">
 									<span className="image">
-										<img src="images/rockphotos/Cobalt.png" alt="" />
+										<img src="images/rockphotos/Cobalt.png" alt="CobaltZoomIn Image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
 									<a href="case_studies/cobalt.html">
@@ -49,7 +49,7 @@ const HomePage = () => {
 								</article>
 								<article className="style3">
 									<span className="image">
-										<img src="images/rockphotos/Copper.png" alt="" />
+										<img src="images/rockphotos/Copper.png" alt="CopperZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
 									<a href="case_studies/copper.html">
@@ -61,7 +61,7 @@ const HomePage = () => {
 								</article>
 								<article className="style4">
 									<span className="image">
-										<img src="images/rockphotos/GoldZoomIn.jpeg" alt="" />
+										<img src="images/rockphotos/GoldZoomIn.jpeg" alt="GoldZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
 									<a href="case_studies/gold.html">
@@ -73,7 +73,7 @@ const HomePage = () => {
 								</article>
 								<article className="style5">
 									<span className="image">
-										<img src="images/rockphotos/IronZoomIn.jpeg" alt="" />
+										<img src="images/rockphotos/IronZoomIn.jpeg" alt="IronZoomIn Image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
 									<a href="case_studies/iron.html">
@@ -85,7 +85,7 @@ const HomePage = () => {
 								</article>
 								<article className="style6">
 									<span className="image">
-										<img src="images/rockphotos/LithiumZoomIn.jpeg" alt="" />
+										<img src="images/rockphotos/LithiumZoomIn.jpeg" alt="LithiumZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
 									<a href="case_studies/lithium.html">
@@ -97,7 +97,7 @@ const HomePage = () => {
 								</article>
 								<article className="style2">
 									<span className="image">
-										<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="" />
+										<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="ManganeseZoomIn Image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
 									<a href="case_studies/manganese.html">
@@ -109,7 +109,7 @@ const HomePage = () => {
 								</article>
 								<article className="style1">
 									<span className="image">
-										<img src="images/rockphotos/NickelZoomIn.jpeg" alt="" />
+										<img src="images/rockphotos/NickelZoomIn.jpeg" alt="NickelZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
 									<a href="case_studies/nickel.html">
@@ -121,7 +121,7 @@ const HomePage = () => {
 								</article>
 								<article className="style5">
 									<span className="image">
-										<img src="images/rockphotos/PhosphorusZoomIn.png" alt="" />
+										<img src="images/rockphotos/PhosphorusZoomIn.png" alt="PhosphorusZoomIn image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
 									<a href="case_studies/phosphorous.html">
@@ -133,7 +133,7 @@ const HomePage = () => {
 								</article>
 								<article className="style6">
 									<span className="image">
-										<img src="images/rockphotos/Silver.png" alt="" />
+										<img src="images/rockphotos/Silver.png" alt="SilverZoomIn Image" />
 									</span>
 									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
 									<a href="case_studies/silver.html">
