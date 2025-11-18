@@ -12,7 +12,7 @@ const HomePage = () => {
 							<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'0%'}}>
 
                                 <h1>Where Materials Relevant to Modern Society Come From</h1>
-                                <p>A Historical Global Overview of Mineral Acquisition and Exploitation.</p>
+                                <p>A Historical Global Overview of Mineral Acquisition</p>
             
                               
 							</header>
