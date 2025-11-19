@@ -3255,6 +3255,8 @@ input, select, textarea {
     height: 50px;
 	border-radius: 40px;
 	text-indent: 40px;
+	color: white;
+	display: inline-block;
 	
 	
    
@@ -3268,6 +3270,9 @@ input, select, textarea {
 }
 #rectangular-header-line3 {
     background-color:  #e75b15ca;
+}
+#rectangular-header-line4 {
+    background-color:  #2015e7e3;
 }
 
 .info-box {
@@ -3288,6 +3293,9 @@ input, select, textarea {
 }
 #info-box3{
 	background-color:  #e75b15ca;
+}
+#info-box4{
+	background-color:  #2015e7e3;
 }
 
 .info-box h1 {
@@ -3341,17 +3349,21 @@ details > p {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem 1.75rem;
+	
+
 }
 
 .navbar-main {
 	/* font-size: 1.5rem; */
 	color: black;
 	text-decoration: none;
+	
 }
 
 .navbar-links {
 	display: flex;
 	align-items: center;
+	
 	/* padding: .5rem  */
 }
 
