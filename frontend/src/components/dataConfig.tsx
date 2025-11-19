@@ -18,7 +18,7 @@ export const dataConfig : Record< string,MineralConfig> = {
   Copper:{
     label: "Copper",
     file_name: "Copper_complete_10_11_25.json",
-    year_interval: "(1493-1900) (1913-2019)"
+    year_interval: "(1801-1900)(1913-2019)"
     
   },
   Manganese:{
