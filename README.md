@@ -13,4 +13,10 @@ Data: Production data for this work was acquired from mineral commodity reports 
 
 
 Technical Documentation and Resources: 
---> updating...
+
+
+The website is constructed using open source resources and repositories:
+- CodingWith-Adam covid19-map: https://github.com/CodingWith-Adam/covid19-map 
+- Site templates pages: https://html5up.net/ 
+
+--> more updates soon...
