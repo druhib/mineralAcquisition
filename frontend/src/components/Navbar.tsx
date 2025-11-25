@@ -9,12 +9,12 @@ const  Navbar = () => {
             <Link to = "/">
              
                 <span style={{color: 'black'}}>
-                    Mineral Exploitation 
+                    Mineral Acquisition  
                 </span>
                 
     
             </Link> 
-            <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingLeft: '1rem'}}>
+            <div className="navbar-links" style = {{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingLeft: '1rem'}}>
              
                 <Link to = "/" style={{color: 'black',  padding: '1rem' }}> 
                    Home
@@ -29,7 +29,7 @@ const  Navbar = () => {
                    Case Studies
                </Link> */}
                 <Link to = "/contacts" style={{color: 'black',  padding: '1rem' }}> 
-                   Contacts
+                     Contacts
                </Link>
 
 
