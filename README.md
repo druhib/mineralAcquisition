@@ -17,6 +17,17 @@ Technical Documentation and Resources:
 
 The website is constructed using open source resources and repositories:
 - CodingWith-Adam covid19-map: https://github.com/CodingWith-Adam/covid19-map 
-- Site templates pages: https://html5up.net/ 
+- Site templates pages: https://html5up.net/
+
+Running Code locally: 
+1. download repository: run frontend
+  1. open terminal, change directory to frontend folder :
+  2. cd frontend
+  3. type: npm install
+  4. type: npm build
+  5. type: npm run dev
+    
+note: packages installed in frontend: react-leaflet, antd
+
 
 --> more updates soon...
