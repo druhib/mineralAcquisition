@@ -1,4 +1,4 @@
-# mineralexploitation
+# mineralacquistion
 
 The current website link: https://main.dlxo0816chl0c.amplifyapp.com/
 
