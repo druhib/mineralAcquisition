@@ -15,6 +15,7 @@ const Contacts= () => {
 
 
 						<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'0%'}}>
+							
 								{/* <h1>Where Materials Relevant to Modern Society Come From</h1> */}
 							<h1>Contacts </h1>
 		
