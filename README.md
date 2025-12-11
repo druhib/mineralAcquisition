@@ -23,11 +23,14 @@ Running Code locally:
 1. download repository: run frontend
   1. open terminal, change directory to frontend folder :
   2. cd frontend
-  3. type: npm install
-  4. type: npm build
-  5. type: npm run dev
+  3. type: npm run dev
     
 note: packages installed in frontend: react-leaflet, antd
+
+Windows set up: 
+- install npm / node:
+- using link below fix npm in windows: 
+- https://www.geeksforgeeks.org/node-js/how-to-fix-npm-path-in-windows-8-and-10/ 
 
 
 --> more updates soon...
