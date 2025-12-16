@@ -1,6 +1,6 @@
 # mineral acquistion
 
-The current website link: https://main.dlxo0816chl0c.amplifyapp.com/
+The current website link: https://main.d1u80h390oz588.amplifyapp.com/ (updated link 12/16/25) 
 
 The website is still under development. The chemical process diagrams will be reconstructed to improve visibility of graphics.
 
