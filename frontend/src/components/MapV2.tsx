@@ -204,6 +204,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
     // Find the index of this year for when play is clicked again
     const yearIndex = listOfYears.findIndex(year => {
       const yearNum = Number(year);
+      
       return yearNum >= sliderValue;
     });
     
@@ -214,6 +215,9 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
     if (sliderValue  >= 1913){
       setCurrentYear(sliderValue)
 
+    }
+    else if ((sliderValue  > 1900) && (sliderValue  <= 1912 )){
+      setCurrentYear(0)
     }
     else if((sliderValue  >= 1801) && (sliderValue  <= 1900  )){
       setCurrentYear(1801)
