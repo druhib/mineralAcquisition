@@ -2,7 +2,7 @@ import { Component }  from "react";
 import { createMap, MapApi } from "@foursquare/map-sdk";
 
 import './App.css'
-import MapLoading from './components/MapLoading';
+
 import Navbar from './components/Navbar';
 import { Route, Routes } from "react-router";
 import HomePage from './components/HomePage';
