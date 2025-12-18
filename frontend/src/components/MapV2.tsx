@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { Slider, Popover} from 'antd';
 import type { SliderSingleProps} from 'antd';
 import { PlayCircleFilled, CloseCircleFilled } from '@ant-design/icons';
-import L from 'leaflet';
+
 
 
 
@@ -84,10 +84,13 @@ function onEachCountry(feature: any, data: Record<string, any>, layer: any) {
 
     const name = feature.properties.ADMIN
     const iso3 = feature.properties.ISO_A3; 
-    const mineralValue = Number(data[iso3]);
+    const mineralValue = parseInt(data[iso3]);
+    const formattedValue = mineralValue.toLocaleString();
 
  
-    layer.bindPopup(`Country: ${name} (${iso3}) <br> Tonnage: ${mineralValue != -1 ? mineralValue : "NaN"}`);
+    layer.bindPopup(`Country: ${name} (${iso3}) <br> Tonnage: ${formattedValue != '-1' ? formattedValue : "NaN"}`);
+
+    //${mineralValue != -1 ? mineralValue : "NaN"}
     
 
     

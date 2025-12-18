@@ -21,7 +21,7 @@ const mineralRanges = [
       "5k - 10k",
       "100 -5k", 
       "0 - 100",
-      'no data reported' //blue
+      'no data reported (NaN) ' //blue
      
     ];
 
@@ -53,18 +53,6 @@ const MapLoading = () => {
       const loadCountriesTask = new LoadCountriesTask();
       loadCountriesTask.load(setCountries);
 
-      // fetch('https://mineralexploitationbucket.s3.us-east-1.amazonaws.com/data/countries.json', 
-      //       {       method: 'GET',  
-      //               headers: {'Content-Type': 'application/json',}    })    
-      //               .then(response => response.json())  
-      //               .then(countriesdata => {setCountries(countriesdata);
-      //               console.log("fetched countries:", countriesdata);    
-
-      //       })    
-      //       .catch(error => {  
-      //       setCountries([]);   
-      //       console.error('Error fetching data:', error);    
-      //     });
         
     }, []);
     // set data dynamically based on selected data key
