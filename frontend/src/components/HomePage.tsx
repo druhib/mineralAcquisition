@@ -158,7 +158,7 @@ const HomePage = () => {
 								
 									Click a mineral from the list below and use the timeline to select a year. 
 									On the map, click a country to see the reported mineral tonnage. <br/> 
-									The “Play” button animates the map in which the years change for a mineral commodity. Press the “X” button to stop the animation.
+									The “Play” button animates of the map in which the years change for a mineral commodity. Press the “X” button to stop the animation.
 
 									
 								</p>
@@ -175,19 +175,7 @@ const HomePage = () => {
 								<MapLoading /> 
 							</div>
 
-						{/* </div>  */}
-
-						{/* <div style = {{textAlign: 'left'}}>
-								<p style ={{ fontSize:"small",marginBottom:"0rem"}}> 
-									
-								* Note that one value of tonnage per country is associated for each of the following sets of years: 1493-1600, 1601-1700, 1701-1800, 1801-1900 
-
-									
-
-
-
-								</p>
-							</div> */}
+						
 					
 						</div>
 					</div>
