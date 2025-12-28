@@ -20,7 +20,7 @@ const  Navbar = () => {
                    Home
                </Link>
                <Link to = "/about" style={{color: 'black',  padding: '1rem' }}> 
-                   Tool Overview
+                   About
                </Link>
                 {/* <Link to = "/maps" style={{color: 'black',  padding: '1rem' }}>
                 Maps
@@ -28,6 +28,9 @@ const  Navbar = () => {
                 {/* <Link to = "/casestudies" style={{color: 'black',  padding: '1rem' }}> 
                    Case Studies
                </Link> */}
+                <Link to = "/mining" style={{color: 'black',  padding: '1rem' }}> 
+                   What is Mining?
+               </Link>
                 <Link to = "/contacts" style={{color: 'black',  padding: '1rem' }}> 
                      Contacts
                </Link>

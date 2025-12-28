@@ -10,18 +10,42 @@ const HomePage = () => {
 				{/* <!-- Main --> */}
 					<div id="main">
 						<div className="inner">
-							<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'0%'}}>
+							<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
 
-                                <h1>Where Materials Relevant to Modern Society Come From</h1>
-                                <p>A Historical Global Overview of Mineral Acquisition</p>
-            
+                                <h1>Where Do Materials Come From?</h1>
+    							<p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>A Historical Global Overview of Mineral Acquisition</p>
+							
+								<div style = {{}}>
+
+									<ul style ={{ fontSize:"large", marginBottom:"1rem", textAlign: 'left'}}> 
+										<li>Below is a map that displays global mineral production of select materials.</li>
+										<li>Select one mineral from the list below on the left, then use the timeline to select a year.</li>
+										<li>Click the "Play" button to iterate through the production data for the selected mineral.</li>
+										<li>Press the "X" button to stop the animation.</li>
+										<li>A country can be clicked to view the reported tonnage produced for that year.</li>
+									</ul>
+
+								<p style ={{ fontSize:"large ",marginBottom:"1rem", textAlign: 'left'}}>
+									Please Note: The production of copper, gold, and silver are represented as one cumulative tonnage value for the time periods of 1493-1600, 1601-1700, 1701-1800, 1801-1900. 
+									
+								</p>
+
+							</div>
                               
 							</header>
-
-							<div >
-								<p style ={{ fontSize:"x-large",marginBottom:"0rem"}}> click a rock to learn more! scroll down to interact with maps!</p>
-							</div>
 							
+							<div style = {{display:"flex", alignContent:"center", justifyContent:"center"}}>
+					
+								<MapLoading /> 
+							</div>
+
+							<p style ={{ fontSize:"large ",marginBottom:"1rem", marginTop:"1.5rem",textAlign: 'center'}}>
+								
+								<h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Click on the rocks to learn more!</h1>
+
+								</p>
+
+
 							<div className="tiles" style = {{ alignItems: 'center'}}>
 								<article className="style1">
 									<span className="image">
@@ -148,34 +172,8 @@ const HomePage = () => {
 							</div>
 
 	
-							<div style = {{}}>
-								<p style ={{ fontSize:"x-large",marginBottom:"1rem", textAlign: 'center'}}> 
-									interact with the map! 
-									 
-								</p>
 
-								<p style ={{ fontSize:"medium ",marginBottom:"1rem", textAlign: 'left'}}> 
-								
-									Click a mineral from the list below and use the timeline to select a year. 
-									On the map, click a country to see the reported mineral tonnage. <br/> 
-									The “Play” button animates of the map in which the years change for a mineral commodity. Press the “X” button to stop the animation.
-
-									
-								</p>
-								<p style ={{ fontSize:"small ",marginBottom:"0rem", textAlign: 'left'}}>
-									*Note: For the minerals: Copper, Gold, and Silver, one value of tonnage per country is associated for each of the following ranges of years: 1493-1600, 1601-1700, 1701-1800, 1801-1900
-
-								</p>
-								
-							</div>
-						
-
-							<div style = {{display:"flex", alignContent:"center", justifyContent:"center"}}>
-					
-								<MapLoading /> 
-							</div>
-
-						
+												
 					
 						</div>
 					</div>

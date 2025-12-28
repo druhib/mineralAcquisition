@@ -125,7 +125,7 @@ const marks: SliderSingleProps['marks'] = { // help with scale
   1960: '1960',
   1980: '1980',
   2000: '2000',
-  2023: '2023'
+  2019: '2019'
 };
   
 //map function 
@@ -133,7 +133,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
 
   //console.log("mineral selected", mineral_name)
 
-  const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2023];
+  const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2019];
   const [currentYear, setCurrentYear] = useState(0) // set initial year to ? 
   const [titleYear, setTitleYear] = useState(0)
 
@@ -257,7 +257,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
           <div>  
               <Slider
               min={1493}
-              max={2023}
+              max={2019}
               step={1}
               defaultValue={1493}
               value = {titleYear}
@@ -279,7 +279,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
           {!startTimer && (
             
             <div >
-              <Slider value = {titleYear} min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChange={(sliderValue) => handleSliderChange(sliderValue)} />
+              <Slider value = {titleYear} min ={1493} max= {2019} step={1}  defaultValue={1493} marks = {marks} onChange={(sliderValue) => handleSliderChange(sliderValue)} />
           <div style = {{position:"relative", left:"-5rem",marginTop: "-1.5rem"}}>
           <Popover content="Play to flip through the Years" trigger="hover"> 
             <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />

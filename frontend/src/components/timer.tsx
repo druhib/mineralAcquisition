@@ -14,7 +14,7 @@ const marks: SliderSingleProps['marks'] = {
   1960: '1960',
   1980: '1980',
   2000: '2000',
-  2023: '2023'
+  2019: '2019'
 };
 
   const handleSliderChange = (sliderValue: number) => {
@@ -92,8 +92,8 @@ export function SimpleTimer() {
         {startTimer && (
           <Slider
             min={1493}
-            max={2023}
-            step={1}
+            max={2019}
+            step={20}
             defaultValue={1493}
             marks={marks}
             onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)}
@@ -101,7 +101,7 @@ export function SimpleTimer() {
           />
         )}
         {!startTimer && (
-        <Slider min ={1493} max= {2023} step={1}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
+        <Slider min ={1493} max= {2019} step={20}  defaultValue={1493} marks = {marks} onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)} />
         )}
       </div>
     </div>
