@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,94 +114,86 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Iron is a transition metal that makes up about 5 wt % of the Earth's crust. Iron metal is made of iron particles that are separated and recovered from sulfide or oxide ores, which are more complex minerals. A common sulfide ore is pyrite. Iron-containing oxide minerals occur as red or yellow ochre (clay rock). Red ochre hosts one of the most common iron-containing minerals called hematite (Fe2O3). Yellow ochres tend to host another iron-containing mineral called limonite (2Fe2OH6O3). There is also magnetite (Fe3O4) which is a black ore that is rich in iron and manganese.</p>
+                
+                <p>Evidence of iron smelting goes back as far as 5000BC in Mesopotamia. Iron metal working became more popular in 1200 BC, demarking the Iron Age (1200-332BC). In 2 BC, China was manufacturing high-quality steel from pig iron by removing impurities with pressurized air. This method was the basis for the Bessemer process. The Bessemer process was coined in 1856 after English inventor, Henry Bessemer developed a fast, cheap industrial-scale method to remove impurities (carbon, manganese, sulfur, silicon) from steel by blasting smelted iron ore with cold air. Smelted iron ore is sometimes called 'pig iron'. As the Bessemer was an economically scalable process, steel became poised as a critical material during the Industrial Revolution in 1760-1840. Today some of the largest iron mines are in China, Australia, South Africa, Brazil, Russia, Ukraine and India. Most of the iron mines are surface mines.</p>
+                
+                <p><strong>Iron Mining: Getting the Ore</strong></p>
+                
+                <p>Topsoil and overburden, or the dirt that doesn't have the sought mineral deposit, is excavated to reveal the iron ore. The rock is exploded to release the ore. From here it is transported to separation facilities. Sometimes the iron ore is so plentiful in the region that the soil occurs as shades of red, black and brown.</p>
+                
+                <p><strong>Iron Separation Processes: Crushing, Magnets and Froth Flotation!</strong></p>
+                
+                <p>To begin separating the iron, the fine particles are separated from larger ones in a cyclone. Cyclones use centrifugal force to make heavier particles settle at the bottom so they can be recycled into the milling circuit. Finer particles are subsequently filtered out and sent to thickening units. Thickening units filter out the liquid from this milled slurry. The dried concentrate is conveyed to a magnet that separates out the ferromagnetic particles.</p>
+                
+                <p>The nonmagnetic ore is sent for froth flotation unit. The recovered magnetic iron particles are combined in the froth flotation feed because they also still have impurities. The iron concentrate is mixed with a cationic reagent that is often amine based as well as a frothing additive like methyl isobutyl. The reagent binds to the silica, freeing the iron particles. The silica is removed from the top of the unit and iron settles to the bottom of the tank. This metal concentrate is discharged to a thickening and filtration system to dewater so that it can be transported by pump, truck, or ship to smelting units. At these facilities the concentrate is transformed into pellets - they are pelletized.</p>
+                
+                <p><strong>Transforming Iron Concentrate to Metal</strong></p>
+                
+                <p>At the pelletizing facilities, organic binders like bentonite are mixed in with the concentrate. This mixture is sent to a balling drum which forces the mixture to aggregate into little balls. These are filtered so that the pellets that are too small are sent back to aggregate into larger sizes. The larger pellets are conveyed to a furnace where they are sintered at temperatures above 1200 °C. At these temperatures, the iron oxide grains undergo recrystallization and sintering: the mineral grains fuse together into a rock-hard ceramic.</p>
+                
+                <p>The final hardened pellets are mixed with coke and lime (Ca(OH)2). This mixture is transported to a blast furnace where compressed hot air forces the coke to burn and strip oxygen out as gaseous carbon monoxide. This process gives "pig iron". Pig iron is iron with a carbon content of around 4 wt %. The carbon content makes pig iron brittle. To remove the impurities from pig iron it is melted, mixed with lime (Ca(OH)2) and then blown with compressed oxygen. The carbon leaves the iron as gaseous carbon monoxide. At this point the iron has reached a level of purity where it can be alloyed with other materials like manganese, chromium and nickel. By combining the iron with these other metals, steel is made.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is iron used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Iron_TreeMap.png" alt="industry uses for iron" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of iron. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-					<p>Iron is a transition metal that makes up about 5% of the Earth’s crust. Iron is not a native metal like copper. Iron metal is made of iron particles that are separated and recovered from sulfide or oxide ores. Ores are rocks that have a specific mineral structure that can be processed into  a mineral structure that can be transformed into a These ores are more complex minerals  A common sulfide ore is pyrite is the most common iron-containing sulfide mineral. Iron-containing oxide minerals occur as red or yellow ochre (clay rock). Red ochre hosts one of the most common iron-containing minerals called hematite (Fe2O3). Yellow ochres tend to host another iron-containing mineral called limonite (2Fe2OH6O3). There is also magnetite (Fe3O4) which is a black ore that is rich in iron and manganese. </p>
-					<p>Evidence of iron smelting goes back as far as 5000BC in Mesopotamia. Iron metal working became more popular in 1200 BC, demarking the Iron Age (1200-332BC). In 2BCE, China was manufacturing high-quality steel from pig iron by removing impurities with pressurized air. This method was the basis for the Bessemer process. The Bessemer process was coined in 1856 after English inventor, Henry Bessemer developed a fast, cheap industrial-scale method to remove impurities (carbon, manganese, sulfur, silicon) from steel by blasting smelted iron ore with cold air. Smelted iron ore is sometimes called 'pig iron'. As the Bessemer was an economically scalable process, steel became poised as a critical material during the Industrial Revolution in 1760-1840. Today some of the largest iron mines are in China, Australia, South Africa, Brazil, Russia, Ukraine and India. Most of the iron mines are surface mines.  </p>
-					<p><strong>Iron Mining: Getting the Ore</strong> </p>
-					<p>Topsoil and overburden, or the dirt that doesn’t have the sought mineral deposit, is excavated to reveal the iron ore. The rock is exploded to release the ore. From here it is transported to separation facilities. Sometimes the iron ore is so plentiful in the region that the soil occurs as shades of red, black and brown. </p>
-					<p><strong>Iron Separation Processes: Crushing, Magnets and Froth Flotation!</strong></p>
-					<p>To begin separating the iron, the fine particles are separated from larger ones in a cyclone. Cyclones use centrifugal force to make heavier particles settle at the bottom so they can be recycled into the milling circuit. Finer particles are subsequently filtered out and sent to thickening units. Thickening units filter out the liquid from this milled slurry. The dried concentrate is conveyed to a magnet that separates out the ferromagnetic particles.  </p>
-					<p>The nonmagnetic ore is sent for froth flotation unit. The recovered magnetic iron particles are combined in the froth flotation feed because they also still have impurities. The iron concentrate is mixed with a cationic reagent that is often amine based as well as a frothing additive like methyl isobutyl. The reagent binds to the silica, freeing the iron particles. The silica is removed from the top of the unit and iron settles to the bottom of the tank. This metal concentrate is discharged to a thickening and filtration system to dewater so that it can be transported by pump, truck, or ship to smelting units. At these facilities the concentrate is transformed into pellets- they are pelletized. </p>
-					<p><strong>Transforming Iron Concentrate to Metal</strong> </p>
-					<p>At the pelletizing facilities, organic binders like bentonite are mixed in with the concentrate. This mixture is sent to a balling drum which forces the mixture to aggregate into little balls. These are filtered so that the pellets that are too small are sent back to aggregate into larger sizes. The larger pellets are conveyed to a furnace where they are sintered at temperatures above 1200 C. At these temperatures, the iron oxide grains undergo recrystallization and sintering: the mineral grains fuse together into a rock-hard ceramic. </p>
-					<p>The final hardened pellets are mixed with coke and lime (Ca(OH)2. This mixture is transported to a blast furnace where compressed hot air forces the coke to burn and strip oxygen out as gaseous carbon monoxide. This process gives “pig iron”. Pig iron is iron with a carbon content of around 4%. The carbon content makes pig iron brittle. To remove the impurities from pig iron it is melted, mixed with lime (Ca(OH)2 and then blown with compressed oxygen. The carbon leaves the iron as gaseous carbon monoxide. At this point the iron has reached a level of purity where it can be alloyed with other materials like manganese, chromium and nickel. By combining the iron with these other metals, steel becomes the widely machined metal that is resistant to corrosion and abrasion. </p>
-				</div>
+                <h1>What do some iron minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/iron/iron_minerals.png" alt="iron minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of iron containing materials.</p>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
+            <div class="content-section">
+                <h1>Where are iron mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/iron/IronDeposits.png" alt="iron deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global iron reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
 
-                        <div class="media-container">
-                            
-							<h1>What is iron used for?</h1> 
-							<img src="../treemaps/Iron_TreeMap.png" alt="industry uses for iron" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of iron. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some iron minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/iron/iron_minerals.png" alt="iron minerals" />
-                            <p class="media-caption">Figure 2: Different types of iron containing materials.</p>					
-						
-							<h1>Where are iron mineral deposits?</h1> 
-							<img src="../images/iron/IronDeposits.png" alt="lithium deposits" />
-                            
-							<p class="media-caption">Figure 3: Global iron reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
+            <div class="iframe-wrapper">
+                <h1>Who imports iron?</h1> 
+                <p>Click on the blue bubbles to see where iron is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/FEORE_CRUDE/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is iron mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-iron-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
-
-
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports iron?</h1> 
-							<p>Click on the blue bubbles to see where gold is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/IRON/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+            <div class="iframe-wrapper">
+                <h1>Where is iron mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-iron-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
-            </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
                 <p>R. D. Walker, "Iron Processing - Iron Making," Encyclopedia Britannica, Sep. 07, 2022. https://www.britannica.com/technology/iron-processing/Iron-making</p>
 
                 <p>Britannica, "Iron processing - Ores," Encyclopædia Britannica. 2019. Available: https://www.britannica.com/technology/iron-processing/Ores</p>
@@ -221,7 +217,7 @@
                 <p>Carmen, "The world's ten largest iron ore mines," Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-iron-ores-mines/</p>
 
                 <p>A. Singh, "The 10 Largest Iron Ore Mines in the World," WorldAtlas, Jul. 25, 2024. https://www.worldatlas.com/industries/the-10-largest-iron-ore-mines-in-the-world.html</p>
-            </ul>
+            </div>
         </footer>
     </div>
 

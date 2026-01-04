@@ -196,23 +196,23 @@ const MiningOverview = () => {
                             A Brief Overview of Mineral Deposits and Mining Methods
                         </h1>
 
-                        {/* Introduction Section */}
-                        <div className="content-section">
-                            <p>Earth formed 4.6 billion years ago and has since accrued mass through collisions with celestial bodies like meteorites in the solar system. Over time, gravitational forces and intense heat caused the accrued materials to separate. This separation has formed Earth's complex internal structure.</p>
-                            <p>Earth's outermost layer, the crust, has a depth of 100 km. At the base of the crust lies the lithosphere, where tectonic plates rest. When these tectonic plates move to collide or separate away, magma is brought to the surface. Over millennia, the cooling and sedimentation of magma within the Earth's crust has formed the mineral deposits that are mined today. Many of these mineral deposits concentrate at the edges of tectonic plates. </p>
-                            <div className="intro-images">
-                                <img 
-                                    src="../images/MiningOverview/Mine.png" 
-                                    alt="Earth's layers"
-                                    style={{ width: '100%' }}
-                                />
-                            </div>
-
-                            <div className="tectonic-figure">
-                                <img src="../images/MiningOverview/TectonicPlates_PhysicalGeology.png" alt="Earth's tectonic plates" />
-                                <figcaption>Image credit: Physical Geology by Steven Earle pg. 279</figcaption>
-                            </div>
-                        </div>
+                       {/* Introduction Section */}
+<div className="content-section">
+    <p>Earth formed 4.6 billion years ago and has grown from colliding with other celestial bodies in our solar system, like meteorites. Over time, gravitational forces and intense heat have caused the accrued materials to separate. This separation has formed Earth's internal structure.</p>
+    <p>Earth's outermost layer, the crust, has a depth of 100 km. At the base of the crust lies the lithosphere, where tectonic plates rest. When these tectonic plates move to collide or separate away, magma is brought to the surface. Over millennia, the cooling and sedimentation of magma within the Earth's crust has formed the mineral deposits that are mined today. Many of these mineral deposits concentrate at the edges of tectonic plates.</p>
+    
+    <div style={{ display: 'flex', gap: '2rem', margin: '2rem 0', alignItems: 'flex-start', justifyContent: 'center' }}>
+        <div style={{ maxWidth: '45%' }}>
+            <img src="../images/MiningOverview/MiningOverviewFig1.png" alt="Mining Overview Figure 1" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
+        </div>
+        <div style={{ maxWidth: '45%' }}>
+            <img src="../images/MiningOverview/TectonicPlates_PhysicalGeology.png" alt="Earth's tectonic plates" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
+            <p style={{ fontSize: '0.9rem', color: '#666', fontWeight: 'bold', marginTop: '0.5rem' }}>
+                Figure 2: Earth's tectonic plates. Image credit: Physical Geology by Steven Earle
+            </p>
+        </div>
+    </div>
+</div>
 
                         {/* Two Column: Text and Map */}
                         <div className="content-section">

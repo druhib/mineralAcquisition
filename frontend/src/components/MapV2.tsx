@@ -247,7 +247,7 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
     <div >
        {/* title of map  */}
       <div style={{  alignItems:"center", textAlign: 'center',  fontSize: '1.5rem', fontWeight: 'bold', marginTop: "4.5rem"}}>
-        The Global Production of <span style ={{textDecoration: 'underline'}}>{mineral_name}</span> in metric tonnes for year <span style ={{textDecoration: 'underline'}}> {titleYear}</span>
+        The Global Production of <span style ={{textDecoration: 'underline'}}>{mineral_name}</span> in MT for year <span style ={{textDecoration: 'underline'}}> {titleYear}</span>
       </div>
       
      

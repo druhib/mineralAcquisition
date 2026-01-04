@@ -109,7 +109,7 @@ const MapLoading = () => {
         
           {/* legend  */}
           <div id="legend" style ={{ font: 'Inter',}}>
-            <h3><span style = {{ fontSize:"small"}}> Map Legend (tonnes)</span></h3>
+            <h3><span style = {{ fontSize:"small"}}> Map Legend (MT)</span></h3>
             <ul style={{ listStyleType: 'none', paddingLeft: 10, font: 'Inter', fontSize: "15px"}}>
               {generateLegendData(colordata).map((item, index) => (
 

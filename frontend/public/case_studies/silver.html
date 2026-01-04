@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,98 +114,82 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Silver is a transition metal that can occur naturally as a pure metal, as an alloy, or as a crystal in more complex minerals. The most common mineral containing silver ores include argentiferous galena and Argentinian pyrite. The first record of silver smelting and mining was in 3000 BC in present day Türkiye. By 1200 BC the lustrous metal became a primary currency along the euro-Asia diaspora. The pursuit of precious capital like silver became a major motivator for Europeans to explore west. Between 1500 and 1800, the Spaniards searched for precious goods motivated violent silver mining throughout South America. At the time, Bolivia, Peru, and Mexico supplied 85% of the worlds silver. Most of the silver was mined from veins, mineral occurrences of silver metal. During this period, the silver ore was mined with slave labor and then transported to smelters. Here, the ore was heated in the presence of mercury to purify the silver metal.</p>
+                
+                <p>Today, over 80% of silver is recovered as a secondary product from polymetallic and porphyritic sulfide ores obtained from mining lead, zinc, gold, and copper. The silver is carried along with the primary metal concentrates that were formed from froth flotation. When the primary metal, such as copper, is removed in the electrorefining process, the waste is collected and sent to a furnace to remove base metal impurities; this produces what is called a doré metal, which has a silver content of approximately 95–98%. The resultant doré solid can be heated to a molten state in the presence of chlorine gas to further remove impurities. To achieve a 99.9% silver purity, electrolytic refining is performed. Here, direct current is applied to the silver immersed in a silver nitrate solution. The silver ions migrate to a cathode typically made of stainless steel. From here, the pure silver is mechanically separated and ready for sale.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is silver used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Silver_TreeMap.png" alt="industry uses for silver" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of silver. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-						<p>Silver is a transition metal that can occur naturally as a pure metal, as an alloy, or as a crystal in more complex minerals. The most common mineral containing silver ores include argentiferous galena and Argentinian pyrite. The first record of silver smelting and mining was in 3000 BC in present day Türkiye. By 1200 BC the lustrous metal became a primary currency along the euro-Asia diaspora. The pursuit of precious capital like silver became a major motivator for Europeans to explore west. Between 1500 and 1800, the Spaniards searched for precious goods motivated violent silver mining throughout South America. At the time, Bolivia, Peru, and Mexico supplied 85% of the worlds silver. Most of the silver was mined from veins, mineral occurrences of silver metal. During this period, the silver ore was mined with slave labor and then transported to smelters. Here, the ore was heated in the presence of mercury to purify the silver metal. </p>
-						<p>Today, over 80% of silver is recovered as a secondary product from polymetallic and porphyritic sulfide ores obtained from mining lead, zinc, gold, and copper. The silver is carried along with the primary metal concentrates that were formed from froth flotation. When the primary metal, such as copper, is removed in the electrorefining process, the waste is collected and sent to a furnace to remove base metal impurities; this produces what is called a doré metal, which has a silver content of approximately 95–98%. The resultant doré solid can be heated to a molten state in the presence of chlorine gas to further remove impurities. To achieve a 99.9% silver purity, electrolytic refining is performed. Here, direct current is applied to the silver immersed in a silver nitrate solution. The silver ions migrate to a cathode typically made of stainless steel. From here, the pure silver is mechanically separated and ready for sale.</p>
-					</div>
+                <h1>What do some silver minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/silver/silver_minerals.png" alt="silver minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of silver containing materials.</p>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
+            <div class="content-section">
+                <h1>Where are silver mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/silver/SilverDeposits.png" alt="silver deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global silver reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
 
-                        <div class="media-container">
-                            
-							<h1>What is silver used for?</h1> 
-							<img src="../treemaps/Silver_TreeMap.png" alt="industry uses for silver" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of silver. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some silver minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/silver/silver_minerals.png" alt="silver minerals" />
-                            <p class="media-caption">Figure 2: Different types of silver containing materials.</p>					
-						
-							<h1>Where are silver mineral deposits?</h1> 
-							<img src="../images/silver/SilverDeposits.png" alt="silver deposits" />
-                            
-							<p class="media-caption">Figure 3: Global silver reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
+            <div class="iframe-wrapper">
+                <h1>Who imports silver?</h1> 
+                <p>Click on the blue bubbles to see where gold is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/SILVE/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is silver mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-silver-maps.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
-
-
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports silver?</h1> 
-							<p>Click on the blue bubbles to see where gold is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/SILVE/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+            <div class="iframe-wrapper">
+                <h1>Where is silver mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-silver-maps.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
-            </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
                 <p>"Argentopyrite," Mindat.org, 2025. https://www.mindat.org/min-299.html</p>
 
-<p>Robins, N. A. and N. A. Hagan, "Mercury Production and Use in Colonial Andean Silver Production: Emissions and Health Implications," Environmental Health Perspectives, vol. 120, no. 5, pp. 627–631, May 2012, doi: https://doi.org/10.1289/ehp.1104192.</p>
+                <p>Robins, N. A. and N. A. Hagan, "Mercury Production and Use in Colonial Andean Silver Production: Emissions and Health Implications," Environmental Health Perspectives, vol. 120, no. 5, pp. 627–631, May 2012, doi: https://doi.org/10.1289/ehp.1104192.</p>
 
-<p>"Silver | Minerals Education Coalition," Minerals Education Coalition, 2016. https://mineralseducationcoalition.org/minerals-database/silver/</p>
+                <p>"Silver | Minerals Education Coalition," Minerals Education Coalition, 2016. https://mineralseducationcoalition.org/minerals-database/silver/</p>
 
-<p>"Silver: mineral and native element overview," mineralexpert.org. https://mineralexpert.org/article/silver-mineral-element</p>
+                <p>"Silver: mineral and native element overview," mineralexpert.org. https://mineralexpert.org/article/silver-mineral-element</p>
 
-<p>"Silver-bearing Galena," Mindat.org, 2016. https://www.mindat.org/min-10975.html</p>
+                <p>"Silver-bearing Galena," Mindat.org, 2016. https://www.mindat.org/min-10975.html</p>
 
-<p>"Silver Mining and Refining | The Natural Sapphire Company | The Natural Sapphire Company," The Natural Sapphire Company, 2018. https://www.thenaturalsapphirecompany.com/education/precious-metal-mining-refining-techniques/silver-mining-refining/</p>
-            </ul>
+                <p>"Silver Mining and Refining | The Natural Sapphire Company | The Natural Sapphire Company," The Natural Sapphire Company, 2018. https://www.thenaturalsapphirecompany.com/education/precious-metal-mining-refining-techniques/silver-mining-refining/</p>
+            </div>
         </footer>
     </div>
 

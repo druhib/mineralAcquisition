@@ -3,14 +3,11 @@
 <html>
 
 	<head>
-		<title>Mineral Acquisition: Gold</title>
+		<title>Mineral Acquisition: Manganese</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
-		
-		
-		
 		
 		<style>
         #main {
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,91 +114,78 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Manganese is a very hard, brittle transition metal. Manganese occurs as a trace element in several ore types: oxides, carbonates, hydroxides, and silicates. More concentrated manganese ores are hosted in ancient sea beds under intense pressure. 70% of manganese deposits have been identified to occur in South Africa. The most common occurrences of manganese-containing minerals include rhodochrosite, pyrolusite, and braunite.</p>
+                
+                <p>The manganese oxide, pyrolusite, has been used to make black pigments since the prehistoric period. The metallic form of manganese was first identified in Austria by Ignatius Kaim 1771. Three years later in Sweden, Johan Gottlieb Gahn heated the pyrolusite (a manganese dioxide) in the presence of carbon to yield manganese metal. Gahn demonstrated manganese metal could be obtained through carbothermal reduction.</p>
+                
+                <p>Between the 1930-40s, the Soviet Union was the largest exporter of manganese and had a reserve of ~ 815,000,000 MT. Concentrated manganese minerals exist in the Nikopol manganese deposit which spans Bulgaria, Georgia and Ukraine. Some of the largest manganese mines are in the Nikopol Manganese Basin in Dnipropetrovsk, Ukraine which began mining in 1886. In recent years, South Africa has lead manganese production, with reserves estimated at 560,000,000 MT. One of the largest South African manganese mines is the Mamatwan Mine, with annual production of 3 million MT. Another significant manganese mining area is in Gabon. Industrial mining in Gabon began in the 1880s. Gabon gained independence from the French in 1960. The US imports 63% of its manganese from Gabon (USGS). The company that oversees the largest mining industry in Gabon was founded after the 1880s in Gabon by the French. Presently, 22% of Gabon's land is used for mining minerals.</p>
+                
+                <p>Most manganese is mined in open pits. To start mining, topsoil and overburden, or the dirt that doesn't have the sought mineral deposit, is excavated to reveal the iron ore. The rock is exploded to release the ore. From here it is transported to separation facilities. As manganese ore often contains significant amounts of clay or sediment, the ore is washed to remove unwanted mud. The washed ore is sent to ball mills for wet milling. A hydrocyclone uses centrifugal force to separate out fine particles while the coarse material is returned for further processing. The milled slurry is dewatered in thickeners and dried in rotary dryers to form a powder or concentrate. This process can generate 1.2 – 7 MT of waste per a produced 1 MT of manganese concentrate.</p>
+                
+                <p>Most concentrate is exported to high temperature furnaces that smelt the material with coke at roughly 1,600 °C. This process is an intermediate step in the production of ferromanganese or silicomanganese alloys which are important for the steel industry.</p>
+                
+                <p>The process to recover more pure manganese (99.7-99.9 wt %) is a little different than producing manganese concentrate. Herein, the crushed manganese ore is leached with sulfuric acid to create a manganese sulfate solution. The manganese flakes are recovered from this solution via electrolysis. During this process, a direct current (DC) is passed through the solution, causing manganese ions in the solution to migrate toward and deposit onto stainless steel cathodes. After manganese has accrued over the course of several days, it is mechanically stripped. The manganese metal flakes are washed with water to remove any acid and heated to 500 °C to get rid of any residual impurities. These flakes are sold by mineral suppliers.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is manganese used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Manganese_TreeMap.png" alt="industry uses for manganese" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of manganese. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-						<p>Manganese is a very hard, brittle transition metal. Manganese occurs as a trace element in several ore types: oxides, carbonates, hydroxides, and silicates. More concentrated manganese ores are hosted in ancient sea beds under intense pressure. 70% of manganese deposits have been identified to occur in South Africa. The most common occurrences of manganese-containing minerals include rhodochrosite, pyrolusite, and braunite.  </p>
-						<p>The manganese oxide, pyrolusite, has been used to make black pigments since the prehistoric period. The metallic form of manganese was first identified in Austria by Ignatius Kaim 1771. Three years later in Sweden, Johan Gottlieb Gahn heated the pyrolusite (a manganese dioxide) in the presence of carbon to yield manganese metal. Gahn demonstrated manganese metal could be obtained through carbothermal reduction.  </p>
-						<p>Between the 1930-40s, the Soviet Union was the largest exporter of manganese and had a reserve of ~ 815,000,000 MT. Concentrated manganese minerals exist in the Nikopol manganese deposit which spans Bulgaria, Georgia and Ukraine. Some of the largest manganese mines are in the Nikopol Manganese Basin in Dnipropetrovsk, Ukraine which began mining in 1886. In recent years, South Africa has lead manganese production, with reserves estimated at 560,000,000 MT. One of the largest South African manganese mines is the Mamatwan Mine, with annual production of 3 million MT. Another significant manganese mining area is in Gabon. Industrial mining in Gabon began in the 1880s. Gabon gained independence from the French in 1960. The US imports 63% of its manganese from Gabon (USGS). The company that oversees the largest mining industry in Gabon was founded after the 1880s in Gabon by the French. Presently, 22% of Gabon's land is used for mining minerals. </p>
-						<p>Most manganese is mined in open pits. To start mining, topsoil and overburden, or the dirt that doesn’t have the sought mineral deposit, is excavated to reveal the iron ore. The rock is exploded to release the ore. From here it is transported to separation facilities. As manganese ore often contains significant amounts of clay or sediment, the ore is washed to remove unwanted mud. The washed ore is sent to ball mills for wet milling. A hydrocyclone uses centrifugal force to separate out fine particles while the coarse material is returned for further processing. The milled slurry is dewatered in thickeners and dried in rotary dryers to form a powder or concentrate. This process can generate 1.2 – 7 MT of waste per a produced 1 MT of manganese concentrate.  </p>
-						<p>Most concentrate is exported to high temperature furnaces that smelt the material with coke at roughly 1,600 °C. This process is an intermediate step in the production of ferromanganese or silicomanganese alloys which are important for the steel industry. </p>
-						<p>The process to recover 99.7-99.9 % manganese is a little different than producing manganese concentrate. Herein, the crushed manganese ore is leached with sulfuric acid to create a manganese sulfate solution. The manganese flakes are recovered from this solution via electrolysis. During this process, a direct current (DC) is passed through the solution, causing manganese ions in the solution to migrate toward and deposit onto stainless steel cathodes. After manganese has accrued over the course of several days, it is mechanically stripped. The manganese metal flakes are washed with water to remove any acid and heated to 500 °C to get rid of any residual impurities. These flakes are sold by mineral suppliers. </p>
-						
-					</div>
+                <h1>What do some manganese minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/manganese/manganese_minerals.png" alt="manganese minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of manganese containing materials.</p>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
-
-                        <div class="media-container">
-                            
-							<h1>What is manganese used for?</h1> 
-							<img src="../treemaps/Manganese_TreeMap.png" alt="industry uses for manganese" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of manganese. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some manganese minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/manganese/manganese_minerals.png" alt="manganese minerals" />
-                            <p class="media-caption">Figure 2: Different types of manganese containing materials.</p>					
-						
-							<h1>Where are manganese mineral deposits?</h1> 
-							<img src="../images/manganese/ManganeseDeposits.png" alt="manganese deposits" />
-                            
-							<p class="media-caption">Figure 3: Global manganese reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is manganese mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-manganese-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
+            <div class="content-section">
+                <h1>Where are manganese mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/manganese/ManganeseDeposits.png" alt="manganese deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global manganese reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
+            <div class="iframe-wrapper">
+                <h1>Who imports manganese?</h1> 
+                <p>Click on the blue bubbles to see where manganese is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/MAGNA/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="iframe-wrapper">
+                <h1>Where is manganese mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-manganese-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
 
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports manganese?</h1> 
-							<p>Click on the blue bubbles to see where gold is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/MAGNA/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
-            </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
                 <p>"Searching for the Origin of the Battery - Manganese," BATTERY INSIDE, Jul. 29, 2022. https://inside.lgensol.com/en/2022/07/searching-for-the-origin-of-the-battery-manganese/</p>
 
                 <p>Cannon, W.F., Kimball, B.E., and Corathers, L.A., 2017, Manganese, chap. L of Schulz, K.J., DeYoung, J.H., Jr., Seal, R.R., II, and Bradley, D.C., eds., Critical mineral resources of the United States—Economic and environmental geology and prospects for future supply: U.S. Geological Survey Professional Paper 1802, p. L1-L28, https://doi.org/10.3133/ pp1802L. https://www.usgs.gov/publications/manganese.</p>
@@ -208,7 +199,7 @@
                 <p>Hagelstein, K. "Globally sustainable manganese metal production and use," Journal of Environmental Management, vol. 90, no. 12, pp. 3736–3740, Sep. 2009, doi: https://doi.org/10.1016/j.jenvman.2008.05.025.</p>
 
                 <p>"Manganese Metal Flakes," Singhaniainternational.com, 2026. https://www.singhaniainternational.com/products-details/electrolytic-manganese-metal-flakes/127</p>
-            </ul>
+            </div>
         </footer>
     </div>
 

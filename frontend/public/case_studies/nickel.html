@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,95 +114,87 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Nickel is a transition metal that is hard, corrosion-resistant and magnetic which makes it an essential alloy in stainless steel. Although pure nickel metal can be found in small quantities, most nickel ore occurs as oxide minerals like limonite and sulfide minerals like pentlandite. Evidence of nickel metallurgy goes back to 200 BC in central west Asia. The metal, known as "white copper," was used to make weapons and coins. Nickel metal was successfully refined from a mineral body in 1775 by Torbern Bergman in Sweden.</p>
+                
+                <p>Some of the largest nickel mines are in Indonesia and the Philippines. Underground and surface mining techniques are used to acquire nickel ore. The mining method that's used depends on the ore type which can be broken into lateritic deposits (oxides, clays, silicate) and pentlandite deposits (sulfide minerals). Lateritic deposits occur closer to the surface in tropical climates, so they surface mined. The product of these ores is generally exported as an alloy in stainless steel production. Pentlandite deposits occur deeper in the ground and are mined underground. Some of the largest underground nickel mines have been in Canada and Russia. Pentlandite tend to have higher nickel purities and are used in elective vehicle batteries.</p>
+                
+                <p><strong>Refining Pentlandite Deposits into Metal</strong></p>
+                
+                <p>After being recovered from tunnels dug underground, the ore is crushed and milled into powder. From here the fine particles are separated from larger ones in a cyclone. Cyclones use centrifugal force to make heavier particles settle at the bottom so they can be recycled into the milling circuit. Screening and magnetic filtration can be used to separate out finer particles. The finer material is mixed with sulfide collectors like xanthates and dithiophosphates as well as depressants like guar gum to help waste aggregate at the bottom. The liquid is sent to a froth flotation unit that pumps air at the bottom of the tank through the liquid. As the air bubbles through the liquid, nickel minerals froth to the surface forming a metallic froth. This froth is recovered and sent to a thickening unit. A thickener in this process is a cylindrical vat with a stirring rod that filters out the water from the copper rich concentrate synthesized in the froth flotation step. The dewatered concentrate is exported by rail, truck and/or ship to smelters. The smelting facilities dry the concentrate, mix silica in (SiO2). Once the mixture is heated to temperatures exceeding 1300 °C, compressed oxygen is blown through the molten material to burn off iron and sulfur impurities. The product is a 'nickel-metal matte' that can have a nickel concentration ranging between 25-40 wt %. The matte is poured hot into molds called casts. The cooled matte is crushed and the sent through a second flotation unit process. The recovered nickel-froth is then heated to produce nickel oxide. Another way to get nickel oxide from the matte is through pressure leaching; the process of forcing sulfuric acid or ammonia through the solid. The nickel oxide is mixed with carbon monoxide to form nickel carbonyl gas. Increasing the temperature between 180-250 °C forces carbon monoxide to gas off to leave solid nickel metal.</p>
+                
+                <p><strong>Refining Lateritic Deposits into Metal</strong></p>
+                
+                <p>Laterite deposits can have a water content up to 35 wt % along with an iron content of 10-50 wt %. This ore is crushed, dried in a rotary kiln and then calcined at approximately 900 °C. Calcination removes the embedded water and reduces the iron. This process yields ferronickel or nickel-pig iron. Because laterite ores have naturally high iron content, this process is ideal for the stainless steel industry as the iron does not need to be removed before it's exported.</p>
+                
+                <p>To remove the nickel from the iron, the crushed ore is sent to an autoclave which is a heated, pressure vessel. At 250 °C and 40 bar, sulfuric acid is mixed, dissolving the nickel and cobalt, separating from the iron that remains solid. The nickel-rich acid solution is mixed with lime (Ca(OH)2) which forces a precipitate to form. This precipitate is further refined into nickel sulfate (NiSO4) by mixing in more sulfuric acid and passing the liquid into solvent extraction units. Solvent extraction units use an immiscible liquid solvent to selectively separate out a material of solution. The liquid is filtered to give pure nickel concentrate. This product is critical to electric vehicle battery manufacturing.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is nickel used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Nickel_TreeMap.png" alt="industry uses for nickel" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of nickle. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-						<p>Nickel is a transition metal that is hard, corrosion-resistant and magnetic which makes it an essential alloy in stainless steel. Although pure nickel metal can be found in small quantities, most nickel ore occur as oxide minerals like limonite and sulfide minerals like pentlandite. Evidence of nickel metallurgy goes back to 200 BC in central west Asia. The metal, known as “white copper,” was used to make weapons and coins. Nickel metal was successfully refined from a mineral body in 1775 by Torbern Bergman in Sweden.  </p>
-						<p>Some of the largest nickel mines are in Indonesia and the Philippines. Underground and surface mining techniques are used to acquire nickel ore. The mining method that’s used depends on the ore type which can be broken into lateritic deposits (oxides, clays, silicate) and pentlandite deposits (sulfide minerals) which are usually mined underground. Lateritic deposits occur closer to the surface in tropical climates, so they surface mined. The product of these ores is generally exported as an alloy in stainless steel production. Pentlandite deposits occur deeper in the ground and are mined underground. Some of the largest underground nickel mines have been in Canada and Russia. Pentlandite tend to have higher nickel purities so the product of refining them is used in elective vehicle batteries. </p>
-						<p><strong> Refining Pentlandite Deposits into Metal</strong> </p>
-						<p>After being recovered from tunnels dug underground, the ore is crushed and milled into powder. From here the fine particles are separated from larger ones in a cyclone. Cyclones use centrifugal force to make heavier particles settle at the bottom so they can be recycled into the milling circuit. Screening and magnetic filtration can be used to separate out finer particles. The finer material is mixed with sulfide collectors like xanthates and dithiophosphates as well as depressants like guar gum to help waste aggregate at the bottom. The liquid is sent to a froth flotation unit that pumps air at the bottom of the tank through the liquid. As the air bubbles through the liquid, nickel minerals froth to the surface forming a metallic froth. This froth is recovered and sent to a thickening unit. A thickener in this process is a cylindrical vat with a stirring rod that filters out the water from the copper rich concentrate synthesized in the froth flotation step. The dewatered concentrate is exported by rail, truck and/or ship to smelters. The smelting facilities dry the concentrate, mix silica in (SiO2). Once the mixture is heated to temperatures exceeding 1300 °C, compressed oxygen is blown through the molten material to burn off iron and sulfur impurities. The product is a ‘nickel-metal matte’ that can have a nickel concentration ranging between 25-40%. The matte is poured hot into molds called casts. The cooled matte is crushed and the sent through a second flotation unit process. The recovered nickel-froth is then heated to produce nickel oxide. Another way to get nickel oxide from the matte is through pressure leaching; the process of forcing sulfuric acid or ammonia through the solid. The nickel oxide is mixed with carbon monoxide to form nickel carbonyl gas. Increasing the temperature between 180-250 °C forces carbon monoxide to gas off to leave solid nickel metal. </p>
-						<p><strong>Refining Lateritic Deposits into Metal </strong> </p>
-						<p>Laterite deposits can have a water content up to 35 wt % along with an iron content of 10-50 wt % iron. This ore is crushed, dried in a rotary kiln and then calcined at approximately 900 °C. Calcination removes the embedded water and reduces the iron. This process yields ferronickel or nickel-pig iron. Because laterite ores have naturally high iron content, this process is ideal for the stainless steel industry as the iron does not need to be removed before it’s exported.</p>
-						<p>To remove the nickel from the iron, the crushed ore is not sent to a kiln but rather an autoclave which is a heated, pressure vessel. At 250 °C and 40 bar, sulfuric acid is mixed, dissolving the nickel and cobalt, separating from the iron that remains solid. The nickel-rich acid solution is mixed with lime (Ca(OH)2  which forces a precipitate to form. This precipitate is further refined into nickel sulfate (NiSO4) by mixing in more sulfuric acid and passing the liquid into solvent extraction units. Solvent extraction units use an immiscible liquid solvent to selectively separate out a material of solution. The liquid is filtered to give pure nickel concentrate. This product is critical to electric vehicle battery manufacturing. </p>
-					</div>
+                <h1>What do some nickel minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/nickel/nickel_minerals.png" alt="nickel minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of nickel containing materials.</p>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
-
-                        <div class="media-container">
-                            
-							<h1>What is nickel used for?</h1> 
-							<img src="../treemaps/Nickel_TreeMap.png" alt="industry uses for nickle" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of nickle. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some nickel minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/nickel/nickel_minerals.png" alt="nickel minerals" />
-                            <p class="media-caption">Figure 2: Different types of nickel containing materials.</p>					
-						
-							<h1>Where are nickel mineral deposits?</h1> 
-							<img src="../images/nickel/NickelDeposits.png" alt="nickel deposits" />
-                            
-							<p class="media-caption">Figure 3: Global nickel reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is nickel mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-nickel-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
+            <div class="content-section">
+                <h1>Where are nickel mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/nickel/NickelDeposits.png" alt="nickel deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global nickel reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
+            <div class="iframe-wrapper">
+                <h1>Who imports nickel?</h1> 
+                <p>Click on the blue bubbles to see where gold is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/NICKE/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="iframe-wrapper">
+                <h1>Where is nickel mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-nickel-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
 
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports nickel?</h1> 
-							<p>Click on the blue bubbles to see where gold is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/NICKL/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
+                <p>Britannica, "Nickel processing - Extraction and refining," Encyclopædia Britannica. 2019. Available: https://www.britannica.com/technology/nickel-processing/Extraction-and-refining </p>
+                <p>"Laterite | geology," Encyclopedia Britannica. https://www.britannica.com/science/laterite </p>
+                <p>L. Zappala, R. McDonald, and M. I. Pownceby, "Nickel Laterite Beneficiation and Potential for Upgrading Using High Temperature Methods: A Review," Mineral processing and extractive metallurgy review, pp. 1–23, Oct. 2023, doi: https://doi.org/10.1080/08827508.2023.2265533. </p>
+                <p>"4 Nickel Sulfide Froth Flotation Processes and 2 Common Reagents - Xinhai," Xinhaimining.com, 2022. https://www.xinhaimining.com/newo/4-nickel-sulfide-froth-flotation-processes-and-2-common-reagents.html (accessed Jan. 04, 2026). </p>
+                <p>A. Wolf and A.M. Mitrasinovic, "Nickel, copper and cobalt coalescence in copper cliff converter slag," Journal of Mining and Metallurgy, Section B, vol. 52, no. 2, pp. 143–150, Jan. 2016, doi: https://doi.org/10.2298/jmmb150823024w. </p>
+                <p>Grokipedia, "Mond process," Grokipedia, Jan. 21, 1970. https://grokipedia.com/page/Mond_process </p>
             </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
-                <li>[1] https://www.epa.gov/radiation/tenorm-bauxite-and-alumina-production-wastes</li>
-                <li>[2] https://www.ebsco.com/research-starters/geology/bauxite</li>
-                <li>[3] https://www.teeswildlife.org/what-we-do/past-projects/alum-alchemy-and-ammonites/alum/alum-history/</li>
-            </ul>
         </footer>
     </div>
 

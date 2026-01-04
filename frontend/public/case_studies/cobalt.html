@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,109 +114,92 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Cobalt containing minerals have been used for over a thousand years to make blue porcelain and glass throughout China, Persia, and Egypt. Miners have long detested cobalt ore, as it was often mistaken for copper due to its similar blue hue yet quickly discarded due to its propensity to release highly toxic arsenic fumes. Despite these hazards, cobalt metal was discovered in 1735 in Sweden after it was successfully smelted from one of these arsenic-rich blue ores. Today cobalt metal has been found to be a powerful ferromagnetic material that has become critical for making high temperature jet engines, batteries, and superalloys.</p>
+                
+                <p>Cobalt mining began in the 1880s in Norway, Sweden and Hungary. Mining projects have since expanded to larger operation sites in the Democratic Republic of Congo which supplies the world with almost ¾ of the global supply of cobalt.</p>
+                
+                <p>As pure cobalt metal is somewhat reactive with oxygen, it naturally occurs embedded in several complex ores that are rich not only in arsenic, but also sulfur, nickel, copper, and/or zinc. The composition of these materials in the cobalt ore varies with the mineral occurrence's location. Copper-cobalt sediment deposits tend to occur in the DRC while nickel-cobalt laterites tend to occur in Indonesia. Metal concentrates exported from these areas tend to be imported by China, where many cobalt refineries are located. At these refinement facilities, cobalt is separated from the concentrate via two major processes, solvent extraction and electrowinning.</p>
+            
+                <p><strong>1. Solvent Extraction: Synthesizing Cobalt Electrolyte</strong></p>
+                
+                <p>During Solvent Extraction, the imported cobalt-containing concentrate is mixed with a phosphorus-containing organic acid that selectively binds cobalt ions, dissolving them into the organic part of the mixture. This organic phase is fed into another process called a stripping unit, where a strong acid like sulfuric acid 'strips' the cobalt ions from the organic phase into an aqueous solution. This solution is the electrolyte in the subsequent electrowinning step that's used to recover cobalt metal!</p>
+                
+                <p><strong>2. Electrowinning: Metal Recovery</strong></p>
+
+                <p>During electrowinning, direct current is passed through the cobalt electrolyte. The dissolved cobalt ions reduce and precipitate as a solid onto a conductive substrate often made of stainless steel or titanium. The plated cobalt metal is mechanically removed from this substrate in the form of small circular discs, flakes, or other small pieces. These are vacuum sealed in stainless steel drums or other forms of inert packaging. The market price of cobalt metal supersedes the concentrates from which the cobalt was refined.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is cobalt used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Cobalt_TreeMap.png" alt="Box chart showing percentage breakdown of Cobalt usage by industry" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of cobalt. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-						<p> Cobalt containing minerals have been used for over a thousand years to make blue porcelain and glass throughout China, Persia, and Egypt. Miners have long detested cobalt ore, as it was often mistaken for copper due to its similar blue hue yet quickly discarded due to its propensity to release highly toxic arsenic fumes. Despite these hazards, cobalt metal was discovered in 1735 in Sweden after it was successfully smelted from one of these arsenic-rich blue ores. Today cobalt metal has been found to be a powerful ferromagnetic material that has become critical for making high temperature jet engines, batteries, and superalloys.</p>
-                        
-                        <p> Although cobalt metal mining which began in the 1880s was done close to its first site of discovery in Norway, Sweden and Hungary, mining projects have since expanded to larger operation sites in the Democratic Republic of Congo which supplies the world with almost ¾ of the global supply of cobalt. </p>
-                        
-						<p> As pure cobalt metal is somewhat reactive with oxygen, it naturally occurs embedded in several complex ores that are rich not only in arsenic, but also sulfur, nickel, copper, and/or zinc. It cannot be found as a pure, native metal. The composition of these materials in the cobalt ore varies with the mineral occurrence’s location. Copper-cobalt sediment deposits tend to occur in the DRC while nickel-cobalt laterites tend to occur in Indonesia. Metal concentrates exported from these areas tend to be imported by China, where many cobalt refineries are located. At these refinement facilities, cobalt is separated from the concentrate via two major processes, solvent extraction and electrowinning.</p>
-                    
-                        <p><strong>1. Solvent Extraction: Synthesizing Cobalt Electrolyte</strong></p>
-                        
-						<p> During Solvent Extraction, the imported cobalt-containing concentrate is mixed with a phosphorus-containing organic acid that selectively binds cobalt ions, dissolving them into the organic part of the mixture. This organic phase is fed into another process called a stripping unit, where a strong acid like sulfuric acid ‘strips’ the cobalt ions from the organic phase into an aqueous solution. This solution is the electrolyte in the subsequent electrowinning step that’s used to recover cobalt metal!  </p>
-                        
-						<p><strong>2. Electrowinning: Metal Recovery</strong></p>
+                <h1>What do some cobalt minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/cobalt/CobaltMinerals.png" alt="Cobalt minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of cobalt containing materials.</p>
+                </div>
+            </div>
 
-						<P> During electrowinning, direct current is passed through the cobalt electrolyte. The dissolved cobalt ions reduce and precipitate as a solid onto a conductive substrate often made of stainless steel or titanium. The plated cobalt metal is mechanically removed from this substrate in the form of small circular discs, flakes, or other small pieces. These are vacuum sealed in stainless steel drums or other forms of inert packaging. The market price of cobalt metal supersedes the concentrates from which the cobalt was refined. </P>
-                    </div>
+            <div class="content-section">
+                <h1>Where are cobalt mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/cobalt/CobaltDeposits.png" alt="Cobalt deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global cobalt reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
+            
+            <div class="iframe-wrapper">
+                <h1>Who imports cobalt?</h1> 
+                <p>Click on the blue bubbles to see where cobalt is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/COBAL/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
+            <div class="iframe-wrapper">
+                <h1>Where is cobalt mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-cobalt-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-                        <div class="media-container">
-                            
-							<h1>What is cobalt used for?</h1> 
-							<img src="../treemaps/Cobalt_TreeMap.png" alt="Box chart showing percentage breakdown of Cobalt usage by industry" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of cobalt. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some cobalt minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/cobalt/CobaltMinerals.png" alt="Cobalt minerals" />
-                            <p class="media-caption">Figure 2: Different types of cobalt containing materials.</p>					
-						
-							<h1>Where are cobalt mineral deposits?</h1> 
-							<img src="../images/cobalt/CobaltDeposits.png" alt="Cobalt deposits" />
-                            
-							<p class="media-caption">Figure 3: Global cobalt reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
-
-				    
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is cobalt mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-cobalt-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
-
-
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports cobalt?</h1> 
-							<p>Click on the blue bubbles to see where cobalt is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/COBAL/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+            
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
+                <p>Encyclopedia Britannica, "cobalt | Definition & Facts," Encyclopædia Britannica. Jan. 11, 2019. Available: https://www.britannica.com/science/cobalt-chemical-element </p>
+                <p>M. W. Hitzman, A. A. Bookstrom, J. F. Slack, and M. L. Zientek, "Cobalt—Styles of deposits and the search for primary deposits," Open-File Report, 2017, doi: https://doi.org/10.3133/ofr20171155. </p>
+                <p>Mining Technology, "The world's ten largest cobalt mines," Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-cobalts-mines/ </p>
+                <p>R. R. Moskalyk and A. M. Alfantazi, "Review of present cobalt recovery practice," Mining, Metallurgy & Exploration, vol. 17, no. 4, pp. 205–216, Nov. 2000, doi: https://doi.org/10.1007/bf03403236. </p>
+                <p>Responsible Minerals Initiative, "Cobalt," www.responsiblemineralsinitiative.org. https://www.responsiblemineralsinitiative.org/minerals-due-diligence/cobalt/ </p>
+                <p>Smithsonian, "Blue," National Museum of Asian Art. https://asia.si.edu/explore-art-culture/art-stories/colors/blue/ </p>
+                <p>B. Venditti, "Cobalt demand to outpace supply by early 2030s, says Cobalt Institute," MINING.COM, May 14, 2025. https://www.mining.com/cobalt-demand-to-outpace-supply-by-early-2030s-says-cobalt-institute/ </p>
+                <p>Virginia Department of Energy, "Virginia Energy - Geology and Mineral Resources - Cobalt," energy.virginia.gov, 2021. https://energy.virginia.gov/geology/Cobalt.shtml </p>
+                <p>S. Wang, "JOM 0610: Cobalt-Its Recovery, Recycling, and Application," Tms.org, 2024. https://www.tms.org/pubs/journals/jom/0610/wang-0610.html </p>
             </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
-                <p>Encyclopedia Britannica, “cobalt | Definition & Facts,” Encyclopædia Britannica. Jan. 11, 2019. Available: https://www.britannica.com/science/cobalt-chemical-element </p>
-                <p>M. W. Hitzman, A. A. Bookstrom, J. F. Slack, and M. L. Zientek, “Cobalt—Styles of deposits and the search for primary deposits,” Open-File Report, 2017, doi: https://doi.org/10.3133/ofr20171155. </p>
-                <p>Mining Technology, “The world’s ten largest cobalt mines,” Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-cobalts-mines/ </p>
-                <p>R. R. Moskalyk and A. M. Alfantazi, “Review of present cobalt recovery practice,” Mining, Metallurgy & Exploration, vol. 17, no. 4, pp. 205–216, Nov. 2000, doi: https://doi.org/10.1007/bf03403236. </p>
-                <p>Responsible Minerals Initiative, “Cobalt,” www.responsiblemineralsinitiative.org. https://www.responsiblemineralsinitiative.org/minerals-due-diligence/cobalt/ </p>
-                <p>Smithsonian, “Blue,” National Museum of Asian Art. https://asia.si.edu/explore-art-culture/art-stories/colors/blue/ </p>
-                <p>B. Venditti, “Cobalt demand to outpace supply by early 2030s, says Cobalt Institute,” MINING.COM, May 14, 2025. https://www.mining.com/cobalt-demand-to-outpace-supply-by-early-2030s-says-cobalt-institute/ </p>
-                <p>Virginia Department of Energy, “Virginia Energy - Geology and Mineral Resources - Cobalt,” energy.virginia.gov, 2021. https://energy.virginia.gov/geology/Cobalt.shtml </p>
-                <p>S. Wang, “JOM 0610: Cobalt-Its Recovery, Recycling, and Application,” Tms.org, 2024. https://www.tms.org/pubs/journals/jom/0610/wang-0610.html </p>
-                
-            </ul>
         </footer>
     </div>
 

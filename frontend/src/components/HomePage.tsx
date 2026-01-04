@@ -10,19 +10,46 @@ const HomePage = () => {
 				{/* <!-- Main --> */}
 					<div id="main">
 						<div className="inner">
-							<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
+		<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '0.5rem' }}>
+        <h1 style={{ margin: 0 }}>Where Do Materials Come From?</h1>
+        <a 
+            href="https://forms.gle/P36wUBDxQNNnZnNG9" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+                padding: '0.5rem 1.5rem',
+                backgroundColor: '#030303',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '5px',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+                whiteSpace: 'nowrap'
+            }}
+            onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#333')}
+            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#030303')}
+        >
+            Let us know what you <br> think of this site! </br>
+        </a>
+    </div>
 
-                                <h1>Where Do Materials Come From?</h1>
-    							<p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>A Historical Global Overview of Mineral Acquisition</p>
-							
+    <p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>A Historical Global Overview of Mineral Acquisition</p>
+    
+								
+								
+								
+								
 								<div style = {{}}>
 
 									<ul style ={{ fontSize:"large", marginBottom:"1rem", textAlign: 'left'}}> 
-										<li>Below is a map that displays global mineral production of select materials.</li>
+										<li>Below is a map that displays global mineral production of select materials in metric tons.</li>
 										<li>Select one mineral from the list below on the left, then use the timeline to select a year.</li>
 										<li>Click the "Play" button to iterate through the production data for the selected mineral.</li>
 										<li>Press the "X" button to stop the animation.</li>
 										<li>A country can be clicked to view the reported tonnage produced for that year.</li>
+										<li>Also scroll down past the map to learn more about how materials are acquired!</li>
+
 									</ul>
 
 								<p style ={{ fontSize:"large ",marginBottom:"1rem", textAlign: 'left'}}>

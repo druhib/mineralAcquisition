@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,110 +114,91 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Bauxite is a naturally occurring rock that is rich in aluminum. These red rocks occur plentifully in the topsoil's of South America, Africa and Oceania. The red color is attributed to the presence of iron oxides. Before 2000 BC, other aluminum minerals, such as alum, a sulfate salt, were mined in ancient Egypt for dying and ceramic work. Industrial scale aluminum metal production began in the late 1880s. Today the red mineral is processed into aluminum metal over the course of two major processes.</p>
+
+                <p><strong>1. Bayer Process: Refining Bauxite to Alumina</strong></p>
+                
+                <p>The first step of the standard process of producing aluminum metal is to refine bauxite into alumina via the Bayer Process which was invented in the late 1880s. This process separates the ferric impurities from the bauxite ore to produce alumina (aluminum oxide, Al2O3) and very alkaline waste called "red mud".</p>
+
+                <p>The first step in the Bayer Process is to grind the mined bauxite ore into dust. The powder is then mixed at high pressures with a caustic sodium hydroxide solution and heated to above 100 °C. During this process, aluminum oxides dissolve into the solution, releasing them from bauxite's crystalline, solid structure. The slurry is then pumped to an industrial unit called a 'thickener'. A thickener is a cylindrical vat with a stirring rod that forces the insoluble impurities which are largely iron oxides to settle out. The remaining solution is subsequently filtered, and the solids are discarded as red mud.</p>
+
+                <p>The filtered aluminum oxide-solution is mixed with a supersaturated sodium-aluminum solution to promote the spontaneous precipitation of aluminum hydroxide crystals. While most of the aluminum hydroxide precipitate is recycled to continue the crystallization process, some of the crystallized aluminum hydroxide solids are sent to a kiln for calcination. During this process, the aluminum hydroxide crystals are heated to temperatures above 1000 °C. At this temperature, aluminum hydroxide decomposes into alumina (aluminum oxide, Al2O3), releasing water vapor. After the water is evaporated off and the alumina is cooled, the white, coarse sand is exported by rail, truck and/or ship to smelters.</p>
+
+                <p><strong>2. Metal Smelting: Refining Alumina into Aluminum Metal</strong></p>
+                
+                <p>Smelters transform metal rich powders exported from mining projects into metal products. During the smelting process, alumina is heated to above 2000 °C and diluted with molten aluminum fluoride minerals to lower the solution's operating temperature to 950 °C. At this temperature, the Hall-Heroult Process is performed to precipitate aluminum metal from the molten aluminum solution via electrolysis.</p>
+
+                <p>The Hall-Heroult Process forces electrical gradients in the molten slurry to make aluminum metal collect at the bottom of the tank. This process was invented towards the end of the 19th century. It takes advantage of the fact that current, or the flow or electrons, move from electron rich sites to electron poor sites. The electron concentration gradient is created through immersing an electron rich electrode, which is typically made of carbon, into the vat of molten aluminum. The aluminum ions, which are cationic, disperse away from the rod, towards the bottom of the tank. Once enough aluminum metal collects at the bottom of the tank. The molten metal is siphoned out of the tank and poured into ceramic molds called crucibles. The metal can be cast on or near the smelting facility. If there is no nearby processing facility, the molten aluminum metal is cast into solid metal slabs. The product that is exported at this point is aluminum metal which has a higher market price than bauxite ore and alumina.</p>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-                        <p>Bauxite is a naturally occurring rock that is rich in aluminum. These red rocks occur plentifully in the topsoil's of South America, Africa and Oceania. The red color is attributed to the presence of iron oxides. Before 2000 BC, other aluminum minerals, such as alum, a sulfate salt, were mined in ancient Egypt for dying and ceramic work. Industrial scale aluminum metal production began in the late 1880s. Today the red mineral is processed into aluminum metal over the course of two major processes.</p>
+                <h1>What is bauxite used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Bauxite_TreeMap.png" alt="Box chart showing percentage breakdown of bauxite usage by industry" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of bauxite. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
-                        <p><strong>1. Bayer Process: Refining Bauxite to Alumina</strong></p>
-                        
-                        <p>The first step of the standard process of producing aluminum metal is to refine bauxite into alumina via the Bayer Process which was invented in the late 1880s. This process separates the ferric impurities from the bauxite ore to produce alumina (aluminum oxide, Al2O3) and very alkaline waste called "red mud".</p>
+            <div class="content-section">
+                <h1>What do some aluminum minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/bauxite/Bauxite_minerals.png" alt="Bauxite minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of aluminum containing materials.</p>
+                </div>
+            </div>
 
-                        <p>The first step in the Bayer Process is to grind the mined bauxite ore into dust. The powder is then mixed at high pressures with a caustic sodium hydroxide solution and heated to above 100 C. During this process, aluminum oxides dissolve into the solution, releasing them from Bauxite's crystalline, solid structure. The slurry is then pumped to an industrial unit called a 'thickener'. A thickener is a cylindrical vat with a stirring rod that forces the insoluble impurities which are largely iron oxides to settle out. The remaining solution is subsequently filtered, and the solids are discarded as red mud.</p>
+            <div class="content-section">
+                <h1>Where are bauxite mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/bauxite/AluminumDeposits.png" alt="Bauxite deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global bauxite reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
 
-                        <p>The filtered aluminum oxide-solution is mixed with a supersaturated sodium-aluminum solution to promote the spontaneous precipitation of aluminum hydroxide crystals. While most of the aluminum hydroxide precipitate is recycled to continue the crystallization process, some of the crystallized aluminum hydroxide solids are sent to a kiln for calcination. During this process, the aluminum hydroxide crystals are heated to temperatures above 1000 C. At this temperature, aluminum hydroxide decomposes into alumina (aluminum oxide, Al2O3), releasing water vapor. After the water is evaporated off and the alumina is cooled, the white, coarse sand is exported by rail, truck and/or ship to smelters.</p>
+            <div class="iframe-wrapper">
+                <h1>Who imports bauxite?</h1> 
+                <p>Click on the blue bubbles to see where bauxite is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/BAUXI/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-                        <p><strong>2. Metal Smelting: Refining Alumina into Aluminum Metal</strong></p>
-                        
-                        <p>Smelters transform metal rich powders exported from mining projects into metal products. During the smelting process, alumina is heated to above 2000 C and diluted with molten aluminum fluoride minerals to lower the solution's operating temperature to 950 C. At this temperature, the Hall-Heroult Process is performed to precipitate aluminum metal from the molten aluminum solution via electrolysis.</p>
-
-                        <p>The Hall-Heroult Process forces electrical gradients in the molten slurry to make aluminum metal collect at the bottom of the tank. This process was invented towards the end of the 19th century. It takes advantage of the fact that current, or the flow or electrons, move from electron rich sites to electron poor sites. The electron concentration gradient is created through immersing an electron rich electrode, which is typically made of carbon, into the vat of molten aluminum. The aluminum ions, which are cationic, disperse away from the rod, towards the bottom of the tank. Once enough aluminum metal collects at the bottom of the tank. The molten metal is siphoned out of the tank and poured into ceramic molds called crucibles. The metal can be cast on or near the smelting facility. If there is no nearby processing facility, the molten aluminum metal is cast into solid metal slabs. The product that is exported at this point is aluminum metal which has a higher market price than bauxite ore and alumina.</p>
-                    </div>
-
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
-
-                        <div class="media-container">
-                            
-							<h1>What is bauxite used for?</h1> 
-							<img src="../treemaps/Bauxite_TreeMap.png" alt="Box chart showing percentage breakdown of bauxite usage by industry" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of bauxite. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some aluminum minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/bauxite/Bauxite_minerals.png" alt="Bauxite minerals" />
-                            <p class="media-caption">Figure 2: Different types of aluminum containing materials.</p>					
-						
-							<h1>Where are bauxite mineral deposits?</h1> 
-							<img src="../images/bauxite/AluminumDeposits.png" alt="Bauxite deposits" />
-                            <p class="media-caption">Figure 3: Global bauxite reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
-
-				    
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is bauxite mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-bauxite-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
-
-
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports bauxite?</h1> 
-							<p>Click on the blue bubbles to see where bauxite is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/BAUXI/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+            <div class="iframe-wrapper">
+                <h1>Where is bauxite mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-bauxite-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
-            </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
-                <p>C. (Peter) Chieh, “Aluminas,” Chemistry LibreTexts, Oct. 24, 2015. https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Supplemental_Modules_and_Websites_(Inorganic_Chemistry)/Descriptive_Chemistry/Main_Group_Reactions/Compounds/Aluminosilicates/Aluminas </p>
-                <p>EBSCO, “Bauxite | EBSCO,” EBSCO Information Services, Inc. | www.ebsco.com, 2023. https://www.ebsco.com/research-starters/geology/bauxite </p>
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
+                <p>C. (Peter) Chieh, "Aluminas," Chemistry LibreTexts, Oct. 24, 2015. https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Supplemental_Modules_and_Websites_(Inorganic_Chemistry)/Descriptive_Chemistry/Main_Group_Reactions/Compounds/Aluminosilicates/Aluminas </p>
+                <p>EBSCO, "Bauxite | EBSCO," EBSCO Information Services, Inc. | www.ebsco.com, 2023. https://www.ebsco.com/research-starters/geology/bauxite </p>
                 <p>S. Earle and K. Panchuk, Physical geology. Victoria: BCcampus, BC Open Textbook Project, 2015. Available: https://opentextbc.ca/physicalgeology2ed/ </p>
-                <p>[9]Mining Technology, “The world’s ten largest bauxite mines,” Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-bauxites-mines/</p>
-                <p>C. Schmitz, “Handbook of Aluminium Recycling,” Google Books, 2006. https://books.google.com/books?id=WvT2OEf8DskC&pg=PA18#v=onepage&q&f=false </p>
-                <p>Tees Valley Wildlife Trust, “Alum History,” Tees Valley Wildlife Trust. https://www.teeswildlife.org/what-we-do/past-projects/alum-alchemy-and-ammonites/alum/alum-history/ </p>
-                <p>The Aluminum Association, “Aluminum, the Miracle Metal | The Aluminum Association,” www.aluminum.org. https://www.aluminum.org/aluminum-miracle-metal </p>
-                <p>The Aluminum Association, “Bauxite 101 | The Aluminum Association,” www.aluminum.org, 2021. https://www.aluminum.org/bauxite-101 </p>
-                <p>US EPA,OAR, “TENORM: Bauxite and Alumina Production Wastes | US EPA,” US EPA, Apr. 22, 2015. https://www.epa.gov/radiation/tenorm-bauxite-and-alumina-production-wastes</p>
-                
-            </ul>
+                <p>[9]Mining Technology, "The world's ten largest bauxite mines," Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-bauxites-mines/</p>
+                <p>C. Schmitz, "Handbook of Aluminium Recycling," Google Books, 2006. https://books.google.com/books?id=WvT2OEf8DskC&pg=PA18#v=onepage&q&f=false </p>
+                <p>Tees Valley Wildlife Trust, "Alum History," Tees Valley Wildlife Trust. https://www.teeswildlife.org/what-we-do/past-projects/alum-alchemy-and-ammonites/alum/alum-history/ </p>
+                <p>The Aluminum Association, "Aluminum, the Miracle Metal | The Aluminum Association," www.aluminum.org. https://www.aluminum.org/aluminum-miracle-metal </p>
+                <p>The Aluminum Association, "Bauxite 101 | The Aluminum Association," www.aluminum.org, 2021. https://www.aluminum.org/bauxite-101 </p>
+                <p>US EPA,OAR, "TENORM: Bauxite and Alumina Production Wastes | US EPA," US EPA, Apr. 22, 2015. https://www.epa.gov/radiation/tenorm-bauxite-and-alumina-production-wastes</p>
+            </div>
         </footer>
     </div>
 

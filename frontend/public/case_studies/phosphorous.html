@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-		
-		
-		
 		<style>
         #main {
             max-width: 1200px;
@@ -20,64 +17,71 @@
         }
 
         .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            text-align: justify;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        /* Side-by-side layout for images and text */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-
-        .images-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-column {
-            padding-right: 1rem;
-        }
-
-        .text-column p {
-            text-align: justify;
-            line-height: 1.2;
-			margin-bottom: 1rem;
+        .content-section h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .media-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .media-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #030303;
-
         }
 
         .media-caption {
             font-size: small;
             font-weight: bold;
             text-align: left;
-			margin-top: 0.5rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .iframe-wrapper {
+            margin: 2rem 0;
+        }
+
+        .iframe-wrapper h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .iframe-wrapper p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            max-width: 100%;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            #main {
-                padding: 1rem;
-            }
-        }
-
         @media (max-width: 768px) {
             #main {
                 padding: 1rem;
@@ -110,110 +114,94 @@
         </header>
 
         <div id="main">
+            <!-- All Text Content First -->
+            <div class="content-section">
+                <p>Most phosphate rock is transformed into phosphoric acid for chemical production, namely the synthesis of fertilizers. Phosphate deposits is a phosphorus-containing ore. There are three major types of phosphate ore: sedimentary phosphorite, guano, and igneous apatite.</p>
+                
+                <p>In 1669 elemental phosphorus, was accidentally synthesized by a German physician, Hennig Brandt, who believed gold could be made from distilled urine. The importance of phosphorus in fertilizer was chemically studied in 1840 by German chemist Justus von Liebig. Before phosphate fertilizers could be industrially produced, guano was heavily mined from the eastern coast of South America throughout the 19th century. Guano is produced through the gradual mineralization of seagull excrement and was predominately acquired through slave labor. The guano was exported to northern countries that lacked arable land. In 1942 John Bennet Lawes, an English agriculturist, patented a method to make fertilizer by mixing ground phosphate rock with sulfuric acid. Five years later, England began to industrially mine phosphate rock.</p>
+                
+                <p>It has since been identified that Morocco and the Western Sahara host 70% of the world's phosphate rock deposits. Today phosphorus mining has shifted to focus acquiring sedimentary phosphorite ores which are characterized by the presence of phosphate anion (PO4 3⁻) with either a halide (typically F⁻ to form fluorapatite or Cl⁻ to form chlorapatite), hydroxide (OH⁻), or carbonate (CO3 2-).</p>
+                
+                <p>Most phosphate is mined via a surface method called open pit mining. First, between 35-50 ft of soil above the mineral deposit is excavated to expose the phosphate ore. The phosphate ore is then excavated by draglines which has a large bucket that scoops the ore as its operated with cable tension. The ore is piled and the hauled to be mixed with water to form a slurry that is milled. The milled slurry is washed and filtered to remove impurities like sand. Hydrocarbon-based reagents are added to the slurry which selectively adsorbs to the phosphate particles. This mixture is sent to a froth flotation unit where air is pumped through the liquid. As the air bubbles, the adsorbed phosphate particles rise to the surface as a mineral rich froth which is skimmed off. The phosphate froth is sent to a thickening unit that removes the water. The dried concentrate is transported to a chemical plant. Here, sulfuric acid is mixed in to the concentrate to form phosphoric acid. Phosphoric acid is reacted with ammonia (NH3) to create industrial scale produced fertilizers.</p>
+            </div>
+
+            <!-- All Figures Below -->
+            <div class="content-section">
+                <h1>What is phosphorous used for?</h1> 
+                <div class="media-container">
+                    <img src="../treemaps/Phosphate_TreeMap.png" alt="industry uses for phosphorous" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 1: Industrial uses of phosphorous. Data source: USGS National Minerals Information Center, 2025.</p>
+                </div>
+            </div>
 
             <div class="content-section">
-                <div class="split-layout">
-                    
-                    <!-- Text Column (Right) -->
-                    <div class="text-column">
-						<p>Most phosphate rock is transformed into phosphoric acid for chemical production, namely the synthesis of fertilizers. Phosphate deposits is a phosphorus-containing ore. There are three major types of phosphate ore, like sedimentary phosphorite, guano, and igneous apatite.  </p>
-						<p>In 1669 elemental phosphorus, was accidentally synthesized by a German physician, Hennig Brandt, who believed gold could be made from distilled urine. The importance of phosphorus in fertilizer was chemically studied in 1840 by German chemist Justus von Liebig. Before phosphate fertilizers could be industrially produced, guano was heavily mined from the eastern coast of South America throughout the 19th century. Guano is produced through the gradual mineralization of seagull excrement and was predominately acquired through slave labor. The guano was exported to northern countries that lacked arable land. In 1942 John Bennet Lawes, an English agriculturist, patented a method to make fertilizer by mixing ground phosphate rock with sulfuric acid. Five years later, England began to industrially mine phosphate rock.  </p>
-						<p>It has since been identified that Morocco and the Western Sahara host 70% of the world’s phosphate rock deposits. Today phosphorus mining has shifted to focus acquiring sedimentary phosphorite ores which are characterized by the presence of phosphate anion (PO₄³⁻) with either a halide (typically F⁻ to form fluorapatite or Cl⁻ to form chlorapatite), hydroxide (OH⁻), or carbonate (CO₃²⁻).  </p>
-						<p>Most phosphate is mined via a surface method called open pit mining. First, between 35-50 ft of soil above the mineral deposit is excavated to expose the phosphate ore. The phosphate ore is then excavated by draglines which has a large bucket that scoops the ore as its operated with cable tension. The ore is piled and the hauled to be mixed with water to form a slurry that is milled. The milled slurry is washed and filtered to remove impurities like sand. Hydrocarbon-based reagents are added to the slurry which selectively adsorbs to the phosphate particles. This mixture is sent to a froth flotation unit where air is pumped through the liquid. As the air bubbles, the adsorbed phosphate particles rise to the surface as a mineral rich froth which is skimmed off. The phosphate froth is sent to a thickening unit that removes the water. The dried concentrate is transported to a chemical plant. Here, sulfuric acid is mixed in to the concentrate to form phosphoric acid. Phosphoric acid is reacted with ammonia (NH3) to create industrial scale produced fertilizers.  </p>
-						<p> </p>
-						<p> </p>
-					</div>
+                <h1>What do some phosphate minerals look like?</h1> 
+                <div class="media-container">
+                    <img src="../images/phosphate/phosphorusrock_minerals.png" alt="phosphate minerals" style="max-width: 800px;" />
+                    <p class="media-caption">Figure 2: Different types of phosphorous containing materials.</p>
+                </div>
+            </div>
 
-					<!-- Images Column (Left) -->
-                    <div class="images-column">
+            <div class="content-section">
+                <h1>Where are phosphorous mineral deposits?</h1> 
+                <div class="media-container">
+                    <img src="../images/phosphate/PhosphorusDeposits.png" alt="phosphate deposits" style="max-width: 1000px;" />
+                    <p class="media-caption">Figure 3: Global phosphate rock reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>
+                </div>
+            </div>
+ <div class="iframe-wrapper">
+                <h1>Who imports phosphates?</h1> 
+                <p>Click on the blue bubbles to see where gold is imported from.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/PHOSP/all/default"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="iframe-wrapper">
+                <h1>Where is phosphate rock mined?</h1> 
+                <p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out.</p>
+                <div style="height: 600px; border: 1px solid #ccc;">
+                    <iframe 
+                        src="/cesium_maps/cesium-phosphorus-map.html"
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="border: none;">
+                    </iframe>
+                </div>
+            </div>
 
-                        <div class="media-container">
-                            
-							<h1>What is phosphorous used for?</h1> 
-							<img src="../treemaps/Phosphate_TreeMap.png" alt="industry uses for nickle" style="width:100%; height:auto;" />
-							<p class="media-caption">Figure 1: Industrial uses of nickle. Data source: USGS National Minerals Information Center, 2025.</p>							
-							
-							<h1>What do some phosphate minerals look like? </h1> 
-							<div class="media-container">
-							<img src="../images/phosphate/phosphorusrock_minerals.png" alt="phosphate minerals" />
-                            <p class="media-caption">Figure 2: Different types of phosphorous containing materials.</p>					
-						
-							<h1>Where are phosphorous mineral deposits?</h1> 
-							<img src="../images/nickel/NickelDeposits.png" alt="nickel deposits" />
-                            
-							<p class="media-caption">Figure 3: Global phosphate rock reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
-							</div>
-						</div>		
-					</div>
-				</div>
-
-				<div class="split-layout">
-					<div class="text-column">
-					<div class="iframes-container">
-					<!-- Cesium Map iframe -->
-					    <div class="media-container">
-						<div class="iframe-wrapper">
-							<h1>Where is phosphate rock mined? </h1> 
-							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="/cesium_maps/cesium-phosphorus-map.html"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-						</div>
-						</div>
-						</div>
-
-
-						<div class="images-column">
-						<div class="iframe-wrapper">
-							<h1>Who imports phosphates?</h1> 
-							<p>Click on the blue bubbles to see where gold is imported from.</p>
-							<div style="height: 600px; border: 1px solid #ccc;">
-								<iframe 
-									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/PHOSP/all/default"
-									width="100%" 
-									height="100%" 
-									frameborder="0"
-									style="border: none;">
-								</iframe>
-							</div>
-						</div>
-					</div>
-			</div>
-				                    </div>
-
+           
+        </div>
 
         <footer>
-            <div style="display:flex; justify-content: center; align-items: center;"> 
-                <h3 style="margin-bottom: 1rem;">References</h3>
-            </div>
-            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+            <h3>References</h3>
+            <div style="max-width: 100%; word-wrap: break-word; overflow-wrap: break-word;">
                <p>"Aurora Fossil Museum» Aurora Phosphate Mine," aurorafossilmuseum.org. https://aurorafossilmuseum.org/post/22/aurora-phosphate-mine.html</p>
 
-<p>Cathcart, J. B. "Phosphate deposits of the United States—discovery, development; Economic geology and outlook for the future," Economic Geology, U.S., pp. 153–164, 2026, doi: https://doi.org/10.1130/dnag-gna-p2.153.</p>
+               <p>Cathcart, J. B. "Phosphate deposits of the United States—discovery, development; Economic geology and outlook for the future," Economic Geology, U.S., pp. 153–164, 2026, doi: https://doi.org/10.1130/dnag-gna-p2.153.</p>
 
-<p>Colwell, B. D. "A History Of Phosphate And Phosphate Rock - Brian D. Colwell," Brian D. Colwell, Jun. 27, 2025. https://briandcolwell.com/a-history-of-phosphate-and-phosphate-rock/</p>
+               <p>Colwell, B. D. "A History Of Phosphate And Phosphate Rock - Brian D. Colwell," Brian D. Colwell, Jun. 27, 2025. https://briandcolwell.com/a-history-of-phosphate-and-phosphate-rock/</p>
 
-<p>"How the Hunt for the Philosopher's Stone Led to Phosphorus," Field Museum, Sep. 02, 2016. https://www.fieldmuseum.org/blog/how-hunt-philosophers-stone-led-phosphorus</p>
+               <p>"How the Hunt for the Philosopher's Stone Led to Phosphorus," Field Museum, Sep. 02, 2016. https://www.fieldmuseum.org/blog/how-hunt-philosophers-stone-led-phosphorus</p>
 
-<p>"Igneous vs Sedimentary," First Phosphate. https://firstphosphate.com/phosphate-industry/worldphosphatedeposits/</p>
+               <p>"Igneous vs Sedimentary," First Phosphate. https://firstphosphate.com/phosphate-industry/worldphosphatedeposits/</p>
 
-<p>"Mineral Resource of the Month: Phosphate Rock," www.earthmagazine.org. https://www.earthmagazine.org/article/mineral-resource-month-phosphate-rock/</p>
+               <p>"Mineral Resource of the Month: Phosphate Rock," www.earthmagazine.org. https://www.earthmagazine.org/article/mineral-resource-month-phosphate-rock/</p>
 
-<p>"Phosphate Deposits GEOLOGICAL SURVEY BULLETIN 1252-D," 2010. Available: https://pubs.usgs.gov/bul/1252d/report.pdf</p>
+               <p>"Phosphate Deposits GEOLOGICAL SURVEY BULLETIN 1252-D," 2010. Available: https://pubs.usgs.gov/bul/1252d/report.pdf</p>
 
-<p>"Phosphate Rock Statistics and Information | U.S. Geological Survey," www.usgs.gov. https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information</p>
+               <p>"Phosphate Rock Statistics and Information | U.S. Geological Survey," www.usgs.gov. https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information</p>
 
-<p>"Phosphorite | Research Starters | EBSCO Research," EBSCO, 2023. https://www.ebsco.com/research-starters/mining-and-mineral-resources/phosphorite</p>
+               <p>"Phosphorite | Research Starters | EBSCO Research," EBSCO, 2023. https://www.ebsco.com/research-starters/mining-and-mineral-resources/phosphorite</p>
 
-<p>"ТОВ Інститут Геології," Інститут геології, May 13, 2024. https://insgeo.com.ua/en/phosphorites/</p>
-            </ul>
+               <p>"ТОВ Інститут Геології," Інститут геології, May 13, 2024. https://insgeo.com.ua/en/phosphorites/</p>
+            </div>
         </footer>
     </div>
 
