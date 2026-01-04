@@ -13,7 +13,7 @@ const HomePage = () => {
 		<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
     <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '0.5rem' }}>
         <h1 style={{ margin: 0 }}>Where Do Materials Come From?</h1>
-        <a 
+        {/* <a 
             href="https://forms.gle/P36wUBDxQNNnZnNG9" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const HomePage = () => {
             onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#030303')}
         >
             Let us know what you <br> think of this site! </br>
-        </a>
+        </a> */}
     </div>
 
     <p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>A Historical Global Overview of Mineral Acquisition</p>
