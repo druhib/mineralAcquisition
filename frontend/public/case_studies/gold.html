@@ -9,223 +9,233 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-	</head>
+		
+		
+		
+		<style>
+        #main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .content-section {
+            margin-bottom: 1rem;
+        }
+
+        /* Side-by-side layout for images and text */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+
+        .images-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-column {
+            padding-right: 1rem;
+        }
+
+        .text-column p {
+            text-align: justify;
+            line-height: 1.2;
+			margin-bottom: 1rem;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #030303;
+
+        }
+
+        .media-caption {
+            font-size: small;
+            font-weight: bold;
+            text-align: left;
+			margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            #main {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
 	
 	<body class="is-preload">
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+                <nav class="navbar">
+                    <a href="/" class="navbar-brand">Mineral Acquisition</a>
+                    
+                    <div class="navbar-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/mining">What is Mining?</a>
+                        <a href="/contacts">Contacts</a>
+                    </div>
+                </nav>
+            
+                <div style='position: relative; margin-top: 2rem;'>
+                    <div class="rectangular-header-line" id='rectangular-header-line3'>
+                        <h1><span style='color: white'>Gold</span></h1>
+                    </div>
+                </div>
+            </div> 
+        </header>
 
-		<div id="wrapper">
-			<header id="header">
-				<div class="inner">
+        <div id="main">
 
-					<nav class="navbar">
-						<a href="/" class="navbar-brand">
-							Mineral Acquisition
-						</a>
+            <div class="content-section">
+                <div class="split-layout">
+                    
+                    <!-- Text Column (Right) -->
+                    <div class="text-column">
+						<p> Gold is a transition metal that occurs naturally as small grains of pure metal. Gold remains pristine with time as it does not tend to oxidize. Gold was first smelted in ancient Egypt as far back as 3600 BC for metal work and currency. Gold coins first appeared in Türkiye in 600 BC. Gold was a steadfast backer of global currencies up until 1971, after US President Richard Nixon delinked gold from global currencies. </p>
+						<p> In the mid and late 1800s, US Gold Rushes, the discovery of gold that can be panned from sand deposits, in California, Nevada then Alaska encouraged mass migration. Similar rushes also occurred in Canada, Australia, and South Africa. </p>
+						<p><strong>Placer Mining and Mercury Retorting</strong></p>
+						<p>Placer mining is used to recover gold from loose sediments like sand and gravel along riverbeds. As the ore is already loose, explosives aren’t used to release the ore from the Earth. Instead, placer mining is a form of surface mining that uses a combination of dredging and suction to extract ore from the riverbed. The recovered gold ore is crushed then ground into a fine powder that is mixed with liquid mercury. This mixture forms an alloy called amalgam. In a process called retorting, mercury is boiled off to isolate gold particles and then condensed back to liquid, reducing the emittance of dangerous, toxic vapor. Although industrial scale mercury retorting ceased in the 1960s, smaller mines with less oversight may employ this process to recover gold.</p>
 						
-						<div class="navbar-links">
-							<a href="/">Home</a>
-							<a href="/about">About</a>
-							<a href="/mining">What is Mining?</a>
-							<a href="/contacts">Contacts</a>
-						</div>
-					</nav>
-				
-					<div style = 'position: relative;margin-top: 2rem;'>
-						<div class="rectangular-header-line" id = 'rectangular-header-line1' >
-							<h1><span style = 'color: white'>What is gold ?</span></h1>
-						</div>
-					
+						<p><strong>Hard Rock Mining and Recovering of Gold Concentrate</strong></p>						
+						<p>Today most gold is mined from hard rock, hence the name “Hard rock mining”. Herein gold is encased in complex mineral structures of quartz and or sulfide minerals like pyrite. These hard rocks can be drilled and exploded during open-pit mining on the Earth’s surface and during underground mining operations in excavated tunnels and shafts. Both processes use explosives to loosen the gold-containing minerals so that they can be excavated and transported for further processing. </p>
+						<p>The loose gold ore is ground and then milled into a fine particle size. The fine particles are separated from larger ones in a cyclone. Cyclones use centrifugal force to make heavier particles settle at the bottom so they can be milled for longer. Finer particles are subsequently recovered and sent to thickening units. Thickening units filter out the liquid from this milled slurry. The dewatered slurry is pumped into agitated tanks where cyanide diluted in lime (Ca(OH)2 is mixed into the slurry. The solid gold particles dissolve into the cyanide solution. The concentrate is passed through an activated carbon adsorption unit. The carbon adsorbs the cyanide-gold complexes from the concentrate. The carbon-cyanide-gold complex is treated with acid to remove calcium (and sometimes copper) impurities. The product is sent to an elution column, where a heated cyanide and caustic soda (sodium hydroxide) solution strips the gold from the carbon so that as hot water is subsequently pumped through the column, eluate - rich in gold - is recovered.  </p>
+						<p><strong>Gold Refining: Making the Gold Bars </strong></p>
+						<p>Eluate is then sent to electrowinning units. Electrowinning is the process of passing current through a solution to cause dissolved metals to precipitate out onto a substrate. So, in this process, the gold in the eluate is made to plate onto a steel mesh. The gold can be separated from the iron in one of two ways. First, caustic acid like hydrochloric or sulfuric acid can be used to dissolve the steel, to leave a gold sludge behind. Or, the gold-iron mix can be smelted which oxidizes the steel, transforming it into a slag that can be removed while the molten gold can be poured into bars.</p>
+						<p>These bars are not 99.99% pure gold, so they are shipped to another refinery. The refinery purifies with two major processes. The first is the Miller Process where chlorine gas is made to bubble through the bars which were heated to a molten state. The gold, which is a remarkable inert metal, is left intact while the residual impurities: silver, copper, zinc form chloride salts, a low-density slag, that is separated away. From here the gold bar has a 99.5% purity. These bars then undergo the Wohlwill Process, an electrolysis process where electric current is passed through an electrolyte solution of hydrochloric acid and gold chloride. During which the gold from the Miller Process dissolves and migrates to a titanium substrate. Any impurities are left to settle at the bottom of the tank. When all the gold plates onto the new substrate, it is removed either through simply prying the gold block off the titanium, chemical stripping methods that dissolve the contact layer or through pressure washing. The recovered gold is melted and cast once more into the classic gold bar. It is from these refinery plants the gold is sold to investment institutions like central banks.</p>
+						<p>Some of the largest mines occur in South Africa and the United States. the deepest underground gold mine is in South Africa, with a depth of 3.9km (12,800 ft)! The largest gold mine operation is in Nevada, the driest state in the US. Nevada is also the richest region of gold deposits in the US. Although many of these deposits formed in the Paleozoic era, the Carlin gold deposit was discovered in 1907 by the Newmont Mining Corporation. The deposit is comprised mainly of pyrite in sedimentary rocks. The deposit has been extracted through what is considered the world’s largest gold mining operation: Nevada Goldmines LLC in Elko, Nevada oversees a total of 10 open-pit mines, 9 underground operations, 8 heap leach facilities, 3 oxide plants, 1 flotation plant, 2 autoclave facilities, and 2 roaster facilities. In 2024, their operations contributed $2.9 billion to the Nevada economy.</p>
 					</div>
-				</div> 
-			</header>	
 
-			<!-- introcution  -->
-			<div id="main" style='justify-content: center; align-items: center; margin: 0 8rem 0 8rem;'>
+					<!-- Images Column (Left) -->
+                    <div class="images-column">
 
-				<div style ='margin-top: 1.25rem;'>
-					<div class="block"  >
-						<p> 
-							Gold is a transition metal that occurs naturally as small grains of pure metal within larger minerals called 'lodes'. 
-							A lode commonly occurs in the bedrock of North America. Elemental gold can also occur as an alloy with silver and copper. 
-							One of the most common gold alloys is called electrum. Gold may also occur in lesser amounts within complex sulfide minerals called pyrite, 
-							more commonly known as "fool's gold".[1][2][3]
-						</p>
-						<div style = "display:flex; justify-content: center;align-content: center;"> 
-							<img src="../images/gold/gold_minerals.png" alt="gold image" style="width:600px;height:420px;margin-top: -2rem;" />
-						</div>
-					</div>				
-				</div>
-					
-
-				<!-- discovery  -->	
-				<div class="flex-container" style= 'margin-top: 5rem; gap: 1rem;' >
-					<div class="column">
-						<div class="info-box" id = 'info-box1'>
-							<h1>Where was gold discovered?</h1> 
-						</div>
-						<div style = 'margin-top: 1rem;'>
-							<p> 
-								Gold was first smelted in ancient Egypt as far back as 3600 BC for metal work and currency. 
-								Gold coins first appeared in Türkiye in 600 BC. Gold was a steadfast backer of global currencies up until 1971, 
-								after US President Richard Nixon delinked gold from global currencies. [4][5]
-							</p>
-						</div>
-						
-					</div>
-					<div class="column">
-						<img src="../images/gold/where_was_gold_found.png" alt="where_was_gold_found image" style="width:600px;height:400px;border: 5px solid #030303" />
-						<p style="font-size: x-small;font-weight: bold">Screenshot via Google Earth</p>
-					</div>
-	
-				</div>
-				<!-- tree map   -->
-				<div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box1'>
-					<h1>What is gold used for?</h1> 
-				</div>
-
-				<div  style = 'display: flex; flex-direction: column;  margin-top: 1rem; border: 3px solid #030303'> 
-					
-					<h3 style="font-size: large;margin:.5rem 1rem 0rem 1rem">What industries use gold?</h3>
-					<p style="font-size:large;margin-left:1rem;">Data from USGS National Minerals Information Center 2025</p>
-					<span style = 'display: flex; justify-content:center; align-items:center;margin-Bottom: 1rem'>
-						<img src="../treemaps/Gold_TreeMap.png" alt="gold tree map" style="width:auto;height:500px;" />
-						<span> 							
-				</div>
-
-				<!-- bar chart   -->
-				<div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box1'>
-					<h1>How much gold has been mined?</h1> 
-				</div>
-		
-				<div  style = 'display: flex; flex-direction: column;  margin-top: 1rem; border: 3px solid #030303'> 
-					<h3 style="font-size: large;margin:.5rem 1rem 0rem 1rem">Cumulative Gold Mined by Country in Metric Tons</h3>
-					<p style="font-size: large;margin-left:1rem;">Data from British Geological Survey Mineral Commodity Reports 1493-1900, US Geological Survey Mineral Commodity Reports 1913-2019</p>
-					<span class ="frame" style = 'display: flex; justify-content:center; align-items:center;width:auto;height:500px;overflow-y: auto; overflow-y: scroll'> 
-
-						<img src="../barcharts/Gold_BarChart.png" alt="gold_productionbarchart" style="height:8000px;margin:auto" />
-					</span>	
-					<p style="font-weight: bold;font-size: x-small;margin:.5rem 1rem 0rem 1rem">*Data Warning: Production data [MT] reported under former states were manually reassigned to modern territories to the best of the authors’ ability. Some national averages may be overinflated due to limited granularity on where within the former state the material was originally mined.</p>				
-				</div>
-
-			<!-- case studies  --> 
-				<!-- <div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box1'><h1>How is gold mined?</h1> </div>
-					<details style ='margin: 1rem 0 1rem 0; border-color: black;border: 10px;border: 3px solid #030303; border-radius: 20px;'>
-						<summary> Goldmines LLC Nevada, USA</summary>
-							<p style ='padding: 1rem 1rem 0 1rem ;'>
-								Nevada has gold deposits all across the state. Many paleozoic gold deposits occur in Nevada, the driest state in the United States. 
-								The Carlin gold deposit was discovered in 1907 by the Newmont Mining Corporation. 
-								The deposit is comprised mainly of pyrite in sedimentary rocks. 
-
-							</p>
+                        <div class="media-container">
+                            
+							<h1>What is gold used for?</h1> 
+							<img src="../treemaps/Gold_TreeMap.png" alt="Box chart showing percentage breakdown of gold usage by industry" style="width:100%; height:auto;" />
+							<p class="media-caption">Figure 1: Industrial uses of gold. Data source: USGS National Minerals Information Center, 2025.</p>							
 							
-							<div class="column" style="display: flex;justify-content: center;align-items: center;">
-								<img src="../images/gold/NevadaImagesCombined.png" alt="where_was_gold_found image" style="width:800px;height:400px;border: 5px solid #030303" />
-								 <p style="font-size: x-small;font-weight: bold">Screenshot via Google Earth</p> --
+							<h1>What do some gold minerals look like? </h1> 
+							<div class="media-container">
+							<img src="../images/gold/gold_minerals.png" alt="gold minerals" />
+                            <p class="media-caption">Figure 2: Different types of gold containing materials.</p>					
+						
+							<h1>Where are gold mineral deposits?</h1> 
+							<img src="../images/gold/GoldDeposits.png" alt="gold deposits" />
+                            
+							<p class="media-caption">Figure 3: Global gold reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
 							</div>
-
-							<p style ='padding: 1rem 1rem 0 1rem ;'>
-								
-								
-								
-								Today, the deposit is overseen by Nevada Goldmines LLC, Elko, Nevada. This group was formed in 2019 after Barrick (62%) and Newmont Corporation (38%) merged. 
-								Gold-containing ore, namely pyrite, is mined from four major complexes located in this high desert region: Carlin, Cortez, Phoenix, and Turquoise Ridge. 
-								There is a total of 10 open-pit mines, 9 underground operations, 8 heap leach facilities, 3 oxide plants, 1 flotation plant, 2 autoclave facilities, and 2 roaster facilities. 
-								In 2024, their operations contributed $2.9 billion to the Nevada economy. [3-13]
-
-							</p>
-
-
-
-
-
-							<div class="info-box" id = 'info-box1' style = 'display: flex; justify-content: center; align-items: right;margin: 2rem; '>
-								
-								<h1>Process Diagram</h1>
-							</div>
-
-							
-							<div style = 'display: flex; justify-content: center; align-items: right;margin: .5rem; gap: 1rem'> 
-	
-										<span  class ="frame" style = 'width:auto;height:1600px;overflow-y: auto;'> 
-
-											<img src="../images/gold/GoldminesNevadaLLCProcessDiagram.png" alt="gold process diagram" style="display: flex; justify-content: center; align-items: center;width:auto;height:1500px;" />
-										</span>							
-							</div> -->
-
-							<!-- alternative scrollable pd  -->
-							<!-- <div style = 'display: flex; justify-content: center; align-items: right;margin: .5rem; gap: 1rem'> 
-									<span style="width:900px;height:500px;overflow-y: auto;">
-										<img src="../images/gold/GoldminesNevadaLLCProcessDiagram.png" alt="SQMLithiumMinePDChile.png" style="width:830px;height:1400px;  border: 5px solid #98792ca6"> 
-										 <p style="font-size: x-small;">Screenshot via Google Earth</p> -->
-									<!-- </span>							
-							</div>  -->
-
-			
-					
-					<!-- </details>	
-
-			</div>  -->
-
-				<footer>
-					<div style=" display:flex; justify-content: center;align-items: center;"> 
-
-					<h3 style = "margin-bottom: 1rem;">References</h3>
+						</div>		
 					</div>
-						<ul style="list-style-type: none;margin: 0 8rem 0 8rem;">
-							<li>
-								[1] 911Metallurgist, “Auriferous Deposits,” *911Metallurgist*, [Online]. Available: [https://www.911metallurgist.com/blog/auriferous-deposits/](https://www.911metallurgist.com/blog/auriferous-deposits/). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[2] 911Metallurgist, “Geology of Hard Rock Gold Deposits,” *911Metallurgist*, [Online]. Available: [https://www.911metallurgist.com/blog/geology-of-hard-rock-gold-deposits/](https://www.911metallurgist.com/blog/geology-of-hard-rock-gold-deposits/). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[3] EBSCO Research Starters, “Pyrite (Fool's Gold),” *EBSCO Research Starters: Mining and Mineral Resources*, [Online]. Available: [https://www.ebsco.com/research-starters/mining-and-mineral-resources/pyrite-fools-gold](https://www.ebsco.com/research-starters/mining-and-mineral-resources/pyrite-fools-gold). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[4] The Royal Mint, “A Brief History of Gold,” *The Royal Mint*, [Online]. Available: [https://www.royalmint.com/invest/discover/gold-news/a-brief-history-of-gold/](https://www.royalmint.com/invest/discover/gold-news/a-brief-history-of-gold/). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[5] Yale School of Management, “How the Nixon Shock Remade the World Economy,” *Yale Insights*, [Online]. Available: [https://insights.som.yale.edu/insights/how-the-nixon-shock-remade-the-world-economy](https://insights.som.yale.edu/insights/how-the-nixon-shock-remade-the-world-economy). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[6] Barrick Gold Corporation, “Nevada Gold Mines,” *Barrick Gold Corporation*, [Online]. Available: [https://www.barrick.com/English/operations/nevada-gold-mines/default.aspx](https://www.barrick.com/English/operations/nevada-gold-mines/default.aspx). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[7] Barrick Gold Corporation, “Nevada Gold Mines Completes Construction of 200 MW Solar Power Plant,” *Barrick Gold Corporation News Release*, 2024. [Online]. Available: [https://www.barrick.com/English/news/news-details/2024/nevada-gold-mines-completes-construction-of-200-megawatt-solar-power-plant/default.aspx](https://www.barrick.com/English/news/news-details/2024/nevada-gold-mines-completes-construction-of-200-megawatt-solar-power-plant/default.aspx). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[8] Nevada Gold Mines, *Community Benefit Footprint Report 2024*, [Online]. Available: [https://s25.q4cdn.com/322814910/files/doc_downloads/ngm/NGM_2024_Community_Benefit_Footprint.pdf](https://s25.q4cdn.com/322814910/files/doc_downloads/ngm/NGM_2024_Community_Benefit_Footprint.pdf). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[9] SRK Consulting, *Turquoise Ridge Technical Report*, 2019. [Online]. Available: [https://minedocs.com/19/Turquoise-Ridge-TR-12312023.pdf](https://minedocs.com/19/Turquoise-Ridge-TR-12312023.pdf). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[10] SRK Consulting, *Carlin Complex Technical Report*, 2020. [Online]. Available: [https://minedocs.com/20/Carlin-Complex-TR-03252020.pdf](https://minedocs.com/20/Carlin-Complex-TR-03252020.pdf). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[11] Barrick Gold Corporation, *Cortez Technical Report*, 2021. [Online]. Available: [https://minedocs.com/19/Cortez-TR-12312021.pdf](https://minedocs.com/19/Cortez-TR-12312021.pdf). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[12] Barrick Gold Corporation, *Nevada Gold Mines Technical Report*, 2024. [Online]. Available: [https://minedocs.com/28/Nevada-Gold-Mines-TR-12312024.pdf](https://minedocs.com/28/Nevada-Gold-Mines-TR-12312024.pdf). [Accessed: Nov. 10, 2025].
-							</li>
-							<li>
-								[13] Mining Data Online, “Phoenix Mine,” *Mining Data Online*, [Online]. Available: [https://miningdataonline.com/property/2985/Phoenix-Mine.aspx](https://miningdataonline.com/property/2985/Phoenix-Mine.aspx). [Accessed: Nov. 10, 2025].
-							</li>
-							
-						
-						</ul>
-				</footer>
-			</div> <!-- /wrapper -->
+				</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+				<div class="split-layout">
+					<div class="text-column">
+					<div class="iframes-container">
+					<!-- Cesium Map iframe -->
+					    <div class="media-container">
+						<div class="iframe-wrapper">
+							<h1>Where is gold mined? </h1> 
+							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
+							<div style="height: 600px; border: 1px solid #ccc;">
+								<iframe 
+									src="/cesium_maps/cesium-gold-map.html"
+									width="100%" 
+									height="100%" 
+									frameborder="0"
+									style="border: none;">
+								</iframe>
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
 
 
-			
+						<div class="images-column">
+						<div class="iframe-wrapper">
+							<h1>Who imports gold?</h1> 
+							<p>Click on the blue bubbles to see where gold is imported from.</p>
+							<div style="height: 600px; border: 1px solid #ccc;">
+								<iframe 
+									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/GOLD/all/default"
+									width="100%" 
+									height="100%" 
+									frameborder="0"
+									style="border: none;">
+								</iframe>
+							</div>
+						</div>
+					</div>
+			</div>
+				                    </div>
 
-	</body>
-</html> 
+
+        <footer>
+            <div style="display:flex; justify-content: center; align-items: center;"> 
+                <h3 style="margin-bottom: 1rem;">References</h3>
+            </div>
+            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+                <<p>"Gold Fields South Deep Gold Mine - How we process," www.goldfields-southdeep.co.za. https://www.goldfields-southdeep.co.za/about-us/about-south-deep/how-we-process</p>
+
+<p>"Auriferous Deposits - 911Metallurgist," 911Metallurgist, Feb. 29, 2016. https://www.911metallurgist.com/blog/auriferous-deposits/</p>
+
+<p>D. Michaud, "Geology Of Hard Rock Gold Deposits," Mineral Processing & Metallurgy, Sep. 01, 2015. https://www.911metallurgist.com/blog/geology-of-hard-rock-gold-deposits</p>
+
+<p>"Pyrite (fool's gold) | Research Starters | EBSCO Research," EBSCO, 2022. https://www.ebsco.com/research-starters/mining-and-mineral-resources/pyrite-fools-gold</p>
+
+<p>"A Brief History of Gold | The Royal Mint," www.royalmint.com. https://www.royalmint.com/invest/discover/gold-news/a-brief-history-of-gold</p>
+
+<p>J. E. Garten, "How the 'Nixon Shock' Remade the World Economy," Yale Insights, Jul. 13, 2021. https://insights.som.yale.edu/insights/how-the-nixon-shock-remade-the-world-economy</p>
+
+<p>"Barrick Gold Corporation - Operations - Nevada Gold Mines," www.barrick.com. https://www.barrick.com/English/operations/nevada-gold-mines/default.aspx</p>
+
+<p>"Nevada Gold Mines Completes Construction of 200MW Solar Power Plant," Barrick.com, 2020. https://www.barrick.com/English/news/news-details/2024/nevada-gold-mines-completes-construction-of-200-megawatt-solar-power-plant/default.aspx</p>
+
+<p>"2024 COMMUNITY BENEFIT FOOTPRINT Social Investment Annual Totals 2020 -2025 Spent to date $12.3M." Available: https://s25.q4cdn.com/322814910/files/doc_downloads/ngm/NGM_2024_Community_Benefit_Footprint.pdf</p>
+
+<p>C. Fiddes, J. Langhans, P. Schmiesing, J. Becker, and T. Webber, "NI 43-101 Technical Report on the Turquoise Ridge Complex Humboldt County, Nevada, USA Prepared for Barrick Gold Corporation," Mar. 2024. [Online]. Available: https://minedocs.com/19/Turquoise-Ridge-TR-12312023.pdf</p>
+
+<p>C. Fiddes, J. Olcott, C. L. Bolin, and S. Yopps, "TECHNICAL REPORT ON THE CARLIN COMPLEX, EUREKA AND ELKO COUNTIES, STATE OF NEVADA, USA PREPARED FOR BARRICK GOLD CORPORATION AND NEWMONT CORPORATION BY NEVADA GOLD MINES LLC Report for NI 43-101," 2020. Available: https://minedocs.com/20/Carlin-Complex-TR-03252020.pdf</p>
+
+<p>B. Gold et al., "TECHNICAL REPORT ON THE CORTEZ COMPLEX, LANDER AND EUREKA COUNTIES, STATE OF NEVADA, USA NI 43-101 TECHNICAL REPORT Prepared for: Prepared by," Dec. 2021. [Online]. Available: https://minedocs.com/19/Cortez-TR-12312021.pdf</p>
+
+<p>D. Doe, "Nevada Operations Nevada, USA Technical Report Summary," Newmont, Dec. 31, 2024. https://minedocs.com/28/Nevada-Gold-Mines-TR-12312024.pdf</p>
+
+<p>"Major Mines & Projects | Phoenix Mine," Miningdataonline.com, 2019. https://miningdataonline.com/property/2985/Phoenix-Mine.aspx</p>
+
+            </ul>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

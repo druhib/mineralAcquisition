@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 
-
 <html>
 
 	<head>
@@ -10,183 +9,231 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 		
-	</head>
+		
+		
+		
+		<style>
+        #main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .content-section {
+            margin-bottom: 1rem;
+        }
+
+        /* Side-by-side layout for images and text */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+
+        .images-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-column {
+            padding-right: 1rem;
+        }
+
+        .text-column p {
+            text-align: justify;
+            line-height: 1.2;
+			margin-bottom: 1rem;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #030303;
+
+        }
+
+        .media-caption {
+            font-size: small;
+            font-weight: bold;
+            text-align: left;
+			margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            #main {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
 	
 	<body class="is-preload">
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+                <nav class="navbar">
+                    <a href="/" class="navbar-brand">Mineral Acquisition</a>
+                    
+                    <div class="navbar-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/mining">What is Mining?</a>
+                        <a href="/contacts">Contacts</a>
+                    </div>
+                </nav>
+            
+                <div style='position: relative; margin-top: 2rem;'>
+                    <div class="rectangular-header-line" id='rectangular-header-line3'>
+                        <h1><span style='color: white'>Copper</span></h1>
+                    </div>
+                </div>
+            </div> 
+        </header>
 
-		<div id="wrapper">
-			<header id="header">
-				<div class="inner">
+        <div id="main">
 
-					<nav class="navbar">
-						<a href="/" class="navbar-brand">
-							Mineral Exploitation
-						</a>
+            <div class="content-section">
+                <div class="split-layout">
+                    
+                    <!-- Text Column (Right) -->
+                    <div class="text-column">
+						<p> Copper is one of a handful of other metallic elements that can occur as a native metal, pure metal that can be taken straight from the ground. The fact that it can be mined with minimal refined has allowed the metal to be used as far back as 8000 B.C. </p>
+						<p> Today copper is the third most consumed metal in the world because it is a highly conductive and ductile material. There are two types of copper deposits. One is a type of igneous rock called a porphyry deposit and hosts 2/3 of the copper sourced globally. The other is a sedimentary deposit and makes up ¼ of where copper can be mined from. These sedimentary copper deposits host 60% of the world’s cobalt. Both deposits host oxide and sulfide copper ores. The largest producers of copper concentrate, the material from which copper metal is made, are Chile, United States, Indonesia, and Australia. The country with the largest copper smelters globally is China.</p>
+						<p> Regardless of the type of deposit, the most common way to mine copper is through open-pit mining which is a surface mining technique that uses drills, explosives, and excavators to unearth the copper ore. Once the copper ore is loose, the rock is hauled to a processing site. Although both ore types are ground before they undergo further separation processes, after this point copper oxide and copper sulfides ores are treated differently.</p>
+                        
+						<p><strong> Processing Copper Oxide Ore</strong></p>
+                        
+						<p> 1. Heap Leaching: Ground rock to Copper Concentrate </p>
 						
-						<div class="navbar-links">
-							<a href="/">Home</a>
-							<a href="/about">About</a>
-							<a href="/mining">What is Mining?</a>
-							<a href="/contacts">Contacts</a>
-						</div>
-					</nav>
-				
-					<div style = 'position: relative;margin-top: 2rem;'>
-						<div class="rectangular-header-line" id = 'rectangular-header-line2' >
-							<h1><span style = 'color: white'>What is Copper ?</span></h1>
-						</div>
-					
-					</div>
-				</div> 
-			</header>	
-
-			<!-- introcution  -->
-			<div id="main" style='justify-content: center; align-items: center; margin: 0 8rem 0 8rem;'>
-				<div style ='margin-top: 1.25rem;'>
-					<div class="block"  >
-						<p> 
-							Copper is a naturally occurring metal that has been used since 8000 B.C. 
-							It is the third most consumed metal in the world because it is a highly conductive and ductile material. 
-							
-						</p>
-						<div style = "display:flex; justify-content: center;align-content: center;"> 
-							<img src="../images/copper/CopperMinerals.png" alt=" copper image" style="width:1500px;height:220px;margin-top: -2rem;" />
-						</div>
-
-						<p> 
-							
-							Today, 2/3 of copper comes from <span style="font-weight: bold;"> porphyry copper deposits</span> granite and igneous rock that contain copper. 
-							Another 1/4 of copper comes from <span style="font-weight: bold;">sedimentary copper deposits,</span> which formed after copper chloride brine leached through permeable rocks over the course of millions of years. 
-							These deposits also host 60% of the world's cobalt. [1][2][3][4]
-						</p>
+						<p> The copper oxide that has been crushed is heaped in an impermeable basin where dilute sulfuric acid is poured over the heap. The heap is sloped such that as the acid percolates through the heap, dissolving copper ions into solution it eventually collects into a pool. </p>
 						
-					<div> 
-						<div style = "display:flex; flex-direction: center; justify-content:center; margin-top: 1rem;"> 
-							<span style="width:900px;height:400px"> 
-							<img src="../images/copper/CopperDepositMap.jpg" alt="CopperDepositMap.jpg" style="width:900px;height:400px;margin-top: 1rem;border: 5px solid #030303" />
-							<p style="font-size: x-small;font-weight: bold;"> From USGS Global Copper Map </p>
-							</span>
-						</div>
-					</div>
-					</div>
-				</div>	
-			<!-- discovery  -->		
+						<p> 2. During Solvent Extraction, the copper-containing concentrate is mixed with an organic acid (frequently an aromatic ketone or aldehyde-based reagent like hydoxyoxime) that selectively binds copper ions, dissolving them into the organic part of the mixture. This organic phase is fed into another process called a stripping unit where a strong acid like sulfuric acid ‘strips’ the copper ions from the organic phase into an aqueous solution. This solution is the electrolyte in the subsequent electrowinning step that’s used to recover copper metal!  </p>
+						<p> 3.	Electrowinning: Metal Recovery </p>
 							
-				<div style= 'margin-top: 2rem; gap: 1rem; display: flex; justify-content: center;' >
-					<div class="column">
-						<div style = 'display: flex; justify-content: center; align-items: center;'> 
-							<div class="info-box" id = 'info-box2'><h1>Where was copper discovered?</h1> </div>
-						</div>
-						<div style = 'margin-top: 1rem;'>
-								<p> Copper metallurgy was first recorded in 8000 B.C. in Türkiye.[1]</p>
-								<img src="../images/copper/where_was_copper_found.png" alt="Cooper was found in Türkiye" style="width:600px;height:400px;border: 5px solid #030303" />
-								<p style="font-size: x-small;font-weight: bold">Screenshot via Google Earth</p>
-						</div>
+						<p> During electrowinning, direct current is passed through the copper electrolyte. The dissolved copper ions reduce and precipitate as a solid onto a conductive substrate often made of stainless steel The plated copper metal is mechanically removed off the substrate in a sheet. This can happen because copper is ductile, compared to cobalt which in similar processes is mechanically removed and recovered in smaller, fractured sizes. The market price of copper metal supersedes the concentrates from which the metal was refined. </p>
+                    </div>
+
+					<!-- Images Column (Left) -->
+                    <div class="images-column">
+
+                        <div class="media-container">
+                            
+							<h1>What is copper used for?</h1> 
+							<img src="../treemaps/Copper_TreeMap.png" alt="Box chart showing percentage breakdown of copper usage by industry" style="width:100%; height:auto;" />
+							<p class="media-caption">Figure 1: Industrial uses of copper. Data source: USGS National Minerals Information Center, 2025.</p>							
+							
+							<h1>What do some copper minerals look like? </h1> 
+							<div class="media-container">
+							<img src="../images/copper/CopperMinerals.png" alt="Copper minerals" />
+                            <p class="media-caption">Figure 2: Different types of copper containing materials.</p>					
 						
+							<h1>Where are copper mineral deposits?</h1> 
+							<img src="../images/copper/CopperDeposits.png" alt="Copper deposits" />
+                            
+							<p class="media-caption">Figure 3: Global copper reserves as reported by the USGS. Data is from https://mrdata.usgs.gov/general/map-global.html</p>            
+							</div>
+						</div>		
 					</div>
 				</div>
 
-			<!-- tree map   -->
-				<div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box2'>
-					<h1>What is copper used for?</h1> 
-				</div>
+				<div>
+					<p><strong> Processing Copper Sulfide Ore </strong> </p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> 1. Froth Flotation: Separate Copper Sulfide Particles from Ore </p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> Ground copper sulfide ore is further milled into fine sand. The fine sand is mixed in an aqueous solution. A hydrophobic chemical reagent, often potassium ethyl xanthate, is subsequently added to selectively bind to the copper sulfide particles. The slurry is fed into the froth flotation unit where pipes at the bottom of the tank blow air. The air bubbles force the copper bonded to the hydrophobic reagent to rise to the surface. This metallic froth is skimmed off the surface of mixture and sent to a thickening unit.</p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> 2. Thickening: Synthesize Copper-rich Concentrate </p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> A thickener in this process is a cylindrical vat with a stirring rod that filters out the water from the copper rich concentrate synthesized in the froth flotation step. The dewatered concentrate is exported by rail, truck and/or ship to smelters.</p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> 3. Metal Smelting: Transform Copper Concentrate to Copper Metal </p> 
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> The filtered copper composite is sent for smelting. Smelters transform metal rich powders exported from mining projects into metal products. The composite is not pure copper and has iron and sulfur. This concentrate is melted at temperatures above 1000 C that is poured into a slag-settling furnace. The furnace keeps the mixture in a liquid form while allowing a mixture of copper, sulfur, iron, and silica to collect at the bottom of the tank. This collection of solid material is called matte and contains roughly 60% copper. This matte is heated to above 1200 C in another furnace, to burn off sulfur and iron impurities, giving a yellow product called producing ‘blister copper’ that contains 98% Cu. This blister copper is sent to its final heated separation step, anode smelting, that burns off the oxygen from the metal mixture. This process results in 99% copper.</p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> 3. Electrolysis: Recover 99.99% Copper Metal</p>
+					<p style="margin-bottom: 0.5rem; line-height: 1.2;"> To achieve 99.99% Cu purity in the metal, 99% copper sheets are suspended in a copper sulfate and sulfuric acid solution. These are sandwiched between pure (99.99%) copper sheets. When electric current is passed through the system, copper cations migrate from the impure electrode to the pure one. This process takes about two weeks but yields a hunk of copper that can be made into copper metal goods like wires. These metal goods are sold for a higher price than the copper concentrate from which they are synthesized.</p>
+				</div>    
+				<div class="split-layout">
+					<div class="text-column">
+					<div class="iframes-container">
+					<!-- Cesium Map iframe -->
+					    <div class="media-container">
+						<div class="iframe-wrapper">
+							<h1>Where is copper mined? </h1> 
+							<p>Scroll with your mouse or touchpad over the tagged locations on the map to zoom in/out. </p>
+							<div style="height: 600px; border: 1px solid #ccc;">
+								<iframe 
+									src="/cesium_maps/cesium-copper-map.html"
+									width="100%" 
+									height="100%" 
+									frameborder="0"
+									style="border: none;">
+								</iframe>
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
 
-				<div  style = 'display: flex; flex-direction: column;  margin-top: 1rem; border: 3px solid #030303'> 
-					
-					<h3 style="font-size: large;margin:.5rem 1rem 0rem 1rem">What industries use copper ?</h3>
-					<p style="font-size:large;margin-left:1rem;">Data from USGS National Minerals Information Center 2025</p>
-					<span style = 'display: flex; justify-content:center; align-items:center;margin-Bottom: 1rem'>
-						<img src="../treemaps/Copper_TreeMap.png" alt="copper tree map" style="width:auto;height:500px;" />
-						<span> 							
-				</div>
 
-			<!-- bar chart   -->
-				 <div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box2'>
-					<h1>How much copper has been mined?</h1> 
-				</div>
-				
-
-				<div  style = 'display: flex; flex-direction: column;  margin-top: 1rem; border: 3px solid #030303'> 
-					<h3 style="font-size: large;margin:.5rem 1rem 0rem 1rem">Cumulative Copper Mined by Country in Metric Tons</h3>
-					<p style="font-size: large;margin-left:1rem;">Data from British Geological Survey Mineral Commodity Reports 1493-1900, US Geological Survey Mineral Commodity Reports 1913-2019</p>
-					<span class ="frame" style = 'display: flex; justify-content:center; align-items:center;width:auto;height:500px;overflow-y: auto; overflow-y: scroll'> 
-
-						<img src="../barcharts/Copper_BarChart.png" alt="copper productionbarchart" style="height:6000px;margin:auto" />
-					</span>	
-					<p style="font-weight: bold;font-size: x-small;margin:.5rem 1rem 0rem 1rem">*Data Warning: Production data [MT] reported under former states were manually reassigned to modern territories to the best of the authors’ ability. Some national averages may be overinflated due to limited granularity on where within the former state the material was originally mined.</p>
-								
-				</div>				
-
-			<!-- proceess diagram -->
-				<!-- <div> 
-					<div style = 'display: flex; justify-content: center; align-items: center;' class="info-box" id = 'info-box2'><h1>How is copper mined?</h1> </div>
-							
-							<h2 style="font-size: x-small;margin:.5rem 1rem 0rem 1rem">Process Diagram</h2>
-							<span  class ="frame" style = 'width:auto;height:1200px;overflow-y: auto;'> 
-
-								<img src="../images/copper/NewCopperMiningProcessDiagram11.9.25.drawio.png" alt="bauxite_productionbarchart" style="width:auto;height:1100px;" />
-							</span>									
-						
-				</div>  -->
-
-			</div> 
-			
-
-				<footer>
-					<div style=" display:flex; justify-content: center;align-items: center;"> 
-
-					<h3 style = "margin-bottom: 1rem;">References</h3>
+						<div class="images-column">
+						<div class="iframe-wrapper">
+							<h1>Who imports copper?</h1> 
+							<p>Click on the blue bubbles to see where copper is imported from.</p>
+							<div style="height: 600px; border: 1px solid #ccc;">
+								<iframe 
+									src="https://www.compareyourcountry.org/trade-in-raw-materials/en/3/COPPE/all/default"
+									width="100%" 
+									height="100%" 
+									frameborder="0"
+									style="border: none;">
+								</iframe>
+							</div>
+						</div>
 					</div>
-						<ul style="list-style-type: none;margin: 0 8rem 0 8rem;">
-							<li>
-								[1] J. Doebrich, “USGS Mineral Resources Program Copper - A Metal for the Ages,” USGS, 2009, Available: https://pubs.usgs.gov/fs/2009/3031/FS2009-3031.pdf
-							</li>
-							<li>
-								[2] Cox, Dennis P, et al. Sediment-Hosted Copper Deposits of the World: Deposit Models and Database Grade and Tonnage Model of Sediment-Hosted Cu Descriptive Model of Reduced-Facies Cu 30b.2 by Dennis P. Cox 1 Grade and Tonnage Model of Reduced Facies Cu Grade and Tonnage Model Of. 2002.
-							</li>
-							<li>
-								[3] “Sediment-Hosted Copper Deposits.” Gambusino Prospector, 12 July 2016, gambusinoprospector.com/2016/07/12/sediment-hosted-copper-deposits/.
-							</li>
-							<li>
-								[4] Pistilli, Melissa. “Types of Copper Deposits in the World | an Investor's Perspective | INN.” Investing News Network, 23 May 2019, investingnews.com/daily/resource-investing/base-metals-investing/copper-investing/types-copper-deposits-world/.
-							</li>
-							<li>
-								[5] Maureira, Rodrigo, and Carlos Delgado. Title: Technical Report Summary -Minera Escondida Limitada SEC S-K 229.1300 Technical Report Summary Stage of Property: Production/Pre-Feasibility Study Property: Minera Escondida Limitada Location: Antofagasta Region, Chile for the Fiscal Year Ended: 30 June 2022 Report Prepared for BHP Group Limited Exhibit 96.1. 2022.
-							</li>
-							<li>
-								[6] “Copper Ores and Concentrates Imports from Chile |2024.” Worldbank.org, 2024, wits.worldbank.org/trade/comtrade/en/country/All/year/2024/tradeflow/Imports/partner/CHL/product/260300. Accessed 28 Oct. 2025.
-							</li>
-							<li>
-								[7] Rani, Archana. “BHP's Chilean Copper Mine Fined $8.2m for Environmental Damage.” Mining Technology, 11 Mar. 2022, www.mining-technology.com/news/bhps-chilean-mine-fine/?cf-view.
-							</li>
-							<li>
-								[8] Young, James. “Technical Report Summary of Mineral Reserves and Mineral Resources for Morenci Mine.” Sec.gov, 2021, www.sec.gov/Archives/edgar/data/831259/000083125922000009/a2021trsmorenci-exhibit.htm#i49239041caad451bbc66b33c36099a17_67. Accessed 28 Oct. 2025.
-							</li>
-							<li>
-								[9] “Flotation | Ore Dressing.” Encyclopædia Britannica, 2019, www.britannica.com/technology/flotation-ore-dressing.
-							</li>
-							<li>
-								[10] “United States Copper Ores and Concentrates Exports by Country | 2024 | Data.” Worldbank.org, 2024, wits.worldbank.org/trade/comtrade/en/country/USA/year/2024/tradeflow/Exports/partner/ALL/product/260300. Accessed 28 Oct. 2025.
-							</li>
-							<li>
-							</li>
-							
-							
-		
-
-						</ul>
-				</footer>
-			</div> <!-- /wrapper -->
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			</div>
+				                    </div>
 
 
-			
+        <footer>
+            <div style="display:flex; justify-content: center; align-items: center;"> 
+                <h3 style="margin-bottom: 1rem;">References</h3>
+            </div>
+            <ul style="list-style-type: none; margin: 0 8rem 0 8rem;">
+               <p>The University of Arizona, “Copper Mining and Processing: Processing Copper Ores,” Superfund Research Center, Jul. 13, 2020. https://superfund.arizona.edu/resources/learning-modules-english/copper-mining-and-processing/processing-copper-ores </p>
+               <p>J. Doebrich, “USGS Mineral Resources Program Copper—A Metal for the Ages,” USGS, 2009, Available: https://pubs.usgs.gov/fs/2009/3031/FS2009-3031.pdf </p>
+               <p>“Copper Smelter Production by Country 2025,” World Population Review, 2025. https://worldpopulationreview.com/country-rankings/copper-smelter-production-by-country </p>
+               <p>D. P. Cox, D. A. Lindsey, D. A. Singer, B. C. Moring, and M. F. Diggles, “Sediment-Hosted Copper Deposits of the World: Deposit Models and Database Grade and Tonnage Model of Sediment-Hosted Cu Descriptive Model of Reduced-Facies Cu 30b.2 By Dennis P. Cox 1 Grade and Tonnage Model of Reduced Facies Cu Grade and Tonnage Model of,” 2002. Available: https://pubs.usgs.gov/of/2003/of03-107/of03-107.pdf </p>
+               <p>“Sediment–Hosted Copper Deposits,” Gambusino Prospector, Jul. 12, 2016. http://gambusinoprospector.com/2016/07/12/sediment-hosted-copper-deposits/ (accessed Jan. 03, 2026). </p>
+               <p>M. Pistilli, “Types of Copper Deposits in the World | An Investor’s Perspective | INN,” Investing News Network, May 23, 2019. https://investingnews.com/daily/resource-investing/base-metals-investing/copper-investing/types-copper-deposits-world/ </p>
+               <p>R. Maureira, F. Barrera, A. Salazar, F. Villegas, C. Delgado, and A. Naranjo, “Title: Technical Report Summary -Minera Escondida Limitada SEC S-K 229.1300 Technical Report Summary Stage of Property: Production/Pre-Feasibility Study Property: Minera Escondida Limitada Location: Antofagasta Region, Chile For the fiscal year ended: 30 June 2022 Report Prepared for BHP Group Limited Exhibit 96.1,” 2022. Available: https://minedocs.com/23/Escondida-TR-6302022.pdf </p>
+               <p>“Copper ores and concentrates imports from Chile |2024,” Worldbank.org, 2024. https://wits.worldbank.org/trade/comtrade/en/country/All/year/2024/tradeflow/Imports/partner/CHL/product/260300.%20Accessed%2028%20Oct.%202025. (accessed Jan. 03, 2026). </p>
+               <p>“BHP’s Chilean copper mine fined $8.2m for environmental damage,” Mining Technology, Mar. 11, 2022. https://www.mining-technology.com/news/bhps-chilean-mine-fine/ </p>
+               <p>J. Young, P. Albers, L. Tejada, J. Steeples, and L. Hill, “Document,” Sec.gov, 2021. https://www.sec.gov/Archives/edgar/data/831259/000083125922000009/a2021trsmorenci-exhibit.htm#i49239041caad451bbc66b33c36099a17_67 </p>
+               <p>Britannica, “Flotation | ore dressing,” Encyclopædia Britannica. 2019. Available: https://www.britannica.com/technology/flotation-ore-dressing </p>
+               <p>“United States Copper ores and concentrates exports by country | 2024 | Data,” Worldbank.org, 2024. https://wits.worldbank.org/trade/comtrade/en/country/USA/year/2024/tradeflow/Exports/partner/ALL/product/260300. (accessed Jan. 03, 2026). </p>
+               <p>Carmen, “The world’s ten largest copper mines,” Mining Technology, Jun. 03, 2022. https://www.mining-technology.com/marketdata/ten-largest-coppers-mines/ </p>
+            </ul>
+        </footer>
+    </div>
 
-	</body>
-</html> 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
