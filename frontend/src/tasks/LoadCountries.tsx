@@ -5,8 +5,8 @@ class LoadCountriesTask{
     
     load = (setState: any) => {
         setState(countries); 
-        console.log("Loaded countries");
-        console.log(countries);
+        // console.log("Loaded countries");
+        // console.log(countries);
     }
     
 }; 
