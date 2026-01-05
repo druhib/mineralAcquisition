@@ -5,212 +5,168 @@ const HomePage = () => {
     return (
 
         <div id="wrapper" >
-			
-         
-				{/* <!-- Main --> */}
-					<div id="main">
-						<div className="inner">
-		<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
-    <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '0.5rem' }}>
-        <h1 style={{ margin: 0 }}>Where Do Materials Come From?</h1>
-        {/* <a 
-            href="https://forms.gle/P36wUBDxQNNnZnNG9" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{
-                padding: '0.5rem 1.5rem',
-                backgroundColor: '#030303',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '5px',
-                fontWeight: 'bold',
-                fontSize: '1rem',
-                whiteSpace: 'nowrap'
-            }}
-            onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#333')}
-            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#030303')}
-        >
-            Let us know what you <br> think of this site! </br>
-        </a> */}
-    </div>
-
-    <p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>A Historical Global Overview of Mineral Acquisition</p>
-    
-								
-								
-								
-								
-								<div style = {{}}>
-
-									<ul style ={{ fontSize:"large", marginBottom:"1rem", textAlign: 'left'}}> 
-										<li>Below is a map that displays global mineral production of select materials in metric tons.</li>
-										<li>Select one mineral from the list below on the left, then use the timeline to select a year.</li>
-										<li>Click the "Play" button to iterate through the production data for the selected mineral.</li>
-										<li>Press the "X" button to stop the animation.</li>
-										<li>A country can be clicked to view the reported tonnage produced for that year.</li>
-										<li>Also scroll down past the map to learn more about how materials are acquired!</li>
-
-									</ul>
-
-								<p style ={{ fontSize:"large ",marginBottom:"1rem", textAlign: 'left'}}>
-									Please Note: The production of copper, gold, and silver are represented as one cumulative tonnage value for the time periods of 1493-1600, 1601-1700, 1701-1800, 1801-1900. 
-									
-								</p>
-
-							</div>
-                              
-							</header>
-							
-							<div style = {{display:"flex", alignContent:"center", justifyContent:"center"}}>
-					
-								<MapLoading /> 
-							</div>
-
-							<p style ={{ fontSize:"large ",marginBottom:"1rem", marginTop:"1.5rem",textAlign: 'center'}}>
-								
-								<h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Click on the rocks to learn more!</h1>
-
-								</p>
-
-
-							<div className="tiles" style = {{ alignItems: 'center'}}>
-								<article className="style1">
-									<span className="image">
-										<img src="images/rockphotos/BauxiteZoomIn.png" alt="BauxiteZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
-									
-									<a href="case_studies/bauxite.html">
-										<h2>Bauxite</h2>
-										<div className="content">
-											<p> (aluminum ore) </p>
-										</div>
-									</a>
-								</article>
-								<article className="style2">
-									<span className="image">
-										<img src="images/rockphotos/Cobalt.png" alt="CobaltZoomIn Image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
-									<a href="case_studies/cobalt.html">
-										<h2>Cobalt</h2>
-										<div className="content">
-											{/* <p>Cobalite from Canada</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style3">
-									<span className="image">
-										<img src="images/rockphotos/Copper.png" alt="CopperZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
-									<a href="case_studies/copper.html">
-										<h2>Copper</h2>
-										<div className="content">
-											{/* <p>Native Copper from United Kingdom </p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style4">
-									<span className="image">
-										<img src="images/rockphotos/GoldZoomIn.jpeg" alt="GoldZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
-									<a href="case_studies/gold.html">
-										<h2>Gold</h2>
-										<div className="content">
-											{/* <p>Carbon Leader Gold Ore from South Africa</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style5">
-									<span className="image">
-										<img src="images/rockphotos/IronZoomIn.jpeg" alt="IronZoomIn Image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
-									<a href="case_studies/iron.html">
-										<h2>Iron</h2>
-										<div className="content">
-											{/* <p>Hermatite from Madagascar</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style6">
-									<span className="image">
-										<img src="images/rockphotos/LithiumZoomIn.jpeg" alt="LithiumZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
-									<a href="case_studies/lithium.html">
-										<h2>Lithium</h2>
-										<div className="content">
-											{/* <p>Spudumene from Madagascar</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style2">
-									<span className="image">
-										<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="ManganeseZoomIn Image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
-									<a href="case_studies/manganese.html">
-										<h2>Manganese</h2>
-										<div className="content">
-											{/* <p>Pyrolusite from Brazil</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style1">
-									<span className="image">
-										<img src="images/rockphotos/NickelZoomIn.jpeg" alt="NickelZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
-									<a href="case_studies/nickel.html">
-										<h2>Nickel</h2>
-										<div className="content">
-											{/* <p>Pentlandite from Canada</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style5">
-									<span className="image">
-										<img src="images/rockphotos/PhosphorusZoomIn.png" alt="PhosphorusZoomIn image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
-									<a href="case_studies/phosphorous.html">
-										<h2>Phosphorous</h2>
-										<div className="content">
-											{/* <p>Apatite from Madagascar</p> */}
-										</div>
-									</a>
-								</article>
-								<article className="style6">
-									<span className="image">
-										<img src="images/rockphotos/Silver.png" alt="SilverZoomIn Image" />
-									</span>
-									<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
-									<a href="case_studies/silver.html">
-										<h2>Silver</h2>
-										<div className="content">
-											{/* <p>Native Silver from Czech Republic</p> */}
-										</div>
-									</a>
-								</article>
-								
-							</div>
-
-	
-
-												
-					
+			{/* <!-- Main --> */}
+			<div id="main">
+				<div className="inner">
+					<header style = {{ paddingTop: '1rem', textAlign:'left' ,color:'#000000ff', lineHeight:'normal'}}>
+						<div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '0.5rem' }}>
+							<h1 style={{ margin: 0 }}>Where Do Materials Come From?</h1>
+							{/* <a 
+								href="https://forms.gle/P36wUBDxQNNnZnNG9" 
+								target="_blank" 
+								rel="noopener noreferrer"
+								style={{
+									padding: '0.5rem 1.5rem',
+									backgroundColor: '#030303',
+									color: 'white',
+									textDecoration: 'none',
+									borderRadius: '5px',
+									fontWeight: 'bold',
+									fontSize: '1rem',
+									whiteSpace: 'nowrap'
+								}}
+								onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#333')}
+								onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.backgroundColor = '#030303')}
+							>
+								Let us know what you <br> think of this site! </br>
+							</a> */}
 						</div>
+
+						{/*  Title  */}
+						<p style={{ fontSize: 'x-large', marginBottom: "1rem"}}>
+							A Historical Global Overview of Mineral Acquisition
+						</p>
+						{/* Directions  */}
+						<div>
+							<ul style ={{ fontSize:"large", marginBottom:"1rem", textAlign: 'left'}}> 
+								<li>Below is a map that displays global mineral production of select materials in metric tons.</li>
+								<li>Select one mineral from the list below on the left, then use the timeline to select a year.</li>
+								<li>Click the "Play" button to iterate through the production data for the selected mineral.</li>
+								<li>Press the "X" button to stop the animation.</li>
+								<li>A country can be clicked to view the reported tonnage produced for that year.</li>
+								<li>Also scroll down past the map to learn more about how materials are acquired!</li>
+
+							</ul>
+
+							<p style ={{ fontSize:"large ",marginBottom:"1rem", textAlign: 'left'}}>
+								Please Note: The production of copper, gold, and silver are represented as one cumulative tonnage value for the time periods of 1493-1600, 1601-1700, 1701-1800, 1801-1900. 
+								
+							</p>
+
+						</div>
+                              
+					</header>
+					{/* Map Page  */}
+					<div style = {{display:"flex", alignContent:"center", justifyContent:"center"}}>
+						<MapLoading /> 
 					</div>
+
+					{/*  Case Studies Header  */}
+					<h1 style={{ textAlign: 'center', marginBottom: '2rem', marginTop:"1.5rem" }}>Click on the rocks to learn more!</h1>
+
+					{/* Case Studies Tiles  */}
+					<div className="tiles" style = {{ alignItems: 'center'}}>
+						<article className="style1">
+							<span className="image">
+								<img src="images/rockphotos/BauxiteZoomIn.png" alt="BauxiteZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© siimsepp / AdobeStock</p>
+							
+							<a href="case_studies/bauxite.html">
+								<h2>Bauxite</h2>
+								<div className="content">
+									<p> (aluminum ore) </p>
+								</div>
+							</a>
+						</article>
+						<article className="style2">
+							<span className="image">
+								<img src="images/rockphotos/Cobalt.png" alt="CobaltZoomIn Image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Valerie Garner / AdobeStock</p>
+							<a href="case_studies/cobalt.html">
+								<h2>Cobalt</h2>
+							</a>
+						</article>
+						<article className="style3">
+							<span className="image">
+								<img src="images/rockphotos/Copper.png" alt="CopperZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© vvoe / AdobeStock</p>
+							<a href="case_studies/copper.html">
+								<h2>Copper</h2>
+							</a>
+						</article>
+						<article className="style4">
+							<span className="image">
+								<img src="images/rockphotos/GoldZoomIn.jpeg" alt="GoldZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Elzbieta Sekowska / AdobeStock</p>
+							<a href="case_studies/gold.html">
+								<h2>Gold</h2>
+							</a>
+						</article>
+						<article className="style5">
+							<span className="image">
+								<img src="images/rockphotos/IronZoomIn.jpeg" alt="IronZoomIn Image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© michal812 / AdobeStock</p>
+							<a href="case_studies/iron.html">
+								<h2>Iron</h2>
+							</a>
+						</article>
+						<article className="style6">
+							<span className="image">
+								<img src="images/rockphotos/LithiumZoomIn.jpeg" alt="LithiumZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Henri Koskinen / AdobeStock</p>
+							<a href="case_studies/lithium.html">
+								<h2>Lithium</h2>
+							</a>
+						</article>
+						<article className="style2">
+							<span className="image">
+								<img src="images/rockphotos/ManganeseZoomIn.jpeg" alt="ManganeseZoomIn Image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Okan / AdobeStock</p>
+							<a href="case_studies/manganese.html">
+								<h2>Manganese</h2>
+							</a>
+						</article>
+						<article className="style1">
+							<span className="image">
+								<img src="images/rockphotos/NickelZoomIn.jpeg" alt="NickelZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Agnieszka / AdobeStock</p>
+							<a href="case_studies/nickel.html">
+								<h2>Nickel</h2> 
+							</a>
+						</article>
+						<article className="style5">
+							<span className="image">
+								<img src="images/rockphotos/PhosphorusZoomIn.png" alt="PhosphorusZoomIn image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© Apatite_Ekaterina / AdobeStock</p>
+							<a href="case_studies/phosphorous.html">
+								<h2>Phosphorous</h2>
+							</a>
+						</article>
+						<article className="style6">
+							<span className="image">
+								<img src="images/rockphotos/Silver.png" alt="SilverZoomIn Image" />
+							</span>
+							<p style = {{fontSize:"x-small", fontWeight:"bold", marginTop:".75rem"}}>© bambambu / AdobeStock</p>
+							<a href="case_studies/silver.html">
+								<h2>Silver</h2>
+							</a>
+						</article>
+						
+					</div>							
 					
-
+				</div>
 			</div>
-
-		
+		</div>	
     )
-
-    }; 
+}; 
 
 export default HomePage;
