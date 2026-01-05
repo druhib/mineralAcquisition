@@ -197,32 +197,39 @@ const MiningOverview = () => {
                         </h1>
 
                        {/* Introduction Section */}
-<div className="content-section">
-    <p>Earth formed 4.6 billion years ago and has grown from colliding with other celestial bodies in our solar system, like meteorites. Over time, gravitational forces and intense heat have caused the accrued materials to separate. This separation has formed Earth's internal structure.</p>
-    <p>Earth's outermost layer, the crust, has a depth of 100 km. At the base of the crust lies the lithosphere, where tectonic plates rest. When these tectonic plates move to collide or separate away, magma is brought to the surface. Over millennia, the cooling and sedimentation of magma within the Earth's crust has formed the mineral deposits that are mined today. Many of these mineral deposits concentrate at the edges of tectonic plates.</p>
-    
-    <div style={{ display: 'flex', gap: '2rem', margin: '2rem 0', alignItems: 'flex-start', justifyContent: 'center' }}>
-        <div style={{ maxWidth: '45%' }}>
-            <img src="../images/MiningOverview/MiningOverviewFig1.png" alt="Mining Overview Figure 1" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
-        </div>
-        <div style={{ maxWidth: '45%' }}>
-            <img src="../images/MiningOverview/TectonicPlates_PhysicalGeology.png" alt="Earth's tectonic plates" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
-            <p style={{ fontSize: '0.9rem', color: '#666', fontWeight: 'bold', marginTop: '0.5rem' }}>
-                Figure 2: Earth's tectonic plates. Image credit: Physical Geology by Steven Earle
-            </p>
-        </div>
-    </div>
-</div>
+                        <div>
+                            <p>Earth formed 4.6 billion years ago and has grown from colliding with other celestial bodies in our solar system, like meteorites. Over time, gravitational forces and intense heat have caused the accrued materials to separate. This separation has formed Earth's internal structure.</p>
+                            <p>Earth's outermost layer, the crust, has a depth of 100 km. At the base of the crust lies the lithosphere, where tectonic plates rest. When these tectonic plates move to collide or separate away, magma is brought to the surface. Over millennia, the cooling and sedimentation of magma within the Earth's crust has formed the mineral deposits that are mined today. Many of these mineral deposits concentrate at the edges of tectonic plates.</p>
+                            
+                            <div style={{ display: 'flex', gap: '2rem', margin: '2rem 0', alignItems: 'flex-start', justifyContent: 'center' }}>
+                                <div style={{ maxWidth: '45%' }}>
+                                    <img src="../images/MiningOverview/MiningOverviewFig1.png" alt="Mining Overview Figure 1" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
+                                </div>
+                                <div style={{ maxWidth: '45%' }}>
+                                    <img src="../images/MiningOverview/TectonicPlates_PhysicalGeology.png" alt="Earth's tectonic plates" style={{ width: '100%', height: 'auto', border: '3px solid #030303' }} />
+                                    <p style={{ fontSize: '0.9rem', color: '#666', fontWeight: 'bold', marginTop: '0.5rem' }}>
+                                        Figure 2: Earth's tectonic plates. Image credit: Physical Geology by Steven Earle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
 
                         {/* Two Column: Text and Map */}
                         <div className="content-section">
                             <div className="two-column-layout">
                                 <div className="text-content">
-                                    <p>The Earth's crust hosts a plethora of inorganic materials including over 6,100 distinct mineral species recognized by the <a href="https://www.rruff.net/ima-mineral-list/?" target="_blank" rel="noopener noreferrer">International Mineralogical Association</a>. The USGS has compiled <a href="https://mrdata.usgs.gov/major-deposits/map-us.html" target="_blank" rel="noopener noreferrer">a map of critical mineral deposits of the world</a> which can be further found and interacted with below. (Please zoom out to see mineral deposits around the world!)</p>
+                                    <p>The Earth's crust hosts a plethora of inorganic materials including over 6,100 distinct mineral species recognized by the <a href="https://www.rruff.net/ima-mineral-list/?" target="_blank" rel="noopener noreferrer">International Mineralogical Association</a>. 
+                                    The United States Geological Surveys (USGS) has compiled <a href="https://mrdata.usgs.gov/major-deposits/map-us.html" target="_blank" rel="noopener noreferrer">a map of critical mineral deposits of the world</a> which can be further found and interacted with below. 
+                                    (Please zoom out to see mineral deposits around the world!)
+                                    </p>
 
-                                    <p>These materials are extracted through mining. Mining refers to the process of extracting "ore" from Earth. The term "ore" refers to a section of rock that is comprised of economically significant concentrations of a material to motivate a mining operation.</p>
+                                    <p>These materials are extracted through mining. Mining refers to the process of extracting "ore" from Earth. 
+                                    The term "ore" refers to a section of rock that is comprised of economically significant concentrations of a material to motivate a mining operation.</p>
 
-                                    <p>The selected mining process depends on the deposit's hardness, abundance, and depth in addition to any existing surrounding infrastructure, labor costs, and environmental restrictions. Most mined materials are extracted within the first 4 km (~13,000 ft) of the Earth's surface due to extreme pressure and temperature constraints. Generally, the process of acquiring materials from the ground can be divided into broad categories of: surface, underground, solution, and ocean mining.</p>
+                                    <p>The selected mining process depends on the deposit's hardness, abundance, and depth in addition to any existing surrounding infrastructure, labor costs, and environmental restrictions. 
+                                        Most mined materials are extracted within the first 4 km (~13,000 ft) of the Earth's surface due to extreme pressure and temperature constraints. 
+                                        Generally, the process of acquiring materials from the ground can be divided into broad categories of: surface, underground, solution, and ocean mining.</p>
                                 </div>
 
                                 <div className="iframe-container">
@@ -297,6 +304,7 @@ const MiningOverview = () => {
                             <p>Although this mining process has yet to reach commercial scales, the ocean bed is rich in several critical materials such as copper, nickel, cobalt, manganese, and rare earth elements. Despite severe environmental concerns, demands for these materials has motivated interest in this mining process.</p>
                         </div>
                     </header>
+                    
                 </div>
             </div>
         </div>
