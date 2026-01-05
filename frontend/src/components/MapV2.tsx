@@ -6,8 +6,6 @@ import type { SliderSingleProps} from 'antd';
 import { PlayCircleFilled, CloseCircleFilled } from '@ant-design/icons';
 
 
-
-
 interface MapProps {
   countries: any; 
   map_data: any;  
@@ -18,8 +16,8 @@ interface MapProps {
 // function to get min and max years 
 function getYearsMinMax(map_data: Record<string, any>) {
   // extracts years from first data key which should be the same all all tables 
-    const yearKeys = Object.keys(map_data[0].Years);
-    const  min_max = [yearKeys[0], yearKeys[yearKeys.length - 1]]
+  const yearKeys = Object.keys(map_data[0].Years);
+  const  min_max = [yearKeys[0], yearKeys[yearKeys.length - 1]]
     
   return  min_max; 
 
@@ -29,7 +27,7 @@ function getYearsMinMax(map_data: Record<string, any>) {
 // function returns all years 
 function getYears(map_data: Record<string, any>) {
   // extracts years from first data key which should be the same all all tables 
-    const yearKeys = Object.keys(map_data[0].Years);
+  const yearKeys = Object.keys(map_data[0].Years);
     
   return  yearKeys; 
 } 
@@ -39,7 +37,7 @@ const mapStyle = {
         height: '36rem',
         width: '64rem',
         margin: '0',
-    }
+}
 
 // return chloropeth map 
 function getColor(d: any) {
@@ -60,13 +58,10 @@ function getColor(d: any) {
 
 // return map style on map 
 function style(feature: any, data: Record<string, any>) {
-
-
-    const iso3 = feature.properties.ISO_A3; 
-    const mineralValue = Number(data[iso3]);
+  const iso3 = feature.properties.ISO_A3; 
+  const mineralValue = Number(data[iso3]);
  
-
-    return {
+  return {
     fillColor: getColor(mineralValue),
     weight: .6,
     opacity: 0.7,
@@ -75,26 +70,19 @@ function style(feature: any, data: Record<string, any>) {
   };
 
     
-    } 
+} 
 
 // returns values for each country 
 function onEachCountry(feature: any, data: Record<string, any>, layer: any) {
 
-  // console.log("why is data here diff", data)
+  const name = feature.properties.ADMIN
+  const iso3 = feature.properties.ISO_A3; 
+  const mineralValue = parseInt(data[iso3]);
+  const formattedValue = mineralValue.toLocaleString();
 
-    const name = feature.properties.ADMIN
-    const iso3 = feature.properties.ISO_A3; 
-    const mineralValue = parseInt(data[iso3]);
-    const formattedValue = mineralValue.toLocaleString();
+  layer.bindPopup(`Country: ${name} (${iso3}) <br> Tonnage: ${formattedValue != '-1' ? formattedValue : "NaN"}`);
 
- 
-    layer.bindPopup(`Country: ${name} (${iso3}) <br> Tonnage: ${formattedValue != '-1' ? formattedValue : "NaN"}`);
-
-    //${mineralValue != -1 ? mineralValue : "NaN"}
-    
-
-    
-    } 
+} 
 
 // returns map data for a spacified year 
 function MineralData(map_data: Record<string, any> , year:any ) {
@@ -105,16 +93,13 @@ function MineralData(map_data: Record<string, any> , year:any ) {
     const yearData = item.Years[year];
     mineralData[iso3] = yearData;
 
-    
-
-
      
   })
 
   return mineralData;
-  }
+}
 // marks on map 
-const marks: SliderSingleProps['marks'] = { // help with scale 
+const marks: SliderSingleProps['marks'] = { 
   1493: '1493',
   1600: '1600',
   1700: '1700',
@@ -131,8 +116,6 @@ const marks: SliderSingleProps['marks'] = { // help with scale
 //map function 
 const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => { 
 
-  //console.log("mineral selected", mineral_name)
-
   const YearDataMin_Max = map_data ? getYearsMinMax(map_data) : [1493,2019];
   const [currentYear, setCurrentYear] = useState(0) // set initial year to ? 
   const [titleYear, setTitleYear] = useState(0)
@@ -141,7 +124,6 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
   const listOfYears = map_data ? getYears(map_data) : [];
   const [count, setCount] = useState(0);
   const [startTimer,setStartTimer] = useState(false)
-  // const [Mineraldata, setMineralData] = useState<{ [key: string]: any }>({})
   const Mineraldata = map_data && currentYear ? MineralData(map_data, currentYear) : {};
 
 // Reset when mineral changes
@@ -169,13 +151,13 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
           }
         setCurrentYear(Number(listOfYears[prev + 1]));
         setTitleYear(Number(listOfYears[prev + 1]))
-        // console.log("Timer tick", listOfYears[prev + 1]);
+        
         return prev + 1;
 
         });
       }, 1250)
 
-        // Cleanup when the component unmounts
+    // Cleanup when the component unmounts
     return () => {
       clearInterval(timerId);
     };;
@@ -190,8 +172,6 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
     } else {
       setCount(0);
     }
-
-
     setStartTimer(true);
   };
 
@@ -245,17 +225,16 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
   return ( 
       
     <div >
-       {/* title of map  */}
+      {/* title of map  */}
       <div style={{  alignItems:"center", textAlign: 'center',  fontSize: '1.5rem', fontWeight: 'bold', marginTop: "4.5rem"}}>
         The Global Production of <span style ={{textDecoration: 'underline'}}>{mineral_name}</span> in MT for year <span style ={{textDecoration: 'underline'}}> {titleYear}</span>
       </div>
-      
      
       <div> 
           {/* timer running  */}
         {startTimer && (
           <div>  
-              <Slider
+            <Slider
               min={1493}
               max={2019}
               step={1}
@@ -263,12 +242,11 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
               value = {titleYear}
               marks={marks}
               onChangeComplete={(sliderValue) => handleSliderChange(sliderValue)}
-              //value={typeof currentYear === 'number' ? currentYear : 0} // i think this shoulf always be true so not sure why were are checking 
               styles = {{ track: { backgroundColor: 'black'}}}
-              />
+            />
             <div style ={{position:"relative", left:"-5rem",marginTop: "-1.5rem" }}>  
-                <Popover content="Stop Timeline" trigger="hover"> 
-                  <CloseCircleFilled style={{ alignContent: 'left',fontSize: '2rem', color: '#08c'}} onClick={handlePauseClick} />
+              <Popover content="Stop Timeline" trigger="hover"> 
+                <CloseCircleFilled style={{ alignContent: 'left',fontSize: '2rem', color: '#08c'}} onClick={handlePauseClick} />
               </Popover>
             </div> 
           </div>
@@ -277,15 +255,14 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
         )}
         {/* no timer running  */}
           {!startTimer && (
-            
-            <div >
+            <div>
               <Slider value = {titleYear} min ={1493} max= {2019} step={1}  defaultValue={1493} marks = {marks} onChange={(sliderValue) => handleSliderChange(sliderValue)} />
-          <div style = {{position:"relative", left:"-5rem",marginTop: "-1.5rem"}}>
-          <Popover content="Play to flip through the Years" trigger="hover"> 
-            <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />
-          </Popover>
-          </div>
-          </div> 
+              <div style = {{position:"relative", left:"-5rem",marginTop: "-1.5rem"}}>
+                <Popover content="Play to flip through the Years" trigger="hover"> 
+                  <PlayCircleFilled style={{ fontSize: '2rem', color: '#08c' }} onClick={handlePlayClick} />
+                </Popover>
+              </div>
+            </div> 
           )}
           
 
@@ -302,18 +279,18 @@ const Map : React.FC<MapProps> = ({ countries, map_data, mineral_name}) => {
               data={countries}
               style={(feature) => style(feature, Mineraldata)}
               onEachFeature={(feature, layer) => onEachCountry(feature, Mineraldata, layer) }
-              />
+            />
             
           </MapContainer>
         </div>
         
        
-      </div>
+    </div>
       
       
 
 
-    ); 
+  ); 
 };
 
 export default Map;
