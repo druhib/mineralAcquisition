@@ -39,6 +39,13 @@ const ToolOverview= () => {
                             are unevenly distributed. As engineers, scientists, and other industrial professionals design and implement exciting technologies, 
                             they should also have to consider the consequences of how the materials required for these projects are acquired. 
                             
+                            <h1 style= {{marginTop:'1rem'}}> Guiding Questions: </h1>
+                            <p> How does a country's "development" relate to mineral acquisition? <br/>
+                                Who bears the burden of extracting these materials? <br/> 
+                                Is the distribution of mineral extraction and wealth fair? <br/>
+                                How do I think I can affect the way materials are consumed? <br/>
+
+                            </p>
 
                                  </p>
 
