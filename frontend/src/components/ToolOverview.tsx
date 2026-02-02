@@ -43,7 +43,7 @@ const ToolOverview= () => {
                             <p> How does a country's "development" relate to mineral acquisition? <br/>
                                 Who bears the burden of extracting these materials? <br/> 
                                 Is the distribution of mineral extraction and wealth fair? <br/>
-                                How do I think I can affect the way materials are consumed? <br/>
+                                How do we think we can affect the way materials are consumed? <br/>
 
                             </p>
 
