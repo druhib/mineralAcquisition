@@ -2,12 +2,11 @@ import pandas as pd
 import json
 from json import loads, dumps
 
-file = 'Silver_complete_10_22_25.csv'
+file = 'Gold_Complete_02_09_26.csv'
 
 df = pd.read_csv(file)
 
-df.to_json('Silver_complete_10_22_25.json', orient='records', indent=4)
-
+df.to_json('Gold_Complete_02_09_26.json', orient='records', indent=4)
 
 
 

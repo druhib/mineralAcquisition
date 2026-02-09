@@ -43,7 +43,7 @@ export const dataConfig : Record< string,MineralConfig> = {
   }, 
   Gold:{
     label: "Gold",
-    file_name: "Gold_complete_10_11_25.json",
+    file_name: "Gold_Complete_02_09_26.json",
     year_interval: "(1493-1900)(1913-2019)"
     
     }, 
